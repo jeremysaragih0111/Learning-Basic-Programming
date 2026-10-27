@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Material Part 7 - Learn HTML5 Modern</title>
+</head>
+<body>
+
+    <!-- Example of Meta Information in HTML 
+    <h1>The Material Part 7 - Meta Information</h1>
+    <p>Meta information is data that provides information about other data. In the context of HTML, meta information is typically included in the head section of an HTML document and can include things like the document's title, character encoding, author, description, keywords, and more. This information is not displayed on the webpage itself but can be used by browsers, search engines, and other web services to understand and process the content of the page.</p>
+    <h2>Common Meta Tags</h2>
+    <ul>
+        <li><strong>Title Tag:</strong> The title tag defines the title of the document, which is displayed in the browser's title bar or tab. It is also used by search engines as the title of the search result.</li>
+        <li><strong>Meta Description:</strong> This tag provides a brief description of the page's content. Search engines often use this description in search results to give users an idea of what the page is about.</li>
+        <li><strong>Meta Keywords:</strong> This tag lists keywords relevant to the page's content. However, it is not widely used by search engines anymore for ranking purposes.</li>
+        <li><strong>Meta Charset:</strong> This tag specifies the character encoding for the HTML document, such as UTF-8.</li>
+        <li><strong>Meta Author:</strong> This tag specifies the author of the document.</li>
+    </ul>
+    <h2>Example of Meta Tags in HTML</h2>
+    <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="description" content="A brief description of the page"&gt;
+            &lt;meta name="keywords" content="HTML, meta tags, web development"&gt;
+            &lt;meta name="author" content="John Doe"&gt;
+            &lt;title&gt;Example Page&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Hello World!&lt;/h1&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </pre>
+    <p>In this example, we have included several meta tags in the head section of the HTML document. The charset tag specifies that the document uses UTF-8 encoding, the description tag provides a brief description of the page, the keywords tag lists relevant keywords, and the author tag specifies the author of the document. The title tag sets the title of the page to "Example Page".</p> -->
+
+    <!-- Continue The Material Part 6 - Learn HTML Modern -->
+    
+    <!-- Chapter 31 - Meta Information -->
+    <h2>Chapter 31 - Meta Information</h2>
+
+    <p>Meta tags in HTML document provide useful information about the document including a description, keywords, and author, dates of modification, and around 90 other fields. The topic cover the usage and purpose of these tags.</p>
+
+    <!-- Chapter 31.1 - Page Information -->
+    <h3>31.1 - Page Information</h3>
+
+    <p>Meta tags are used to provide metadata about the HTML document. They are placed in the head section of the document and are not displayed on the webpage itself. Instead, they provide information to browsers, search engines, and other web services about the content and structure of the page.</p> 
+
+    <p><b><small>application-name</small></b></p>
+
+    <p>Giving the name of web application that the page represents.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            <!--&lt;meta name="application-name" content="My Web Application"&gt; -->
+
+            (meta name="application-name" content="OpenStreetMap")
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <meta name="application-name" content="OpenStreetMap">
+    </p>
+
+    <p>It's not web application, the application-name meta tag must not used.</p>
+
+    <h4>author</h4>
+    <p>Set the author of the page</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        (meta name="author" content="Your Name")
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <meta name="author" content="Your Name">
+    </p>
+
+    <p>Only one name can be given <!-- in the author meta tag.--> </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <h4>description</h4>
+    <p>Set the description of the page:</p>
+
+    <p>
+        <!--
+        <meta name="description" content="A brief description of the page">-->
+
+        (meta name="description" content="Page Description")
+    </p>
+
+    <p><b>Then Output:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <meta name="description" content="Page Description">
+    </p>
+
+    <p> The description meta tag can be used by various search engines while indexing your page for searching purpose. Usually, the description contained within the meta tag is the short summary that shows up under the page/webiste's main title in the search engine results. Google usually uses only the first 20-25 words of your description.</p>
+
+    <h4>generator</h4>
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        (meta name="generator" content="HTML Generator 1.42")
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <meta name="generator" content="HTML Generator 1.42">
+    </p>
+
+    <p>Identifies one of the software packages used to generate the document. Only to be used for page where the markup is automatically generated.</p>
+
+    <br> <!-- Spacing line like enter  -->
+
+    <h4>keywords</h4>
+    <p>Set the keywords for the page:</p>
+
+    <p>
+        (meta name="keywords" content="Keyword1, Keyword2, Keyword3")
+    </p>
+
+    <p><b>Then Output:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <meta name="keywords" content="Keyword1, Keyword2, Keyword3">
+    </p>
+
+    <p>The keyboard meta tag is sometimes used by search engines to know the search query which is relevant to your page.</p>
+
+    <p>As rule of thumb, it is probably a good idea to not add too many words, as most search engines that use this meta tag for indexing will only the first - 20 words. Make sure that you put the most important keyword first.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 31.2 - Character Encoding -->
+    <h3>31.2 - Character Encoding</h3>
+
+    <p>The charset attribute specifies the character encoding for the HTML document and needs to be a valid character encoding (examples includes windows-1252, ISO-8859-2, Shift_JTS, and UTF-8). UTF-8 is the most widely used and should be used for any new project.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (meta charset="UTF-8")
+            (meta charset="ISO-8859-1")
+        </b>
+    </p>
+
+    <p>All the browsers have always recognized the <b>(meta charset)</b> form, but if you for some reason need your page to be valid HTML 4.01, you can use the following instead:</p>
+
+    <p>
+        <b>
+            (meta http-equiv="Content-Type" content="text/html; charset=UTF-8")
+            (meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1")
+        </b>
+    </p>
+
+    <p>See also the <a href="https://encoding.spec.whatwg.org/#names-and-labels"><u>Encoding Standard</u></a>, to view all available character encodings labels that browser recognize.</p>
+
+    <!-- Chapter 31.3 - Robots -->
+    <h3>31.3 - Robots</h3>
+
+    <p>The robots attribute, supported by several major search engines, controls whether search engine spiders are allowed to index a page or not and whether they should follow links from a page or not.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <!--
+        (meta name="robots" content="index, follow")
+        (meta name="robots" content="noindex, nofollow")-->
+
+        (meta name="robots" content="noindex")
+    </p>
+
+    <p><b>Then Output:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <meta name="robots" content="noindex">
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <p>The example instructs all search engines to not show the page in search results. Other allowed values are:</p>
+
+    <!-- Emmet HTML code is: table>(thead>tr>th*2)+(tbody>tr*12>td*2) -->
+    <table>
+        <thead>
+            <tr>
+                <th><b>Value/Directive</b></th>
+                <th><b>Meaning</b></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>all</td>
+                <td><b>Default.</b>Equivalent to index, follow. See note below.</td>
+            </tr>
+            <tr>
+                <td>noindex</td>
+                <td>Do not index the page all.</td>
+            </tr>
+            <tr>
+                <td>nofollow</td>
+                <td>Do not follow the links on this page.</td>
+            </tr>
+            <tr>
+                <td>follow</td>
+                <td>The links on the page can be followed. See note below.</td>
+            </tr>
+            <tr>
+                <td>none</td>
+                <td>Equivalent to noindex, nofollow.</td>
+            </tr>
+            <tr>
+                <td>noarchieve</td>
+                <td>Do not make a cached version of this page available in search results.</td>
+            </tr>
+            <tr>
+                <td>noache</td>
+                <td>Synonym of noarchive used by some bots such as bing.</td>
+            </tr>
+            <tr>
+                <td>nosnippet</td>
+                <td>Do not show a snippet if this page in search results.</td>
+            </tr>
+            <tr>
+                <td>noodp</td>
+                <td>Do not use metadata of this page from the <a href="http://dmoz.org/"><u>Open Directory project</u></a> for titles for snippets in search results.</td>
+            </tr>
+            <tr>
+                <td>notranslate</td>
+                <td>Do not offer translation of this page in search results.</td>
+            </tr>
+            <tr>
+                <td>noimageindex</td>
+                <td>Do not index image on this page.</td>
+            </tr>
+            <tr>
+                <td>unavailable_after [RFC-850 date/time]</td>
+                <td>Do not show this page in search results after the specified date/time. The date/time must be specified in the <a href="http://www.ietf.org/rfc/rfc0850.txt"><u>RFC 850 format.</u></a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><b>Note:</b> Explicitly defining index and/or follow, while valid values, is not necessary as prettty much all search engines will asume they are allow to do so if not explicitly prevented from doing so. Similar to how the robots.txt file operates, search engines generally only look for things they are <i>not allowed</i> to do. only stating things a search engin isn't allowed to do also prevents accidentally stating opposites (sucg as <small>index, ..., noindex)</small> which not all search engines will treat in the same way. </p>
+
+    <br> <!-- Spacing line like enter -->
+
+
+    <!-- Chapter 31.4 - Social Media -->
+    <h3>31.4 - Social Media</h3>
+
+    <p>Open Graph is a standard for metadata that extends the normal information contained within a site's head markup. This enables website such as Facebook to display and richer information about a webiste in a structured format. This information is then automatically displayed when users share links to websites containing OG metadata on Facebook.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (meta property="fb:app_id" content="123456789") <br>
+            (meta property="og:url" content="https://example.com/page.html")   <br>
+            (meta property="og:type" content="website") <br>
+            (meta property="og:title" content="Content Title")  <br>
+            (meta property="og:image" content="https://example.com/image.jpg")  <br>
+            (meta property="og:description" content="Description Here") <br>
+            (meta property="og:site_name" content="Site Name")  <br>
+            (meta property="og:locale" content="en_US") <br>
+            (meta property="article:author" content="Author Name")  <br>
+            <br><!-- Spacing Line like enter -->
+
+            (!-- Facebook: https://developers.facebook.com/docs/sharing/webmasters#mrkup --)    <br>
+            (!-- Open Graph: https://ogp.me/ --)
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is --> 
+    <p>
+        <meta property="fb:app_id" content="123456789">
+        <meta property="og:url" content="https://example.com/page.html">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Content Title">
+        <meta property="og:image" content="https://example.com/image.jpg">
+        <meta property="og:description" content="Description Here">
+        <meta property="og:site_name" content="Site Name">
+        <meta property="og:locale" content="en_US">
+        <meta property="article:author" content="Author Name">
+        <!-- Facebook: https://developers.facebook.com/docs/sharing/webmasters#mrkup -->
+        <!-- Open Graph: https://ogp.me/ -->
+
+        <ul>
+            <li><a href="https://developers.facebook.com/docs/instant-articles/guides/articlecreate"><u> Facebook Instant Articles: Creating Articles</u></a></li>
+            <li><a href="https://developers.facebook.com/docs/instant-articles/reference"><u>Instant Articles: Format Reference</u></a></li>
+        </ul>
+    </p>
+
+    <p>Twitter uses its own markup for metadata. This metadata is used as information to control how tweets are displayed when they contain a link to the site.</p>
+
+    <p><b>Twitter</b></p>
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@site_account">
+        <meta name="twitter:creator" content="@individual_account">
+        <meta name="twitter:url" content="https://example.com/page.html">
+        <meta name="twitter:title" content="Content Title">
+        <meta name="twitter:description" content="Content description less than 200 characters">
+        <meta name="twitter:image" content="https://example.com/image.jpg"> 
+
+        <ul>
+            <li><a href="https://dev.twitter.com/cards/getting-started"><u>Twitter Cards: Getting Started</u></a></li>
+
+            <li><a href="https://dev.twitter.com/docs/cards/validation/validator"><u>Twitter Cards Validator</u></a></li>
+
+            <li><a href="https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup"><u>Twitter Cards: Markup Reference</u></a></li>
+        </ul>
+
+        <!-- Twitter: https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup -->
+    </p>
+
+    <!-- Chapter 31.5 - Mobile Layout Control -->
+    <h3>31.5 - Mobile Layout Control</h3>
+
+    <p>Common mobile-optimized sites use the <b>(meta name="viewport")</b> tag like this:</p>
+
+    <p><b>Input this code is:</b></p>
+    <p>
+        <b>
+            (meta name="viewport" content="width=device-width, initial-scale=1.0")
+        </b>
+    </p>
+
+    <p>The Viewport element gives the browsers instructions on how to conttrol the page's dimensions and scalling based on the device you are using.</p>
+
+    <p>In the above example, <b> content="width=device-width,</b> means that the browser will render the width of the page at the width of its own screen. So if that screen is 480px wide. Initial-scale-1 depicts that the initial zoom (which is 1 in this case, means it does not zoom)</p>
+
+    <p>Belwo are the attributes this tag supports:</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Emmet HTML code is : table>(thead>tr>th*2)+(tbody>tr*6>td*2) -->
+    <table>
+        <thead>
+            <tr>
+                <th><b>Attribute</b></th>
+                <th><b>Description</b></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>width</td>
+                <td>The width of the virtual viewport of the device. <br>
+                Values 1: Device-width or the actual width in pixels like <b>480</b></td>
+            </tr>
+            <tr>
+                <td>height</td>
+                <td>The height of the virtual viewport of the device. <br> Values 2: Device-width or the actual height in pixels like <b>600</b></td>
+            </tr>
+            <tr>
+                <td>initial-scale</td>
+                <td>The initial zoom when the page is loaded. 1.0 does not zoom</td>
+            </tr>
+            <tr>
+                <td>minimum-scale</td>
+                <td>The minimum amount the visitor can zoom on the page. 1.0 does not zoom</td>
+            </tr>
+            <tr>
+                <td>maximum-scale</td>
+                <td>The maximum amount the visitor can zoom on the page. 1.0 does not zoom</td>
+            </tr>
+            <tr>
+                <td>user-scalable</td>
+                <td>Allows the device to zoom ini and out. Values are yes or no. If set to no, the user is not able to zoom in the webpage. The default is yes. Browser settings can ignore this rules.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><b>Notes:</b></p>
+    <ul>
+        <li>The width property can be either specified in <i>pixels</i> (width-600) or by <i>device-width</i> (width-device-width) which represents the physical width of the device's screen.</li>
+        
+        <li>Similarly the height property can be either specified in pixels (height-600) or by <i>device-height</i> (height-device-height) which represents the physical height of the device's screen.</li>
+    </ul>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 31.6 - Automatic Refresh -->
+    <h3>31.6 - Automatic Refresh</h3>
+
+    <p>TO refresh the page every 5 seconds, add this meta element in the head element:</p>
+    <p>
+        <b>
+            (meta http-equiv="refresh" content="5")
+        </b>
+    </p>
+
+    <p><b>CAUTION!</b> While this is a valid command, it is recommended that you do not use it because of its negatve effects on user experienc. Refreshing the page too often can cause it to become unresponsive, and often scrolls to the top of the page. If some information on the page needs to be updated continuously, there are much better ways to do that by only refreshing a portion of a page.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 31.7 - Phone Number Recognition -->
+    <h3>31.7 - Phone Number Recognition</h3>
+
+    <p>Mobile platform like iOS automatically recognize phone numbers and turn them into tel: links. While the feauture is very practical, the system sometimes detects ISBN codes and other numbers as telephone numbers.</p>
+
+    <p>For mobile safari and some other Webkit-based mobile browsers to turn off automatic phone number recognition and formatting, you need this meta tag:</p>
+    <p>
+        <b>
+            (meta name="format-detection" content="telephone=no")
+        </b>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- chapter 31.8 - Automatic redirect -->
+    <h3>31.8 - Automatic Redirect</h3>
+
+    <p>Sometimes your website needs a automatic redirect.</p>
+
+    <p>For example, to redirect to example.com after 5 second:</p>
+    <p>
+        <b>
+            (meta http-equiv="refresh" content="5; url=https://example.com")
+        </b>
+    </p>
+
+    <p>This is line will send you to the designed website (in this case example.com after 5 seconds).</p>
+
+    <p>If you need to change the time delay before a redirect, simply changing the number rigtht before your ;url=will after the time delay.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 31.9 - Web App -->
+    <h3>31.9 - Web App</h3>
+    
+    <p>You can set up your web app or website to have an application shourcur icon added to device's homescreen, and have the app launch in full screen "app mode" using chrome for Android's <a href="https://developer.chrome.com/multidevice/android/installtohomescreen"><u>Add to homescreen</u></a> menu item.</p>
+
+    <p>Below meta tag(s) will open web app in full-screen mode(without address bar.)</p>
+
+    <p><b>Android Chrome</b></p>
+    <p>
+        <b>
+            (meta name="mobile-web-app-capable" content="yes")
+        </b>
+    </p>
+
+    <p><b>iOS Safari</b></p>
+    <p>
+        <b>
+            (meta name="apple-mobile-web-app-capable" content="yes")
+        </b>
+    </p>
+
+    <p>You can also set color for status bar and address bar in meta tag:</p>
+
+    <p><b>Android Chrome</b></p>
+    <p>
+        <b>
+            (meta name="theme-color" content="#4285f4/black")
+        </b>
+    </p>
+
+    <p><b>iOS Safari</b></p>
+    <p>
+        <b>
+            opsi 1:
+            (meta name="apple-mobile-web-app-status-bar-style" content="black")
+
+            opsi 2:
+            (meta name="apple-mobile-web-app-status-bar-style" content="black-translucent/black/default")
+        </b>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+
+                    <!-- Chapter 32 - Marking up computer code -->
+    <h2>Chapter 32 - Marking up computer code</h2>
+
+    <!-- Chapter 32.1 - Block with <pre> and <code> -->
+    <h3>32.1 - Block with &lt;pre&gt; and &lt;code&gt;</h3>
+
+    <p>If the formatting (white, space, new line, indentaion) of the code matters, use the pre element in combination with the code element:</p>
+    <p>
+        <pre><code>&lt;pre&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;</code></pre>
+    </p>
+
+    <p> Example:</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+        &emsp;&emsp;&lt;pre&gt; <br>
+        &emsp;&emsp;&emsp;&emsp;&lt;code&gt; <br>
+        &emsp;&emsp;&emsp;&emsp;&emsp;x = 42  <br>
+        &emsp;&emsp;&emsp;&emsp;&emsp;if x == 42: <br>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;print"x is ...  .  ... 42" <br>
+        <!--
+                    &lt;!-- print("The answer to the Ultimate Question of Life, The Universe, and Everything")--&gt;-->
+        &emsp;&emsp;&emsp;&emsp;&lt;/code&gt; <br>
+        &emsp;&emsp;&lt;/pre&gt;
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <pre>
+            <code>
+                x = 42  <br>
+                if x == 42: <br>
+                    print"x is ...  .  ... 42"
+                <!--
+                    print("The answer to the Ultimate Question of Life, The Universe, and Everything")-->
+            </code>
+        </pre>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <p>You still have to escape characters with special meaning in HTML (like < with &lt; and > with  &gt;): si for <i>displaying</i> a block of HTML code (&lt;p&gt; This is a paragraph.&lt;/p&gt;). it could look like this:</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (pre)   <br>
+            &emsp;&emsp;(code)  <br>
+                    &emsp;&emsp;&emsp;&lt;p&gt; This is a paragrap.&lt;/p&gt; <br>
+            &emsp;&emsp;(/code) <br>
+            (/pre)
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <pre>
+            <code>
+                &lt;p&gt; This is a paragrap.&lt;/p&gt;
+            </code>
+        </pre>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 32.2 - Inline with <code> -->
+    <h3>32.2 - Inline with &lt;code&gt;</h3>
+
+    <p>If a sentence contains computer code (for example, the name of an HTML element), use the code element to mark it up:</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            &lt;p&gt; The &lt;code&gt; a &lt;/code&gt; </b> element creates a hyperlinks. <b>&lt;/p&gt;
+        </b>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    
+                    <!-- Chapter 33 - Marking-up Quotes-->
+    <h2>Chapter 33 - Marking-up Quotes</h2>
+
+    <!-- Chapter 33.1 - Inline with <q> -->
+    <h3>33.1 - Inline with &lt;q&gt; </h3>
+
+    <p>The q <b>element</b> can be used for a quote that is part of a sentence</p>
+
+    <p>&lt;p&gt;She wrote &lt;q&gt; The answer is 42. &lt;/q&gt;and everyone agreed&lt;/p&gt;</p>
+
+    <h4>Quotation marks</h4>
+    <p><small>Version ≤ 4.01</small></p>
+
+    <p>Quotation marks should not be added. User agents should (in HTML 4.01) resp. must(in HTML 4.0) render them automatically</p>
+
+    <p><small>Version ≤ 5</small></p>
+
+    <p>Quotation marks must not be added. User agents will render them automatically.</p>
+
+    <h4>Source URL (<small>cite</small> attribute)</h4>
+
+    <p> &lt;p&gt; She wrote &lt;q cite="http://example.com/blog/hello-world"&gt; The answer is 42.&lt;/q&gt; and everyone agreed. </p>
+
+    <p>Note that browsers typically don't show this URL, so if the source is relevant, you should add a hyperlink (a element) in addition.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- chapter 33.2 - Block with <blockquote> -->
+    <h3>33.2 - Block with &lt;blockquote&gt;</h3>
+
+    <p> The <b>blockquote element</b> can be used for a (block-level) quote.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            &lt;blockquote&gt; <br>
+            &emsp;&emsp;&lt;p&gt; The answer is 42.&lt;/p&gt; <br>
+            &lt;/blockquote&gt; <br>
+
+            SOURCe URL (cite attribute) <br>
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <blockquote>
+            <p>The answer is 42.</p>
+        </blockquote>
+    </p>
+
+    <p><b>Source URL (cite attribute)</b></p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <p>The <b>cite attribute</b> can be used to reference the URL of the quoted source:</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            &lt;blockquote cite="http://example.com/blog/hello-world"&gt; <br>
+            &emsp;&emsp;&lt;p&gt; The answer is 42.&lt;/p&gt; <br>
+            &lt;/blockquote&gt;
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <blockquote cite="http://example.com/blog/hello-world">
+            <p>The answer is 42.</p>
+        </blockquote>
+    </p>
+
+    <p>Note that browsers typically don't show the this URL, so if the source is relevant, you should add a hyperlink (a element) in addition (see the section <i>Citation/attribute</i>) about where to place this link</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <h4>Citation/attribute</h4>
+    <p><small>Version ≤ 4.01</small></p>
+
+    <p>The citation/attribute should not be part of blockquote element:</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            &lt;blockquote cite="http://example.com/blog/hello-world"&gt; <br>
+            &emsp;&emsp;&lt;p&gt; The answer is 42.&lt;/p&gt; <br>
+            &lt;/blockquote&gt; <br>
+            &lt;a href="http://example.com/blog/hello-world"&gt;Source&lt;/a&gt;
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <blockquote>
+            <p>The answer is 42.</p>
+        </blockquote>
+        <p>Source <cite><a href="http://example.com/blog/hello-world" rel="externalk">Hello World</a></cite></p>
+    </p>
+
+    <p>You can add a div element to group and the citation, but it exists no way to associate the semantically.</p>
+
+    <p>The <b>cite element</b> is used to reference of the quoted source (but not for the author name).</p>
+
+    <p><small>Version ≤ 5</small></p>
+
+    <p>The citation/attribute (e.g., the hyperlink giving the source URL) can be inside the blockquote, but in that case it must be within a cite element (for in-text attribution) or a footer element:</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            &lt;blockquote cite="http://example.com/blog/hello-world"&gt; <br>
+            &emsp;&emsp;&lt;p&gt; The answer is 42.&lt;/p&gt; <br>
+            &lt;/blockquote&gt;
+        </b>
+    </p>
+
+    <p>The <b>cite element</b> can be used for the reference of the quoted source, or for the name quote's author.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+
+                    <!-- Chapter 34 - Tabindex -->
+    <h2>Chapter 34 - Tabindex</h2>
+
+    <!-- Emmet HTML code is : table>(thead>tr>th*2)+(tbody>tr*3>td*2) -->
+    <table>
+        <thead>
+            <tr>
+                <th><b>Value</b></th>
+                <th><b>Meaning</b></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>negative</td>
+                <td>element will be focusable, but it should not be reachable via sequential keyboard navigation</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>element will be focusable and reachable through keyboard sequential navigation, but it's relative order is defined by the platform conversation.</td>
+            </tr>
+            <tr>
+                <td>positive</td>
+                <td>element must be focusable and accessible via sequential keyboard navigation, it's relative order will be defined by the attribute value: the sequential follow the increasing number of the tabindex.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br><!-- Spacing line like enter -->
+
+    <!-- Chapter 34.1 - Add an element to the tabbing order -->
+    <h3>34.1 - Add an element to the tabbing order</h3>
+
+    <p>
+        &lt;div tabindex="0"&gt; Some button &lt;/div&gt;   <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        Then Output code is :
+        <!-- Output code is -->
+
+        <br> <!-- Spacing line like enter -->
+
+        <div tabindex="0">Some button</div>
+    </p>
+
+    <p><b>Note:</b> Try to use a native HTML button or an a tag where appropriate.</p>
+
+
+    <br><!-- Spacing line like enter -->
+
+    <!-- Chapter 34.2 - Remove an element from the tabbing order  -->
+    <h3>34.2 - Remove an element from the tabbing order</h3>
+
+    <p>
+        &lt;button tabinder="-1"&gt; This button will not be reachable by tab &lt;/button&gt;   <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        Then Output code is: 
+
+        <br> <!-- Spacing line like enter -->
+
+        <button tabindex="-1">This button will be reachable by tab</button>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 34.3 - Define a custom tabbing order (not recommended) -->
+    <h3> 34.3 - Define a custom tabbing order (not recommended) </h3>
+
+    <p>
+        &lt;div tabindex="2"&gt; Second &lt;/div&gt; <br>
+        &lt;div tabindex="1"&gt; First &lt;/div&gt;  <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        Then Output code is:
+
+        <br><!-- Spacing line like enter -->
+
+        <div tabindex="2">Seond</div>
+        <div tabindex="1">First</div>
+    </p>
+
+    <p>
+        Positive Values will insert the element at the tabbing order position of its respective value. Elements without preference (i.e. tabindex="0" or native elements such as button and a) will appended after those wiht preference.
+
+        <br> <!-- Spacing line like enter -->
+        <br> <!-- Spacing line like enter -->
+
+        Positive value are <b>not recommended</b> as the disrupt the expected behavior of tabbing and might confuse people who rely on screenreaders. Try to create a natural order by rearagging your DOM structure
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+
+                    <!-- Chapter  35 - Contenteditable Attribute -->
+    <h2> Chapter 35 - Contenteditable Attribute </h2>
+
+    <p>
+        &lt;p contenteditable&gt; This is an editable paragraph &lt;/p&gt;   <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        Uppon clicking on the paragraph, the content of it can be edited similar to an input text field.    <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        When the contenteditable attribute is note set on an element, the element will inherit it from its parent. So all child text of a contenext aditable element will also be editable, but you <i>can</i> off for specific text, like :    <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        &lt;p contenteditable&gt;   <br>
+        &ensp;This is an editable paragraph     <br>
+        &ensp;&lt;Span contentidatable="false"&gt; But not this &lt;/span&gt;   <br>
+        &lt;/p&gt;  <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <p contentidable>
+            This is an editable paragraph   <br>
+            <span contentidatable="false">But not this</span>
+        </p>
+
+        <br> <!-- Spacing line like enter -->
+        <br> <!-- Spacing line like enter -->
+
+        Note that an uneditable text element inside an aditable element will still have a text cursor as Inherited from its parent as well
+    </p>
+
+</body>
+</html>
