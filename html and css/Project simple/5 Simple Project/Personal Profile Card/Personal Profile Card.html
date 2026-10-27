@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeremi · Profile Card</title>
+  
+  <!-- Menghubungkan file CSS eksternal -->
+  <link rel="stylesheet" href="Personal Profile Card.css">
+  
+  <!-- Mengambil font Inter dari Google Fonts untuk tampilan modern -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ============ DARK MODE TOGGLE (Floating Button) ============ -->
+  <!-- Tombol melayang di kanan atas untuk mengubah tema terang/gelap -->
+  <div class="theme-toggle" id="themeToggle" role="button" tabindex="0" aria-label="Toggle dark mode">
+    <span>🌙</span> Dark mode
+  </div>
+
+  <!-- ============ PROFILE CARD ============ -->
+  <!-- Kartu utama yang menampung semua info profil dengan efek glassmorphism -->
+  <div class="profile-card">
+
+    <!-- Foto profil dengan gradient ring melingkar -->
+    <div class="avatar-wrapper">
+    <img 
+    class="avatar" 
+    src="https://instagram.fpku1-2.fna.fbcdn.net/v/t51.82787-19/670420847_17885537712492301_2089070547416969840_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=GG-P9ScNT-hBzYo-AHDyhDGY3v0cbmNDAQAB0j-ccb7-5&ccb=7-5&_nc_sid=669407&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=cXnUxMPuO_0Q7kNvwEolicA&_nc_oc=Adrp-4Cnmt_vrpdEumuxWxH80hEM0y9alroICKPEh64MWE5XV3pooK2GJdwGvE8YgIQ&_nc_zt=24&_nc_ht=instagram.fpku1-2.fna&_nc_gid=MYeq-z5r_m5-qiTrIy2wkA&_nc_ss=7baaf&oh=00_AQMX-ot299ldv71hZLdixds_8zhzghZTZc8ylfEn31n64A&oe=6AE66389"
+    alt="Foto profil Jeremi"
+    referrerpolicy="origin-when-cross-origin"
+    onerror="this.onerror=null;this.src='https://ui-avatars.com/api/?name=Jeremi&background=7f5af0&color=fff&size=128&bold=true&font-size=0.5';"
+    >
+    </div>
+
+    <!-- Nama pengguna -->
+    <h1>Jeremi</h1>
+
+    <!-- Jabatan / profesi dengan efek gradient text -->
+    <div class="job-title">Web Developer</div>
+
+    <!-- Bio singkat pengguna -->
+    <p class="bio">
+      We can do anything with we ambitions and goals
+    </p>
+
+    <!-- Baris ikon/tautan sosial media (Youtube, Linkedin, Pinterest, Instagram, Tiktok) -->
+    <div class="socials">
+      <a href="#" class="social-link" aria-label="YouTube">Youtube</a>
+      <a href="#" class="social-link" aria-label="LinkedIn">Linkedin</a>
+      <a href="#" class="social-link" aria-label="Pinterest">Pinterest</a>
+      <a href="#" class="social-link" aria-label="Instagram">Instagram</a>
+      <a href="#" class="social-link" aria-label="TikTok">Tiktok</a>
+    </div>
+
+    <!-- Tombol kontak dengan gradient background -->
+    <button class="contact-btn">
+      ✉️ Contact me
+    </button>
+
+  </div>
+
+  <!-- ============ JAVASCRIPT: DARK MODE LOGIC ============ -->
+  <script>
+    (function () {
+      const html = document.documentElement;
+      const toggleBtn = document.getElementById('themeToggle');
+
+      // Cek tema yang tersimpan di localStorage, jika ada gunakan itu
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        html.setAttribute('data-theme', savedTheme);
+        updateToggleText(savedTheme);
+      } else {
+        // Jika tidak ada, cek preferensi sistem operasi (prefers-color-scheme)
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = prefersDark ? 'dark' : 'light';
+        html.setAttribute('data-theme', theme);
+        updateToggleText(theme);
+      }
+
+      // Fungsi untuk mengganti teks & ikon tombol toggle sesuai tema
+      function updateToggleText(theme) {
+        if (theme === 'dark') {
+          toggleBtn.innerHTML = '<span>☀️</span> Light mode';
+        } else {
+          toggleBtn.innerHTML = '<span>🌙</span> Dark mode';
+        }
+      }
+
+      // Event klik: ganti tema, simpan ke localStorage, update teks
+      toggleBtn.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        updateToggleText(next);
+      });
+
+      // Dukungan keyboard (Enter / Space) untuk aksesibilitas
+      toggleBtn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleBtn.click();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
