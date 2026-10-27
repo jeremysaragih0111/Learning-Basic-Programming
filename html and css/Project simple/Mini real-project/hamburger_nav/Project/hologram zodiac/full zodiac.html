@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zodiak Hologram 3D | 12 Rasi Bintang</title>
+    <link rel="stylesheet" href="layout.css">
+    <!-- Font Awesome untuk ikon tambahan (opsional) -->
+    <link rel="stylesheet" href="full zodiac.css" >
+</head>
+<body>
+    <!-- Background Slideshow -->
+    <div class="bg-slideshow" id="bgSlideshow"></div>
+
+    <!-- Header dengan animasi ala TypeScript -->
+    <header class="ts-header">
+        <h1 class="glitch" data-text="Zodiak Hologram">Zodiak Hologram</h1>
+        <div class="ts-animation">
+            <span class="ts-text">12 Rasi Bintang 3D</span>
+            <span class="ts-cursor">|</span>
+        </div>
+        <p class="subtitle">Klik lambang zodiak untuk melihat hologram hidup</p>
+    </header>
+
+    <!-- Grid Zodiak (12 zodiak) -->
+    <main class="zodiac-grid" id="zodiacGrid">
+        <!-- Aries -->
+        <div class="zodiac-card" data-zodiac="aries" data-element="api" data-symbol="♈" data-name="Aries" data-dates="21 Mar - 19 Apr" data-description="Pelopor, berani, dan penuh semangat. Api yang tak pernah padam.">
+            <div class="hologram">
+                <div class="symbol">♈</div>
+                <h2>Aries</h2>
+                <p>21 Mar - 19 Apr</p>
+                <small>Api</small>
+            </div>
+            <audio class="zodiac-sound" preload="auto" src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_8a6b0a4c4c.mp3?filename=fire-2-80315.mp3"></audio>
+        </div>
+
+        <!-- Taurus -->
+        <div class="zodiac-card" data-zodiac="taurus" data-element="tanah" data-symbol="♉" data-name="Taurus" data-dates="20 Apr - 20 Mei" data-description="Stabil, sabar, dan menghargai keindahan. Kokoh seperti batu.">
+            <div class="hologram">
+                <div class="symbol">♉</div>
+                <h2>Taurus</h2>
+                <p>20 Apr - 20 Mei</p>
+                <small>Tanah</small>
+            </div>
+            <audio class="zodiac-sound" preload="auto" src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0b3f0c6c6.mp3?filename=earth-sound-2-7223.mp3"></audio>
+        </div>
+
+        <!-- Gemini -->
+        <div class="zodiac-card" data-zodiac="gemini" data-element="udara" data-symbol="♊" data-name="Gemini" data-dates="21 Mei - 20 Jun" data-description="Komunikatif, cerdas, dan serba bisa. Bagaikan angin yang berubah.">
+            <div class="hologram">
+                <div class="symbol">♊</div>
+                <h2>Gemini</h2>
+                <p>21 Mei - 20 Jun</p>
+                <small>Udara</small>
+            </div>
+            <audio class="zodiac-sound" preload="auto" src="https://cdn.pixabay.com/download/audio/2021/11/25/audio_d1c9b8f6c8.mp3?filename=wind-3-8048.mp3"></audio>
+        </div>
+
+        <!-- Cancer -->
+        <div class="zodiac-card" data-zodiac="cancer" data-element="air" data-symbol="♋" data-name="Cancer" data-dates="21 Jun - 22 Jul" data-description="Emosional, intuitif, dan protektif. Dalam seperti lautan.">
+            <div class="hologram">
+                <div class="symbol">♋</div>
+                <h2>Cancer</h2>
+                <p>21 Jun - 22 Jul</p>
+                <small>Air</small>
+            </div>
+            <audio class="zodiac-sound" preload="auto" src="https://cdn.pixabay.com/download/audio/2021/08/09/audio_5d7c0f7b0f.mp3?filename=water-2-82130.mp3"></audio>
+        </div>
+
+        <!-- Leo -->
+        <div class="zodiac-card" data-zodiac="leo" data-element="api" data-symbol="♌" data-name="Leo" data-dates="23 Jul - 22 Agu" data-description="Karismatik, kreatif, dan dermawan. Bersinar seperti matahari.">
+            <div class="hologram">
+                <div class="symbol">♌</div>
+                <h2>Leo</h2>
+                <p>23 Jul - 22 Agu</p>
+                <small>Api</small>
+            </div>
+            <audio class="zodiac-sound" preload="auto" src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_8a6b0a4c4c.mp3?filename=fire-2-80315.mp3"></audio>
+        </div>
+
+        <!-- Virgo -->
+        <div class="zodiac-card" data-zodiac="virgo" data-element="tanah" data-symbol="♍" data-name="Virgo" data-dates="23 Agu - 22 Sep" data-description="Analitis, praktis, dan setia. Teratur seperti bumi.">
+            <div class="hologram">
+                <div class="symbol">♍</div>
+                <h2>Virgo</h2>
+                <p>23 Agu - 22 Sep</p>
+                <small>Tanah</small>
+            </div>
+            <audio class="zodiac-sound" preload="auto" src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0b3f0c6c6.mp3?filename=earth-sound-2-7223.mp3"></audio>
+        </div>
+
+        <!-- Libra -->
+        <div class="zodiac-card" data-zodiac="libra" data-element="udara" data-symbol="♎" data-name="Libra" data-dates="23 Sep - 22 Okt" data-description="Seimbang, diplomatis, dan artistik. Harmonis seperti angin sepoi.">
+            <div class="hologram">
+                <div class="symbol">♎</div>
+                <h2>Libra</h2>
+                <p>23 Sep - 22 Okt</p>
+                <small>Udara</small>
+            </div>
+            <audio class="zodiac-sound" preload="auto" src="https://cdn.pixabay.com/download/audio/2021/11/25/audio_d1c9b8f6c8.mp3?filename=wind-3-8048.mp3"></audio>
+        </div>
+
+        <!-- Scorpio -->
+        <div class="zodiac-card" data-zodiac="scorpio" data-element="air" data-symbol="♏" data-name="Scorpio" data-dates="23 Okt - 21 Nov" data-description="Intens, penuh gairah, dan misterius. Dalam seperti jurang.">
+            <div class="hologram">
+                <div class="symbol">♏</div>
+                <h2>Scorpio</h2>
+                <p>23 Okt - 21 Nov</p>
+                <small>Air</small>
+            </div>
+            <audio class="zodiac-sound" preload="auto" src="https://cdn.pixabay.com/download/audio/2021/08/09/audio_5d7c0f7b0f.mp3?filename=water-2-82130.mp3"></audio>
+        </div>
+
+        <!-- Sagitarius -->
+        <div class="zodiac-card" data-zodiac="sagittarius" data-element="api" data-symbol="♐" data-name="Sagitarius" data-dates="22 Nov - 21 Des" data-description="Optimis, petualang, dan jujur. Membara seperti api.">
+            <div class="hologram">
+                <div class="symbol">♐</div>
+                <h2>Sagitarius</h2>
+                <p>22 Nov - 21 Des</p>
+                <small>Api</small>
+            </div>
+            <audio class="zodiac-sound" preload="auto" src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_8a6b0a4c4c.mp3?filename=fire-2-80315.mp3"></audio>
+        </div>
+
+        <!-- Capricorn -->
+        <div class="zodiac-card" data-zodiac="capricorn" data-element="tanah" data-symbol="♑" data-name="Capricorn" data-dates="22 Des - 19 Jan" data-description="Ambisius, disiplin, dan bertanggung jawab. Kokoh seperti gunung.">
+            <div class="hologram">
+                <div class="symbol">♑</div>
+                <h2>Capricorn</h2>
+                <p>22 Des - 19 Jan</p>
+                <small>Tanah</small>
+            </div>
+            <audio class="zodiac-sound" preload="auto" src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0b3f0c6c6.mp3?filename=earth-sound-2-7223.mp3"></audio>
+        </div>
+
+        <!-- Aquarius -->
+        <div class="zodiac-card" data-zodiac="aquarius" data-element="udara" data-symbol="♒" data-name="Aquarius" data-dates="20 Jan - 18 Feb" data-description="Inovatif, mandiri, dan humanis. Bebas seperti angin.">
+            <div class="hologram">
+                <div class="symbol">♒</div>
+                <h2>Aquarius</h2>
+                <p>20 Jan - 18 Feb</p>
+                <small>Udara</small>
+            </div>
+            <audio class="zodiac-sound" preload="auto" src="https://cdn.pixabay.com/download/audio/2021/11/25/audio_d1c9b8f6c8.mp3?filename=wind-3-8048.mp3"></audio>
+        </div>
+
+        <!-- Pisces -->
+        <div class="zodiac-card" data-zodiac="pisces" data-element="air" data-symbol="♓" data-name="Pisces" data-dates="19 Feb - 20 Mar" data-description="Empati, artistik, dan intuitif. Mengalir seperti air.">
+            <div class="hologram">
+                <div class="symbol">♓</div>
+                <h2>Pisces</h2>
+                <p>19 Feb - 20 Mar</p>
+                <small>Air</small>
+            </div>
+            <audio class="zodiac-sound" preload="auto" src="https://cdn.pixabay.com/download/audio/2021/08/09/audio_5d7c0f7b0f.mp3?filename=water-2-82130.mp3"></audio>
+        </div>
+    </main>
+
+    <!-- Modal untuk tampilan detail hologram -->
+    <div class="modal" id="zodiacModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-hologram">
+                <div class="modal-symbol" id="modalSymbol"></div>
+                <h2 id="modalName"></h2>
+                <p id="modalDates"></p>
+                <p class="modal-element" id="modalElement"></p>
+                <p class="modal-description" id="modalDescription"></p>
+                <div class="hologram-effect"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Backsound utama (otomatis) -->
+    <audio id="backsound" autoplay loop>
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8e1b0a6f0.mp3?filename=ambient-piano-amp-strings-10711.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Jeremi Saragih - Zodiac Hologram 12 Rasi</p>
+        <nav>
+            <a href="#privacy">Kebijakan Privasi</a> |
+            <a href="#terms">Syarat & Ketentuan</a>
+        </nav>
+    </footer>
+
+    <script>
+        // Background slideshow
+        const images = [
+            'https://picsum.photos/id/1043/1920/1080',
+            'https://picsum.photos/id/106/1920/1080',
+            'https://picsum.photos/id/119/1920/1080',
+            'https://picsum.photos/id/126/1920/1080',
+            'https://picsum.photos/id/127/1920/1080',
+            'https://picsum.photos/id/128/1920/1080'
+        ];
+        let currentIndex = 0;
+        const bg = document.getElementById('bgSlideshow');
+        function changeBg() {
+            bg.style.backgroundImage = `url('${images[currentIndex]}')`;
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+        changeBg();
+        setInterval(changeBg, 5000);
+
+        // Efek suara per zodiak saat hover
+        const cards = document.querySelectorAll('.zodiac-card');
+        let currentAudio = null;
+
+        cards.forEach(card => {
+            const sound = card.querySelector('.zodiac-sound');
+            card.addEventListener('mouseenter', () => {
+                if (currentAudio && !currentAudio.paused) {
+                    currentAudio.pause();
+                    currentAudio.currentTime = 0;
+                }
+                if (sound) {
+                    sound.volume = 0.5;
+                    sound.play().catch(e => console.log('Autoplay dicegah browser:', e));
+                    currentAudio = sound;
+                }
+            });
+            card.addEventListener('mouseleave', () => {
+                if (currentAudio && !currentAudio.paused) {
+                    currentAudio.pause();
+                    currentAudio.currentTime = 0;
+                    currentAudio = null;
+                }
+            });
+        });
+
+        // Modal interaksi klik
+        const modal = document.getElementById('zodiacModal');
+        const closeBtn = document.querySelector('.close-modal');
+        const modalSymbol = document.getElementById('modalSymbol');
+        const modalName = document.getElementById('modalName');
+        const modalDates = document.getElementById('modalDates');
+        const modalElement = document.getElementById('modalElement');
+        const modalDescription = document.getElementById('modalDescription');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                // Ambil data dari atribut card
+                const symbol = card.dataset.symbol;
+                const name = card.dataset.name;
+                const dates = card.dataset.dates;
+                const element = card.dataset.element;
+                const description = card.dataset.description;
+
+                // Isi modal
+                modalSymbol.textContent = symbol;
+                modalName.textContent = name;
+                modalDates.textContent = dates;
+                modalElement.textContent = `Elemen: ${element}`;
+                modalDescription.textContent = description;
+
+                // Tambahkan kelas elemen untuk warna tema
+                modalElement.className = 'modal-element ' + element;
+
+                // Tampilkan modal
+                modal.style.display = 'flex';
+                setTimeout(() => {
+                    modal.classList.add('show');
+                }, 10);
+            });
+        });
+
+        // Tutup modal
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('show');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 400);
+        });
+
+        // Tutup modal jika klik di luar konten
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('show');
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                }, 400);
+            }
+        });
+
+        // Fallback backsound jika autoplay diblokir
+        window.addEventListener('load', function() {
+            const audio = document.getElementById('backsound');
+            audio.volume = 0.2;
+            audio.play().catch(() => {
+                const btn = document.createElement('button');
+                btn.innerText = '🔊 Putar Musik Latar';
+                btn.style.position = 'fixed';
+                btn.style.bottom = '20px';
+                btn.style.right = '20px';
+                btn.style.zIndex = 1000;
+                btn.style.padding = '10px 20px';
+                btn.style.background = '#00d2ff';
+                btn.style.border = 'none';
+                btn.style.borderRadius = '50px';
+                btn.style.cursor = 'pointer';
+                btn.style.fontWeight = 'bold';
+                btn.onclick = () => {
+                    audio.play();
+                    btn.remove();
+                };
+                document.body.appendChild(btn);
+            });
+        });
+    </script>
+</body>
+</html>
