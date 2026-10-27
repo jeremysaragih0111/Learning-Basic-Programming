@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> The Material Part 2 Learn HTML 5 Modern </title>
+</head>
+<body>
+    <!-- Continue Material Part 1 - Learn HTML 5 Modern -->
+
+                <!-- Chapter 6 - Table-->
+    <h2> Chapter 6 : Tables </h2>
+    
+    <p> The HTML <b>(table)</b> element allowws web authors to display tabular data (such as text, images, links, other tables, etc.) in a two dimensional table with rows and colums of cells.</p>
+
+    <!-- Chapter 6.1 - Simple Table -->
+    <h3>  6.1 - Simple Table </h3>
+    
+    <table>
+        <tr>
+            <th> Heading 1/Colum 1 </th>
+            <th> Heading 2/Colum 2 </th>
+        </tr>
+        <tr>
+            <td> Row 1 Data Column 1 </td>
+            <td> Row 2 Data Column 2 </td>
+        </tr>
+        <tr>
+            <td> Row 2 Data Column 1</td>
+            <td> Row 2 Data Column 2</td>
+        </tr>
+    </table>
+
+    <p> This will render a  <b>(table)</b> consisting of three total rows <b>(tr)</b>: one row of header cell <b>(th)</b> and two rows of content cell <b>(td)</b>. <b>(th)</b> elements are <i>tabular header</i> and <b>(td)</b> elements are <i>tabular data</i>. You can put whatever you want inside a <b>(td)</b> or <b>(th)</b> </p>
+
+    <p>
+        <b>Heading 1/Column 1Heading 2/Column 2</b>
+        <br> <!-- Spacing line like enter -->
+        Row 1 Data Column 1Row 1 Data Column 2 <br>
+        Row 2 Data Column 1Row 2 Data Column 2  <br>
+    </p>
+
+    <!-- Chapter 6.2 - Spanning columns or rows -->
+    <h3>  6.2 - Spanning columns or rows </h3>
+    <p> Table cells can span multiple columns or rows using the colspan and rowspan attributes. These attributes can be applied to <b>(th)</b> and <b>(td)</b> elements.</p>
+
+    <table>
+        <tr>
+            <td> row 1 col 1 </td>
+            <td> row 2 col 2 </td>
+            <td> row 3 col 3 </td>
+        </tr>
+        <tr>
+            <td colspan="3"> This second row spans all three columns </td>
+        </tr>
+        <tr>
+            <td rowspan="2"> This Cell spans two rows </td>
+            <td> row 3 col 2 </td>
+            <td> row 3 col 3 </td>
+        </tr>
+        <tr>
+            <td> row 4 col 2 </td>
+            <td> row 4 col 3 </td>
+        </tr>
+    </table>
+
+    <p> Note that you should not design a table where bot rows and colums overlap as this is invalid HTML and the result is handled differently by different web browsers. </p>
+
+    <p> rowspand = A non-negative integer that specifies the number of rows spanned by a cell. The default value of this attributes is one (1). A value of zero (0) means that the cell will extend from the current row until the last row of the table <b>(thead)</b>, <b>(tbody)</b>, <b>(tfoot)</b>.</p>
+
+    <p> colspan = A non-negative integer that specifies the number of columns spanned by the current cell. The default value of this attribute is one (1). A value of zero (0) means that the cell will extend from the current to the last column of the column group <b>(colgroup)</b> in which the cell is defined </p>
+
+    <!-- Chapter 6.3 - Column Groups -->
+    <h3>  6.3 - Column Groups </h3>
+
+    <p> Sometimes you may want to apply styling to a column or group of column, or for semantic purposes, you may want to group columns together. To do this, use <b>(colgroup)</b> and <b>(col)</b> elements. </p>
+
+    <p> The optional <b>(colgroup)</b> tag allows you to group columns together. <b>(colgroup)</b> elements must be child elements of a <b>(table)</b> and must come after any <b>(caption)</b>elements and before any table content (e.g., <b>(tr)</b>, <b>(thead)</b>, <b>(tbody)</b>, etc). </p>
+
+    <p><b>Input This code is:</b></p>
+    
+    <p>
+        <b>(table)</b> <br>
+            &emsp;(<b>colgroup span="2"</b>)  <br>
+            &emsp;(<b>colgroup span="2"</b>)   <br>
+        <b>(/table)</b>
+    </p>
+
+    <table>
+        <colgroup span="2"> </colgroup>
+        <colgroup span="2"> </colgroup>
+        ...
+    </table>
+
+    <p> The optional <b>(Col)</b> tag allows you to reference individual columns or a range of columns without applying a logical grouping. <b>(col)</b> elements are optional, but if present, they must be inside a <b>(colgroup)</b> element. </p>
+
+    <br><!-- Spacing line like enter -->
+
+    Input: 
+    
+    <br> <!-- Spacing line like enter -->
+    <br> <!-- Spacing line like enter -->
+
+    <b>(table)</b>  <br>
+        &emsp;&ensp;<b>(colgroup)</b>  <br>
+            &emsp;&emsp;&ensp;<b>(col id="MySpecialColumn" /)</b>    <br>
+            &emsp;&emsp;&ensp;<b>(col /)</b>    <br>
+        &emsp;&ensp;<b>(/colgroup)</b>     <br>
+        &emsp;&ensp;(<b>colgroup</b>)      <br>
+            &emsp;&emsp;&ensp;<b>(col class="CoolColumn")</b>    <br>
+            &emsp;&emsp;&ensp;<b>(col class="Neatcolumn" span="2" /)</b> <br>
+        &emsp;&ensp;<b>(/colgroup)</b>  <br>
+        &emsp;&ensp; ... <br>
+    <b>(/table)</b>    <br>
+
+    <!-- Then Ouput Is: -->
+    
+    <table>
+        <colgroup>
+            <col id="MySpecialColumn" />
+            <col />
+        </colgroup>
+        <colgroup>
+            <col class="CoolColumn">
+            <col class="Neatcolumn" span="2" />
+        </colgroup>
+    </table>
+
+    <p> The Following CSS styles can be applied to <b>(colgroup)</b> and <b>(col)</b> elements:</p>
+    
+    <p> <b>input This code:</b> </p>
+
+    <b>(ul)</b> <br>
+        &emsp;<b>(li)</b> Border <b>(/li)</b>   <br>
+        &emsp;<b>(li)</b> Background <b>(/li)</b> <br>
+        &emsp;<b>(li)</b> Width <b>(/li)</b>  <br>
+        &emsp;<b>(li)</b> Visibility <b>(/li)</b> <br>
+        &emsp;<b>(li)</b> Display (as in display : none) <br>
+            &emsp;&emsp;<b>(ul)</b>    <br>
+                &emsp;&emsp;&emsp;<b>(li)</b> Display : none ; will actually remove the column from the display, causing the table to render as if &emsp;&emsp;&emsp;&emsp;those cells don't exist <b>(/li)</b>   <br>
+            &emsp;&emsp;<b>(/ul)</b>    <br>
+        &emsp;&ensp;<b>(/li)</b>        <br>
+    <b>(/ul)</b>            <br>
+
+    <!-- Then Output code is: -->
+    <ul>
+            <li> Border </li>
+            <li> Background </li>
+            <li> Width </li>
+            <li> Visibility </li>
+            <li> Display (as in display : none) 
+                <ul>
+                    <li> Display : none ; will actually remove the column from the display, causing the table to render as if those cells don't exist </li>
+                </ul>
+            </li>
+        </ul>
+    <p> For more information, see <a href="https://www.w3.org/TR/html5/tabular-data.html"> HTML5 Tabular Data </a> </p>
+
+    <!-- Chapter 6.4 - Table with thead, tbody, tfoo, and caption -->
+    <h3>  6.4 - Table with thead, tbody, tfoo, and caption </h3>
+
+    <p> HTML also provides the tables with the <b>(htead)</b>, <b>(tbody)</b>, <b>(tfoot)</b>, and <b>(caption)</b> element. These additional elements are useful for adding semantic value to your tables and for providing a place for separate CSS styling.</p>
+
+    <p> When Printing out a table that doesn't fit onto one (paper), page, most browsers repeat the contents of <b>(thead)</b> on every page. </p>
+
+    <p> There's a specific order that must be adhered to, and we should be aware that not every element falls into place as one would expert. The Following example demonstrates how our 4 elements should be placed. </p>
+
+    <br> <!-- Spacing line like enter -->
+    
+    <table>
+        <caption> Table Title </caption>
+            <thead>    <!-- ==================== | thead is after caption | -->
+                <tr>
+                    <th> Header Content 1 </th>
+                    <th> Header Content 2 </th>
+                </tr>
+            </thead>
+            <tbody> <!-- ==================== | tbody is after thead | -->
+                <tr>
+                    <td> Body Contents 1 </td>
+                    <td> Body Contents 2 </td>
+                </tr>
+            </tbody>
+            <tfoot> <!--| tfoot can be placed before or after tbody, but not in a group of tbody. | -->
+
+            <!-- | Regardless where tfoot is in markupm it is rendered at the buttom.-->
+                <tr>
+                    <td> Footer Content 1 </td>
+                    <td> Footer Content 2 </td>
+                </tr>
+            </tfoot>
+    </table>
+
+    <p> The following examples's results are demonstrated twice--the first table lacks any styles, the second table has a few CSS properties applied: background-color, color, and border*. The Styles are provides as a visual guide and is not an essential aspect of the topic at hand</p>
+
+    <!-- Emmet HTML Code is table>(thead>tr>th*2)+(tbody>tr*6>td*2) -->
+    <table>
+        <thead>
+            <tr>
+                <th> <b>Element</b> </th>
+                <th> <b>Styles Applies</b> </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> <b>(caption)</b></td>
+                <td>Yellow text on black background</td>
+            </tr>
+            <tr>
+                <td> <b>(thead)</b> </td>
+                <td> Bold text on purple background </td>
+            </tr>
+            <tr>
+                <td> <b>(tbody)</b> </td>
+                <td> Text on blue background </td>
+            </tr>
+            <tr>
+                <td> <b>(tfoot)</b> </td>
+                <td> Text on green background </td>
+            </tr>
+            <tr>
+                <td> <b>(th)</b> </td>
+                <td> Orange Borders </td>
+            </tr>
+            <tr>
+                <td> <b>(td)</b> </td>
+                <td> Red Borders </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 6.5 - Heading Scope -->
+    <h3>  6.5 - Heading Scope </h3>
+
+    <p> <b>th</b> elements are very commonly used to indicate headings for table rows and columns, like so:</p>
+
+    <!-- emmet code : table>(thead>tr>td+th*2)>(tbody>tr*2>th+td*2)-->
+
+    <table>
+        <thead>
+            <tr>
+                <td></td>
+                <th> Column Heading 1 </th>
+                <th> Column Heading 2 </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th> Row Heading 1 </th>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th> Row Heading 2 </th>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p> This can be improved for accessibility by the use of the scopte attribute. The above example would be amended as follows:</p>
+
+    <!-- Emmet code : table>(thead>tr>td+th*2)>(tbody>tr*2>th+td*2)-->
+
+    <table>
+        <thead>
+            <tr>
+                <td></td>
+                <th scope="col"> Column Heading 1 </th>
+                <th scope="col"> Column Heading 2 </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"> Row Heading 1 </th>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row"> Row Heading 2 </th>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p> Scope is known as an <i>enumarated  attribute</i>, meaning that it can be have a value from a specific set of possible values.
+    <br> <!-- Spacing line like enter -->
+    This set includes:
+    </p>
+    <ul>
+        <li>Col</li>
+        <li>row</li>
+        <li>colgroup</li>
+        <li>rowgroup</li>
+    </ul>
+
+    <p> Refences: </p>
+
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th#attr-scope"> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th#attr-scope </a></li>
+        <li><a href="https://www.w3.org/TR/WCAG20-TECHS/H63.html"> https://www.w3.org/TR/WCAG20-TECHS/H63.html</a></li>
+    </ul>
+
+    <br> <!-- Spacing line like enter -->
+
+
+                    <!-- Chapter 7 - Table-->
+    <h2> Chapter 7 : Comments </h2>
+    
+    <p> Simmilar to other programming, markup, and markdown language, comments in HTML provides other developers with development specific information without affecting the user interfaces. Unlike other languages however, HTML comments can be used to specify HTML elements for internet Explore only. This topic explains how to write HTML comments, and their functional applications .</p>
+
+    <!-- Chapter 7.1 - Creating comments -->
+    <h3>  7.1 - Creating comments </h3>
+
+    <p> HTML comments can be used to leave notes to yourself or other developers about a specific point in code. They can be intiated with (!-- and concluded--), like so:</p>
+
+    <p> <i> (!-- I'm an HTML comment! --) </i></p>
+
+    <p> They can be incorporated inline within other content: </p>
+
+    <p> <b>(h1)</b> This Part will be displayed (!-- While this will not be displayed --). <b>(/h1)</b></p>
+
+    <p> They can also span multiple lines to provide more information: </p>
+
+    <p> (!-- This is a multiline HTML comment. Whatever is in here will not be rendered by the browser. You can <b>"comment out"</b> entire sections of HTML code --)</p>
+
+    <p> However, they cannot appear within another HTML tag, like this: </p>
+
+    <p> <b>(h1)</b> (!-- testAttribute=<b>"something"</b>--) This will not work <b>(/h1)</b> </p> 
+    
+    <p> <b>(h1)</b> (!-- testAttribute=<b>"something"</b>--) block would be considered a single start tag h1 with some other invalid information contained within it, followed by a single > closing bracket that does nothing</p>
+
+    <p> For compability with tools that try to parse HTML as XML or SGML, the body of your comment should not contain two dashes--. </p>
+
+    <!-- Chapter 7.2 - Commenting out whitespace between inline elements -->
+    <h3> 7.2 - Commenting out whitespace between inline elements </h3>
+
+    <p> Inline display elements, usually such as span or a, will include up to one white-space character before and after them in the document. In order to Avoid very long lines in markup (that are hard to read) and unintentional white-space (which affects formatting), the white-space can be commented out. </p>
+
+    <p> (-- <i>Use an HTML comment to nullify the newline character below: --) </i></p>
+
+    <p>
+        (<b>a</b> href=<b>"#"</b>) I hope there will be no extra whitespace after this! (/a) (!----) <b>(button)</b> foo <b>(/button)</b>
+    </p>
+
+    <p> Then Output is :</p>
+        
+    <p>
+        <a href="#"> I hope there will be no extra whitespace after this! </a> <!----> <button>foo</button> 
+    </p>
+
+    <p> Try it without a comment between the inline elements, and there will be one space between them. Sometimes picking up the space character is desire. </p>
+
+    <p> Example code: </p>
+
+     <p> (-- <i>Use an HTML comment to nullify the newline character below: --) </i></p>
+
+    <p> (<b>a</b> href="#") I hope there will be no extra whitespace after this! <b>(/a)</b> (!----) <b>(button)</b> Foo <b>(/button)</b> </p>
+
+     (!-- Without it, you can notice a small formatting difference: --)
+    (<b>a</b> href="#") I hope there will be no extra whitespace after this! <b>(/a)</b>
+    <b>(button)</b> Foo <b>(/button)</b>
+
+    <p> <b>Then Output Is: </b></p>
+
+    <p> <!-- Use an HTML comment nullify the newline character below: --> </p>
+
+    <a href="#"> I hope there will be no extra whitespace after this! </a> <!----> <button>Foo</button>
+    
+    <hr>
+
+    <!-- Without it, you can notice a small formatting difference: -->
+    <a href="#">I hope there will be no extra whitespace after this!</a>
+    <button>Foo</button>
+
+    <br> <!-- Spacing line like enter -->
+
+
+                    <!-- Chapter 8 - Classes and IDs -->
+    <h2> Chapter 8 - Classes and IDs </h2>
+
+    <!-- Emmet HTML Code : table>(thead>tr>th*2)+(tbody>tr*2>td*2)-->
+
+    <table>
+        <thead>
+            <tr>
+                <th><b>Parameter</b></th>
+                <th><b>Details</b></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Class</td>
+                    <td>Indicates the Class of the element (non-unique)</td>
+            </tr>
+            <tr>
+                <td>id</td>
+                    <td>Indicates th ID of the element (unique in the same context) </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p> Classes and IDs make referencing HTML elements from scripts and stylesheets easier. The class attribute can be used on one or more tags and is used bby CSS for styling. IDs however are inteded to refer to a single element, meaning the same ID should never be used twice. IDs are generally used with JavaScript and internal document links, and are discouraged in CSS. This topic contains helpful explanations and examples regarding proper usage of class and ID attributes in HTML. </p>
+
+
+    <!-- Chapter 8.1 - Giving an element a class -->
+    <h3> 8.1 - Giving an element a class </h3>
+
+    <p>Classes are identifiers for the elements that they are assigned to. use the class attribute to assign a class to an element.
+    </p>
+
+    <p><b>(div class="class 1 class 2") (/div)</b></p>
+
+    <div class="class 1 class 2"></div>
+
+    <h3>Using Classes in CSS</h3>
+
+    <p> Classes can be used for styling certain elements without changin all elements of that kind. For Example, these two span elements can have complatelu different styling: </p>
+
+    <p>
+        Input the code is: 
+        
+        <br> <!-- Spacing line like enter -->
+        <br> <!-- Spacing line like enter -->  
+
+        <b>(span)</b> <b>(/span)</b> <br>
+        <b>(span class="<b>special</b>")</b> <b>(/span)</b>
+    </p>
+
+    <span></span>
+    <span  class="special"></span>
+
+    <p> Classes of the same name cna be given to any number of elements on a page and they will all receive the styling associated with that class. This will always be true unless you specify the element within the CSS.</p>
+
+    <p> For example, we have two elements, both with the class highlight: </p>
+
+    .highlight {color : green;}
+
+    <p> However if we only want to target div's with the class highlight then we can add specificity like below: </p>
+
+    div.hightlight { color: green;}
+
+    <p>Nevertheless, when styling with CSSm it is generally recommended that only classes (e.g. .highlight) be used rather than elements with classes (e.g .highlight). </p>
+
+    <p>As with any other selector, classes can be nested: </p>
+
+    .main .highlight {color: red;} /*Descandant combinator*/
+    .footer > .highlight {color: blue;} /*child combinator*/ 
+
+    <p> You can also chain the class selector to the only select elements that have a combination of several classes. For example, if this is our HTML: </p>
+
+    <p> (<b>div class="special left menu"</b>) This text will be pink <b>(/div)</b> </p>
+
+    <b>Then Output is:</b>
+
+    <br> <!-- Spacing line like enter -->
+    <br> <!-- Spacing line like enter -->
+
+    <div class="special left menu"> This text will be pink</div>
+
+    <p> And we want to colour this specific piece of text pink, we can do the following in our CSS: </p>
+
+    .special.left.mene{color: pink;}
+
+
+    <!-- Chapter 8.2 - Giving an element an ID -->
+    <h3> 8.2 - Giving an element an ID </h3>
+
+    <p> The ID attribute of an element is an identifier which must be uniqe in the whole document. its purpuse is to uniqely identify the element when linking (using an anchor), scripting or styling (wiht CSS). </p>
+
+    <p> (<b>div id="example-id"</b>) <b>(/div)</b></p>
+
+    <div id="example-id"> </div>
+
+    <p> You should not have two elements with the same ID in the same document, event if the attributes are attached two different kinds of elements. For example, the following code incorrect: </p>
+
+    <p>
+        (<b>div id="example-id"</b>) <b>(/div)</b>
+        (<b>span id="example-id"</b>) <b>(/span)</b>
+    </p>
+
+    <div id="example-id"></div>
+    <span id="example-id"></span>
+
+    <p> Browser will do their best to render this code, but unexpected behavior may occur when styling with CSS or adding functionality with JavaScript. </p>
+
+    <p>To Reference elements by their ID in CSS, prefix in the ID with #.</p>
+
+    #example-id{color:green;}
+
+    <p> To jumpp to an element with an ID on a given page, append # with the element name in the URL. </p>
+
+    <p> <b><i>http://example.com/about#example-id</i></b> </p>
+
+    <p> This feature is supported in most browsers and does not required additional JavaScript or CSS to work. </p>
+
+    <!-- Chapter 8.3 - Acceptable Values -->
+    <h3> 8.3 - Acceptable Values </h3>
+
+    <h4> For an ID </h4>
+    <p> Version ≥ 5 </p>
+
+    <p> The only restrictions on the value of an id are: </p>
+
+    <ol>
+        <li> It must be unique in the document </li>
+        <li> It must not contain any space characters </li>
+        <li> It must containt at least one character </li>
+    </ol>
+
+    <p> So the value can be all digits, just punctuation character, include special characters, whatever. just no whitespace. </p>
+
+    <p> So these are valid: </p>
+
+    <!-- Emmet HTML code is div[id]*9{...}-->
+     
+    <p>
+        (<b>div id="container"</b>) ... <b>(/div)</b>   <br>
+        (<b>div id="999"</b>) ... <b>(/div)</b> <br> 
+        (<b>div id="#%LV-||"</b>)...<b>(/div)</b>   <br>
+        (<b>div id="_ _ _ _V"</b>) ... <b>(/div)</b>    <br>
+        (<b>div id=""⌘⌥")</b> ... <b>(/div)</b> <br>
+        (<b>div id="♥"</b>)  ... <b>(/div)</b> <br>
+        (<b>div id="{}"</b>) ... <b>(/div)</b> <br>
+        (<b>div id="©"</b>) ... <b>(/div)</b>  <br>
+        (<b>div id="♤₩¤☆€~¥"</b>)... <b>(/div)</b>   <br>
+    </p>
+
+    <p><b> Then Output Is: </b></p>
+
+    <div id="container">...</div>
+    <div id="999">...</div>
+    <div id="#%LV-||">...</div>
+    <div id="_ _ _ _V">...</div>
+    <div id="⌘⌥">...</div>
+    <div id="♥">...</div>
+    <div id="{}">...</div>
+    <div id="©">...</div>
+    <div id="♤₩¤☆€~¥">...</div>
+
+    <p> <b>This is Invalid</b> </p>
+
+
+
+    <div id=" ">...</div>
+
+    <p> This is also invalid, when included in the same document </p>
+
+    <p> 
+        (<b>div id="results"</b>) ... <b>(/div)</b>   <br>
+        (<b>div id="results"</b>) ... <b>(/div)</b>   <br>
+    </p> 
+    
+    <p><b> Then Output is: </b></p>
+
+    <!-- emmet code is did[id="result"]*2{...}-->
+
+    <div id="results">...</div>
+    <div id="results">...</div>
+
+    
+
+    <p> <i>version ≤ 4.01</i> </p>
+
+    <p> An id Value begin with a letter, which can then be followed only by :</p>
+
+    <!-- emmet code is ul>li*5-->
+
+    <ul>
+        <li> letters (A-Z/a-z ) </li>
+        <li> digits (0-9) </li>
+        <li> hyphens ("_")</li>
+        <li> underscores ("_") </li>
+        <li>colons (".") </li>
+        <li> periods (".") </li>
+    </ul>
+
+    <p>referring to the first group of examples in the HTML5 section above, only one is valid: </p>
+
+    <p>
+        (<b>div id="sampletext"</b>) ... <b>(/div)</b>    <br>
+        (<b>div id="sample-text"</b>) ... <b>(/div)</b>   <br>
+        (<b>div id="sample_text"</b>) ... <b>(/div)</b>   <br>
+        (<b>div id="sample:text"</b>) ... <b>(/div)</b>   <br>
+        (<b>div id="sample.text"</b>) ... <b>(/div)</b>   <br>
+    </p>
+
+    <p><b>Then Output Is:</b></p>
+
+    <!-- emmet code is did[id="Sampletext"]*5{...}-->
+
+    <did id="sampletext"> ... </did>    <br>
+    <did id="sample-text"> ... </did>   <br>
+    <did id="sample_text"> ... </did>   <br>
+    <did id="sample:text"> ... </did>   <br>
+    <did id="sample.text"> ... </did>   <br>
+
+    <p> Again, if it doesn't start with a letter (uppercase or lowercase), it's not valid. </p>
+
+    <h4> For a Class </h4>
+    <p> The rules for classes are essentially the same as for an id. The difference is that class values <i>do not</i> need to be unique in the document. </p>
+
+    <p> Referring to the examples above, although this is not valid in the same document: </p>
+
+    <p>
+        (<b>div id="results"</b>) ... <b>(/div)</b>   <br>
+        (<b>div id="results"</b>) ... <b>(/div)</b>   <br>
+    </p>
+
+    <p><b>Then Output Is:</b></p>
+
+    <div id="results">...</div>
+    <div id="results">...</div>
+
+    <p> This is perfectly okay: </p>
+
+    <p>
+        (<b>div id="results"</b>) ... <b>(/div)</b>   <br>
+        (<b>div id="results"</b>) ... <b>(/div)</b>   <br>
+    </p>
+
+    <p><b> Then Outpun is: </b></p>
+    
+    <div id="results">...</div>
+    <div id="results">...</div>
+
+    <p><b>Importat Note: How ID and Class values are treated outside of HTML </b></p>
+
+    <p> Keep in mind that the rules and examples above apply within the context of HTML </p>
+
+    <p> Using numbers, punctuation or special characters in the values of an id or a class may cause trouble in the other contexts, such as CSS, JavaScript and regular expressions. </p>
+
+    <p> For examples, although the following id is valid in HTML5: </p>
+
+    <!-- Emmet HTML code is div[id="9lions"]{...}-->
+    <div id="9lions">...</div>
+
+    <p> ... it is invalid in CSS: </p>
+
+    <p> <b><u>4.1.3 Characters and case</u></b></p>
+    <p> In CSS, <i>identifiers</i> (including element names, classes, IDs in selectors) can contain only the characters [a-zA-Z0-9] and ISO 10646 characters U+OOAQ and higher, plus the hypen (-) and the underscore(_); <b><i> they cannot start with a digits, two hypens, or a hypen followed by a digit (emphasis added) </i></b></p>
+
+    <p> In Most cases you may be able to escape characters in contexts where they have restrictions o special meaning.</p>
+
+    <h4> W3C References </h4>
+
+    <!-- Emmet HTML code is  ul>li{<b><u>3.2.5.1Theidattribute</u></b>}+li{<b><u>3.2.5.7Theclassattribute</u></b>}+li{<b><u>6.2 SGMLBasictypes</u></b>} -->
+
+    <ul>
+        <li><b><u>3.2.5.1The id attribute</u></b></li>
+        <li><b><u>3.2.5.7 The class attribute</u></b></li>
+        <li><b><u>6.2 SGML Basic types</u></b></li>
+    </ul>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 8.4 - Problem related to duplicated IDs -->
+    <h3> 8.4 - Problem related to duplicated IDs </h3>
+
+    <p>Having more than one element with the same ID is a hard to troubleshoot problem. The HTML parses will usually try to render the page in any case. usually no error occurs. But the pace could end up in a mis-behaving web page. </p>
+
+    In this example:
+
+    <div id="aDiv">a</div>
+    <div id="aDiv">b</div>
+
+    <p>CSS selectors still work</p>
+
+    #aDiv {
+        color: red;
+    }
+
+    <p>But JavaScript fails to handle both elements:</p>
+    
+    <b>var</b> html = document.getElementById("aDiv").innerHTML;
+    
+    In this case html variable bears only the first div content ("a")
+
+    <br> <!-- Spacing line like enter -->
+
+
+                    <!-- Chapter 9 - Data Attributes -->
+    <h2> Chapter 9 - Tables </h2>
+
+    <!-- Emmet HTML code is table>(thead>tr>th*2)+(tbody>tr>td*2)-->
+    <table>
+        <thead>
+            <tr>
+                <th><b>Value</b></th>
+                <th> Description</th>
+            <tr>
+        </thead>
+        <tbody>
+            </tr>
+                <td> SomeValue </td>
+                <td> Specifies the value of attribute (as a string)</td>   
+            </tr>
+        </tbody>
+    </table>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 9.1 - Older browsers support -->
+    <h3>  9.1 - Older browdser support </h3>
+
+    <p> Data attributes were introduced in HTML5 which os supported by all modern browsers, but older browsers before HTML5 don't recognized the data attributes. </p>
+
+    <p> However, in HTML specification, attributes  that are not recognized by the browser must be left alone and the browser will simply ignore them when rendering the page </p>
+
+    <p> Web developers have utiltized this fact to create non-standard attributes which are any attributes not part the HTML specifications. For example, the value attribute in the line below is considered a non-standard attributes because the specifications for the <b>(img)</b> tag don't have a value attributes and it's not global attribute: </p>
+
+    <p>
+        (<b>img src="sample.jpg" value="test"</b>/)
+    </p>
+
+    <p> <b>Then Output Is:</b></p>
+
+    <img src="sample.jpg" value="test" />
+
+    <p> This means that although data attributes are not supported in older browsers, they still wordk and you can set and retrieve them using the generic JavaScript setAttributes and getAttribute methods, but you cannot use the new dataset property which is only supported in modern browsers. </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 9.2 - Data Attribute use -->
+    <h3>  9.2 - Data Attribute use </h3>
+
+    <p> HTML5 data -* attributes provide a convenient way to store data in HTML elements/ The Stored data can be read or modified using JavaScript </p>
+
+    <p>
+        (<b>div data-submitted="yes" class="user_Profile"</b>) _Some Content_ <b>(/div)</b>
+    </p>
+
+    <p><b>Then Output is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <div data-submitted="yes" class="user_Profile"> _Some Content_ </div>
+    </p>
+
+    <ul>
+        <li>Data attribute structure os data-* i.e. the name of the data attribute comes after the data- part. Using this name, the attribute can be accessed. </li>
+        <li>Data in string format (including json) can be stored using data-* attribute.</li>
+    </ul>
+
+    <br> <!-- Spacing line like enter -->
+
+                
+                    <!-- Chapter 10 - Linking Resources -->
+    <h2> Chapter 10 : Linking Resources </h2>
+
+    <!-- Emmet HTML code is : table>(thead>tr>th*2)+(tbody>tr*11>td*2)-->
+
+    <table>
+        <thead>
+            <tr>
+                <th><b>Attribute</b></th>
+                <th><b>Datails</b></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>chaset</td>
+                <td>Specifies the character encoding of the linked document </td>
+            </tr>
+            <tr>
+                <td>crossorigin</td>
+                <td>specifies how the element handles cross origin requests</td>
+            </tr>
+            <tr>
+                <td>href</td>
+                <td>Specifies the location of the linked document</td>
+            </tr>
+            <tr>
+                <td>hreflang</td>
+                <td>Specifies the language of the text in the linked document</td>
+            </tr>
+            <tr>
+                <td>media</td>
+                <td>specifies on what device the linked document will be displayedm often used with selecting stylesheets based on the devices in question</td>
+            </tr>
+            <tr>
+                <td>rel</td>
+                <td><b>Required</b>. Specifies the relationship between the current document and the linked document</td>
+            </tr>
+            <tr>
+                <td>rev</td>
+                <td>Specifies the relationship between the linked document and the current document</td>
+            </tr>
+            <tr>
+                <td>sizes</td>
+                <td>Specifies the size of the linked resource. Only when rel="icon"</td>
+            </tr>
+            <tr>
+                <td>target</td>
+                <td>Specifies where the linked document is to be loaded</td>
+            </tr>
+            <tr>
+                <td>type</td>
+                <td>Specifies the media type of the linked document</td>
+            </tr>
+            <tr>
+                <td>integrity</td>
+                <td>Specifies a base64 encoded hash(sha256, sha384, or sha512)of the linked resource allowing the browser to verify its legitimacy.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p> While many scripts, icons, and stylesheets can be written straight into HTML markup,  it is best practice and more effecient to include these resources in their own file and link them to your document. This topic covers linking external resources such as stylesheets and scripts into an HTML document. </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 10.1 JavaScript -->
+    <h3> 10.1 - JavaScript </h3>
+    <h4> Synchronous </h4>
+
+    <p>
+        (<b>script src="path/to.js"</b>) Path/to.js <b>(/script)</b>
+    </p>
+
+    <p><b>Then Output Is:</b></p>
+    <!-- Output code is: -->
+     <script src="path/to.js"> path/to.js </script>
+
+    <p> Standard practice  is to place JavaScript <b>(Sript)</b> tags just before the closing <b>(/body)</b> tag. Loading your scripts last allows your site's visuals to show up more quickly and discourages your JavaScript from trying to interact with elements that haven't loaded yet. </p>
+
+    <h4> Asynchronous </h4>
+
+    <p><b>Input this code:</b></p>
+
+    <p>
+        <b>(script)</b> path/to.js <b>(/script)</b>
+    </p>
+
+    <p><b>Then Output Is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <script src="path/to.js" async> path/to.js </script>
+    </p>
+
+    <p> Another alternative, when the JavaScript code being is not necessary for page initialization, it can be loaded Asynchronously, speeding up the page load. Using async the browser will load the contents of the script in parallel and, once it is fully downloaded, will interrupt the HTML parsing in order to parse the JavaScript file. </p>
+
+    <h4> Deffered </h4>
+
+    <p> <b>Input this code:</b> </p>
+    <p>
+        (<b>script src="path/to.js" defer="defer"</b) path/to.js <b>(/script)</b>
+    </p>
+
+    <!-- Output Code is -->
+    <script src="path/to.js" defer> path/to.js </script> 
+
+     <p>Deffered scripts are like async scripts, with the exception that the parsing will only be performed once the HTML is fully parsed. Deffered scripts are guaranteed to be loaded in the order of declaration, same way as Synchronous scripts. </p>
+
+    <p><b>(noscript)</b></p>
+
+    <p><b>(noscript)</b> JavaScript Disabled <b>(/noscript)</b></p>
+
+    <p><b>Then Output is:</b></p>
+
+    <p><noscript> JavaScript Disabled </noscript></p>
+
+    <p> <b>(noscript)</b> element defines content to be displayed if the user has scripts disabled or if the browser does not support using scripts. The <b>(noscript)</b> tag can be placed in either the <b>(head)</b> or the <b>(body)</b> .</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 10.2 External CSS Stylesheet -->
+    <h4> 10.2 External CSS Stylesheet </h4>
+
+    <p><b>Input this code is:</b></p>
+     
+    <p>
+        <b>
+            (link rel="stylesheet" href="path/to.css" type="text/css")
+        </b>
+    </p>
+
+    <p><b>Then Output is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <link rel="stylesheet" href="path/to.css" type="text/css">
+    </p>
+
+    <p>The standard practice is to place CSS <b>(link)</b> tags inside the <b>(head)</b> tag at the top of your HTML. This way the CSS will be loaded first and will apply to your page as it is loading, rather than showing unstyled HTML until the CSS is loaded. The typeattribute is not necessary in HTML5 usually support CSS. </p>
+
+    <link rel="stylesheet" href="path/to.css" type="text/css"> 
+
+    <p>and</p>
+
+    <link rel="stylesheet" href="path/to.css">
+
+    <p>... do the same thing in HTML5.</p>
+
+    <p> Another, though less common practice, is to use an @import statement inside direct CSS. like this: </p>
+    
+    <p><b>Input This code:</b></p>
+
+    <p>
+        (<b>style type="text/css")</b>  <br>
+        &emsp;&emsp;@import url("path/to.css");   <br>
+        <b>(/style)</b> <br>
+
+        <b>(style)</b>  <br>
+        &emsp;&emsp;@import url("path/to.css"); <br>
+        <b>(/style)</b> <br>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!--Output code is: -->
+    <p>
+        <style type="text/css">
+            @import url("path/text.csss");
+        </style>
+
+        <style>
+            @import url("text/css");
+        </style>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 10.3 Favicon -->
+    <h4> 10.3 Favicon </h4>
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+    <p>Use the mime-type image/png for PNG files and image/x-icon(*.ico)files. For the difference, see <a href="https://stackoverflow.com/questions/1344122/favicon-png-vs-favicon-ico-why-should-i-use-png-instead-of-ico"><u> this SO question </u></a></p>
+
+    <p> A file named favicon .ico at the root of your website will typically be loaded and applied automaticly, without the need for a <b>(link)</b> tag. If this file ever changes, browsers can be slow and stubborn about updating their cache.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 10.4 Alternative CSS -->
+    <h3> 10.4 Alternative CSS </h3>
+
+    <p> Some browsers allow alternative style sheets to apply if they are offered. By default they will not be applied, but usually they can be changed through the browsers settings :</p>
+
+    <p> Firefox lets the user select the stylesheet using the View > Page style submenu, Internet Explorer also supports this feature (beginnng with IE 8), also accessed from View > Page style (at least as of IE 11), but Chrome requires an extension to use the feature (as of version 48). The web page can alson provide its own user interface to let the user switch styles</p>
+
+    <p> (Source: the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet"> MDN Docs </a>)</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 10.5 Resource Hint: dns-prefetch, prefetch, prerender -->
+    <h3> 10.5 Resource Hint: dns-prefetch, prefetch, prerender </h3>
+
+    <h4> Preconnect </h4>
+
+    <p> The preconnect relationship is simmilar to dns-prefetch in that will resolve the DNS. However, it will alson make the TCP handshake, and optional TLS negotiation. This is an experimental feature. </p>
+
+    <link rel="preconnect" href="URL">
+    <p><b>DNS-Prefetch</b></p>
+    <p> Informs browsers to resolve the DNS for a URLm so that all assets from that URL load faster. </p>
+
+    <p><b>Input This code:</b></p>
+
+    <p>
+        (<b>link rel="prefetch" href="URL"</b>)
+    </p>
+
+    <!-- Output Code is: -->
+    <link rel="prefetch" href="URL">
+    
+    <br> <!-- Spacing line like enter -->
+
+    <h4> DNS-Prefetch </h4>
+
+    <p> Informs browser to resolve the DNS for a URL, so that all assets from that URL load faster. </p>
+    
+    <p><b> Input Code is: </b></p>
+
+    <p> 
+        (<b>link rel="dns-preftch" href="URL"</b>) 
+    </p>
+
+    <!-- Then Output code is:-->
+    <link rel="dns-prefetch" href="URL">
+
+    <br> <!-- Spacing line like enter -->
+
+    <h4> Prefetch </h4>
+
+    <p> Informs the browsers that a given resource should be prefetched so it can be loaded more quickly. </p>
+
+    <p><b> Input Code is: </b></p>
+
+    <p>
+        (<b>link rel="prefetch" href="URL")</b>
+    </p>
+
+    <!-- Then Output code is: -->
+    <link rel="prefetch" href="URL">
+
+    <p> DNS- Prefetch resolves only the domain name whreas prefetch download/stores the specified resources. </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <h4> Prerender </h4>
+    <p> Informs browsers to fetch and render the UTL in the background, so that they can be delivered to the user instantaneously as the user navigates to that URL. This is an experimental feature. </p>
+
+    <p><b> Input this code is: </b></p>
+
+    <p>
+        (<b>link rel="prerender" href="URL"</b>)
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <link rel="prerender" href="URL">
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 10.6 Link 'media' attribute -->
+
+    <h3> 10.6 Link 'media' attribute </h3>
+
+    <p><b> Input This code : </b></p>
+
+    <p> Media specifies what style sheet should be used for what type of media. Using the print value would onlye display that style sheed for print pages. </p>
+
+    <p> The value of this attribute can be any of the mediatype value (simmilar to a CSS media query)</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 10.7 Prev and Next -->
+     <h3> 10.7 Prev and Next </h3>
+
+    <p> When a page is a part of series of articles, for instance, once can use prev and next to point to pages that are coming before and after. </p>
+
+    <p><b> Input Code is : </b></p>
+
+    <p> 
+        (<b>link rel="prev" href="http://stackoverflow/com/documentation/java/topics"</b>) <br>
+        (<b>link rel="prev" href="http://stackoverflow.com/css/topics"</b>)
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Then Output is: -->
+    <p>
+        <link rel="prev" href="http://stackoverflow.com/documentation/java/topics">
+        <link rel="prev" href="http://stackoverflow.com/documentation/css/topics">
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 10.8 Web Feed -->
+    <p> Use the rel="alternate" attribute to allow discoverabillity of your Atom/RSS feeds.</p>
+
+    <p><b>Input Code is:</b></p>
+
+    <p>
+        (<b>link rel="alternate" type="application/atom+xml" href="http://example.com/feed.xml" type="application/atom+xml"</b> /) <br>
+        <b>(link rel="alternate" type="application/rss+xml" href="http://example.com/feed.xml"/)</b> 
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Then Output Code is-->
+    <p>
+        <link rel="alternate" type="application/atom+xml" href="http://example.com/feed.xml" type="application/atom+xml" /> <br>
+        <link rel="alternate" type="application/rss+xml" href="http://example.com/feed.xml"  /> <br>
+    </p>
+
+    <p> See the MDN docs for <a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Tools/Feeds">RSS feeds</a> dan <a href="https://developer.mozilla.org/en-US/docs/Web/RSS/Module/Atom">Atomic RSS</a></p>    
+
+</body>
+</html>
