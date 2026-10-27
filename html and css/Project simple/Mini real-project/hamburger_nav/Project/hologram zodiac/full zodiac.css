@@ -1,0 +1,550 @@
+/* ========== RESET & DASAR ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    background: #000;
+}
+
+/* Background Slideshow */
+.bg-slideshow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 2s cubic-bezier(0.45, 0, 0.55, 1);
+    filter: brightness(0.6) blur(3px);
+    animation: slowZoom 20s infinite alternate;
+}
+
+@keyframes slowZoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+/* Overlay dinamis */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 40%, rgba(255, 0, 255, 0.1), rgba(0, 255, 255, 0.1), transparent 70%);
+    z-index: -1;
+    pointer-events: none;
+    animation: hueRotate 10s linear infinite;
+}
+
+@keyframes hueRotate {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+/* ========== HEADER DENGAN ANIMASI TYPESCRIPT ========== */
+.ts-header {
+    text-align: center;
+    margin: 2rem 1rem 1rem;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.4);
+    -webkite-backrop-filter:blur(15px); /*menggantikan fungsi dari
+    backdrop-filter: blur(15px); */
+    border-radius: 60px;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 30px 50px rgba(0, 255, 255, 0.2), 0 0 0 2px rgba(255, 0, 255, 0.2) inset;
+    transform: perspective(1000px) rotateX(2deg) translateZ(30px);
+    max-width: 900px;
+    width: 90%;
+    animation: floatHeader 6s infinite alternate;
+}
+
+@keyframes floatHeader {
+    0% { transform: perspective(1000px) rotateX(2deg) translateZ(20px) translateY(0); }
+    100% { transform: perspective(1000px) rotateX(0deg) translateZ(40px) translateY(-10px); }
+}
+
+.glitch {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    text-shadow: 0.05em 0 0 rgba(255,0,0,0.7), -0.05em -0.025em 0 rgba(0,255,255,0.7);
+    animation: glitch 725ms infinite;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.glitch::before {
+    animation: glitch2 725ms infinite;
+    color: #ff00ff;
+    z-index: -1;
+}
+
+.glitch::after {
+    animation: glitch3 725ms infinite;
+    color: #00ffff;
+    z-index: -2;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+@keyframes glitch2 {
+    0% { transform: translate(0); opacity: 0.5; }
+    20% { transform: translate(-4px, 4px); opacity: 0.8; }
+    40% { transform: translate(-4px, -4px); opacity: 0.8; }
+    60% { transform: translate(4px, 4px); opacity: 0.8; }
+    80% { transform: translate(4px, -4px); opacity: 0.8; }
+    100% { transform: translate(0); opacity: 0.5; }
+}
+
+@keyframes glitch3 {
+    0% { transform: translate(0); opacity: 0.5; }
+    20% { transform: translate(4px, -4px); opacity: 0.8; }
+    40% { transform: translate(4px, 4px); opacity: 0.8; }
+    60% { transform: translate(-4px, -4px); opacity: 0.8; }
+    80% { transform: translate(-4px, 4px); opacity: 0.8; }
+    100% { transform: translate(0); opacity: 0.5; }
+}
+
+.ts-animation {
+    margin: 1rem 0;
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.ts-text {
+    background: linear-gradient(45deg, #ffaa00, #ff00aa, #00aaff, #aa00ff);
+    -webkit-background-clip: text; /*harus di tambahkan background-clip: text; agar tidak error atau warning */ 
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rotate3d 4s infinite alternate, hueRotate 6s infinite;
+    transform-style: preserve-3d;
+    display: inline-block;
+}
+
+@keyframes rotate3d {
+    0% { transform: rotateX(0deg) rotateY(0deg) translateZ(0); }
+    100% { transform: rotateX(15deg) rotateY(30deg) translateZ(40px); }
+}
+
+.ts-cursor {
+    animation: blink 1s step-end infinite;
+    color: #00ffff;
+    font-size: 2.5rem;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-top: 0.5rem;
+    text-shadow: 0 0 10px cyan;
+}
+
+/* ========== GRID ZODIAK ========== */
+.zodiac-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    flex: 1;
+    perspective: 1200px;
+}
+
+/* Kartu Zodiak dengan efek hologram super */
+.zodiac-card {
+    background: rgba(10, 20, 30, 0.2);
+    -webkite-backdropfilter: blur(15px); /* menggantikan fungsi dari
+    backdrop-filter: blur(15px); dengan fungsi yang sepadan */
+    border-radius: 40px;
+    padding: 1.8rem 1rem;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+    transform-style: preserve-3d;
+    transform: perspective(800px) rotateY(5deg) rotateX(3deg) translateZ(15px);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.zodiac-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    transform: rotate(30deg);
+}
+
+.zodiac-card:hover {
+    transform: perspective(800px) rotateY(0deg) rotateX(0deg) translateZ(60px) scale(1.05);
+    box-shadow: 0 0 40px cyan, 0 0 80px magenta, 0 30px 50px rgba(0,0,0,0.8);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.zodiac-card:hover::before {
+    opacity: 0.3;
+    animation: rotateGlow 6s linear infinite;
+}
+
+@keyframes rotateGlow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Efek hologram utama */
+.hologram {
+    position: relative;
+    z-index: 2;
+}
+
+.hologram::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: linear-gradient(45deg, 
+        rgba(255,0,0,0.2), 
+        rgba(0,255,0,0.2), 
+        rgba(0,0,255,0.2), 
+        rgba(255,255,0,0.2));
+    filter: blur(20px);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s;
+    animation: spinHologram 8s linear infinite;
+}
+
+.zodiac-card:hover .hologram::after {
+    opacity: 1;
+}
+
+@keyframes spinHologram {
+    0% { filter: blur(20px) hue-rotate(0deg); }
+    100% { filter: blur(20px) hue-rotate(360deg); }
+}
+
+.symbol {
+    font-size: 5.5rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 30px gold, 0 0 60px magenta;
+    animation: floatSymbol 3s ease-in-out infinite;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.zodiac-card:hover .symbol {
+    animation: pulseSymbol 1s infinite alternate, rotateSymbol 4s linear infinite;
+}
+
+@keyframes floatSymbol {
+    0% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-15px) scale(1.1); }
+    100% { transform: translateY(0) scale(1); }
+}
+
+@keyframes pulseSymbol {
+    0% { text-shadow: 0 0 30px cyan, 0 0 60px magenta; transform: scale(1); }
+    100% { text-shadow: 0 0 60px lime, 0 0 120px yellow; transform: scale(1.2); }
+}
+
+@keyframes rotateSymbol {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+.zodiac-card h2 {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+    color: white;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.zodiac-card p {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    color: #eee;
+}
+
+.zodiac-card small {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50px;
+    -webkite-backdropfilter: blur(5px); /* menggantikan fungsi dari 
+    backdrop-filter: blur(5px); dengan fungsi yang sepandan untuk browser modern */
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+/* Audio disembunyikan */
+.zodiac-sound {
+    display: none;
+}
+
+/* ========== MODAL HOLOGRAM 3D ========== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    -webkite-backdropfilter: blur(10px); /* menggantikan fungsi dari 
+    backdrop-filter: blur(10px); dengan fungsi yang sepandan untuk browser modern */
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.modal.show {
+    opacity: 1;
+}
+
+.modal-content {
+    background: rgba(10, 20, 30, 0.3);
+    -webkite-backdropfilter: blur(30px); /* menggantikan fungsi dari 
+    backdrop-filter: blur(30px); dengan fungsi yang sepandan untuk browser modern */
+    border-radius: 60px;
+    padding: 3rem;
+    max-width: 600px;
+    width: 90%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 50px 100px rgba(0, 255, 255, 0.3), 0 0 0 2px rgba(255, 0, 255, 0.3) inset;
+    transform: perspective(1200px) rotateX(5deg) translateZ(50px) scale(0.9);
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.modal.show .modal-content {
+    transform: perspective(1200px) rotateX(0deg) translateZ(0) scale(1);
+}
+
+.modal-content::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: rotateGlow 10s linear infinite;
+    z-index: 0;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.3s, text-shadow 0.3s;
+}
+
+.close-modal:hover {
+    transform: scale(1.3) rotate(90deg);
+    text-shadow: 0 0 20px red, 0 0 40px orange;
+}
+
+.modal-hologram {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.modal-symbol {
+    font-size: 10rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    animation: modalFloat 3s infinite alternate, modalGlow 2s infinite alternate;
+    text-shadow: 0 0 60px cyan, 0 0 120px magenta;
+}
+
+@keyframes modalFloat {
+    0% { transform: translateY(0) rotateY(0deg); }
+    100% { transform: translateY(-20px) rotateY(20deg) scale(1.1); }
+}
+
+@keyframes modalGlow {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(30deg); }
+}
+
+#modalName {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+    background: linear-gradient(45deg, gold, cyan, magenta);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+#modalDates {
+    font-size: 1.3rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.modal-element {
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid currentColor;
+    box-shadow: 0 0 20px currentColor;
+}
+
+.modal-element.api {
+    color: #ff4444;
+    text-shadow: 0 0 15px #ff4444;
+}
+.modal-element.tanah {
+    color: #44ff44;
+    text-shadow: 0 0 15px #44ff44;
+}
+.modal-element.udara {
+    color: #44aaff;
+    text-shadow: 0 0 15px #44aaff;
+}
+.modal-element.air {
+    color: #4444ff;
+    text-shadow: 0 0 15px #4444ff;
+}
+
+.modal-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #fff;
+    max-width: 400px;
+    margin: 1rem auto;
+}
+
+.hologram-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 70%);
+    pointer-events: none;
+    animation: pulseHolo 3s infinite;
+}
+
+@keyframes pulseHolo {
+    0% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.1); }
+    100% { opacity: 0.2; transform: scale(1); }
+}
+
+/* ========== FOOTER ========== */
+footer {
+    background: rgba(0, 0, 0, 0.6);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    text-align: center;
+    color: white;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    width: 100%;
+    margin-top: 2rem;
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
+}
+
+footer nav a {
+    color: #00ffff;
+    text-decoration: none;
+    margin: 0 0.8rem;
+    transition: text-shadow 0.3s;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 10px cyan;
+}
+
+/* ========== RESPONSIF ========== */
+@media (max-width: 600px) {
+    .glitch {
+        font-size: 2.2rem;
+    }
+    .ts-animation {
+        font-size: 1.6rem;
+    }
+    .zodiac-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    .modal-symbol {
+        font-size: 7rem;
+    }
+    #modalName {
+        font-size: 2rem;
+    }
+    .modal-content {
+        padding: 2rem 1rem;
+    }
+}
