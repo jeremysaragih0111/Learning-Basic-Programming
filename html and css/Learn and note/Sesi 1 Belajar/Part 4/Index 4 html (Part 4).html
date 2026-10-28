@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> The Material Part 4 - Learn HTML5 Modern </title>
+</head>
+<body>
+    <!-- Continue Material Part 3 - Learn HTML 5 Modern -->
+
+                    <!--Chapter 16 - Forms -->
+    <h2> Chapter 16 - Forms </h2>
+
+    <!-- Emmet HTML 5 Code is : table>(thead>tr>th*2)+(tbody>tr*8>td*2) -->
+
+    <table>
+        <thead>
+            <tr>
+                <th> Attribute </th>
+                <th> Description </th>
+            </tr>
+        </thead>            
+        <tbody>
+            <tr>
+                <td>accept-charset</td>
+                <td>Specifies the character encodings that are to be used for the for submission</td>
+            </tr>
+            <tr>
+                <td>action</td>
+                <td>Specifies where to send the form-data when a form is submitted.</td>
+            </tr>
+            <tr>
+                <td>autocomplete</td>
+                <td>Specifies wheter a form should have autocomplete on or off</td>
+            </tr>
+            <tr>
+                <td>enctype</td>
+                <td>Specifies how the form-data should be encoded when submitting it to the server (only for method="post)</td>
+            </tr>
+            <tr>
+                <td>method</td>
+                <td>Specifies the HTTP method to use when sending form-data (POST or GET)</td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td>Specifies the name of a form</td>
+            </tr>
+            <tr>
+                <td>novalidate</td>
+                <td>Specifies that the form should not be validated when submitted.</td>
+            </tr>
+            <tr>
+                <td>target</td>
+                <td>Specifies where to display the response that is received after submitting the form</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>In order to group input elements and submit data, HTML uses a form element to encapsulate input and submission elements. These forms handle sending the data in the specified method to a page handled by a server or handler. This topic explains and demonstrates the usage of HTML forms in collecting and submitting input data.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 16.1 - Submitting -->
+    <h3>16.1 - Submitting</h3>
+
+    <h4>The Action Attribute</h4>
+    <p>The action attribute defines the action to be performed when the form is submitted. Which usually leads to a script that collects the information submitted and works with it. If you leave it blank, it will send it to the same file.</p>
+
+    <p><b>Input this code is :</b></p>
+
+    <p>
+        <b>
+            (form action="action.php")(/form)
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is -->
+    <p>
+        <form action="action.php"></form>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <h4>The Method Attribute</h4>
+
+    <p> The method attribute is used to deine the HTTP method of the form which is either GET or POST</p>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>(form action="action.php" method="get") <br>
+        (form action="action.php" method="post")</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+     <p>
+        <form action="action.php" method="get">
+        <form action="action.php" method="post">
+     </p>
+
+     <p>The GET method is mostly used to <i>get</i> data, for example to receive a post by its ID or name, or to submit a search query. The GET method will append the form data to the URL specified in the action attribute.</p>
+
+     <h5>www.example.com/action.php?firstname=Mickey&lastname=Mouse</h5>
+
+     <p>The POST method is used when submitting data to a script. The Post Method does not apped the form data to action URL but sends using the request body.</p>
+
+     <p>To Submit the data from the form correctly, a name attribute name must be specified.</p>
+
+     <p>As an example let's send the value of the field and set its name to <i>lastname</i>:</p>
+
+     <p><b>Input This code is:</b></p>
+
+     <p>
+        <b>(input type="text" name="lastname" value="Mouse")</b>
+     </p>
+
+     <p><b>Then Ouput code is:</b></p>
+     <!-- Output code is -->
+    <p>
+        <input title="#" type="text" name="lastname" value="Mouse">
+    </p>
+
+     <h4>More attribute</h4>
+
+     <p><b>Input This code is:</b></p>
+
+     <p>
+        <b>form action="action.php" method="post" target="_blank" accept-charset="UTF-8" enctype="application/x-www-form-urlencoded" autocomplate="novalidate"> <br>
+        <!-- form elements -->
+        (/form)
+        </b>
+     </p>
+
+     <p><b>Then Output code is:</b></p>
+     <!-- Output codeis : -->
+     <p>
+        <form action="action.php" method="post" target="_blank" accept-charset="UTF-8" enctype="application/x-www-form-urlencoded" autocomplate="novalidate">
+        <!-- form elements -->
+        </form>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 16.2 - Target attribute in form tag -->
+    <h3>16.2 - Target attribute in form tag</h3>
+
+    <p>The target attribute specifies a name or a keyword that indicates where to display the response that is received after submitting the form.</p>
+
+    <p>The target attribute defines a name of, or keyword for, a browsing context (e.g, window, or inline frame).</p>
+
+    <p>from tag with a target attribute:</p>
+
+    <form target="_blank">
+
+    <h4>Attribute Values</h4>
+    <!-- Emmet HTML code is table>(thead>tr>th*2)+(tbody>tr*5>td*2) -->
+    <table>
+        <thead>
+            <tr>
+                <th>Value</th>
+                <th>Description</th>
+            <tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>_blank</td>
+                <td>The response is displayed in a new window or tab.</td>
+            </tr>
+            <tr>
+                <td>_self</td>
+                <td>The Response is displayed in the parent frame.</td>
+            </tr>
+            <tr>
+                <td>_parent</td>
+                <td>The response is displayed in the parent frame </td>
+            </tr>
+            <tr>
+                <td>_top</td>
+                <td>The response is displayed in the full body of the window </td>
+            </tr>
+            <tr>
+                <td><i>framename</i></td>
+                <td> The response is displayed in a named iframe</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Note: The target attribute was <b><i>deprecated in HTML 4.01.</i></b> The target attribute is <b><i>supported</i></b> in <b><i>HTML5.</i></b></p>
+
+    <p>Frames and framesets are not supported in <b><i>HTML5</i></b>, so the <b><i>_parent, _top and framename values are now mostly used with iframes.</i></b></p>
+
+    <br> <!-- Spacing line like enter -->
+
+     <!-- Chapter 16.3 - Uploading file -->
+    <h4>16.3 - Uploading file</h4>
+
+    <p>Images and files can be uploaded/submitted to server by setting enctype attribute of form tag to multipart/form-data.encytype specifies how form data would be encoded while submititng to the server.</p>
+
+    <p><b>Examples</b></p>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>(form action="upload.php" method="post" encytype="multipart/form-data")  <br>
+            &emsp;&emsp;(input type="file" name="pic")  <br>
+            &emsp;&emsp;(input type="submit" value="Upload") <br>
+        (/form)</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Ooutput code is : -->
+     <p>
+        <form action="upload.php" method="post" encytype="multipart/form-data">
+            <input title="#" type="file" name="pic">
+            <input type="submit" value="Upload">
+        </form>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 16.4 - Grouping a few input field -->
+    <h3>16.4 - Grouping a few input field</h3>
+
+    <p>While designing a form, you might like to group a few input fields into a group to help organise the form layout. This can be done by using the tag. Here is an example for using it.</p>
+
+    <p>For each fieldset, you can set a legend for the set using the tag LEGEND TEXT</p>
+
+    <p><b>Example</b></p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>(form)   <br>
+        &emsp;&emsp;(fieldset)  <br>
+        &emsp;&emsp;&emsp;&emsp;(legend)</b> 1st field set <b>(/legend)</b>  <br>
+        &emsp;&emsp;&emsp;&emsp;Field one:<br>
+        &emsp;&emsp;&emsp;&emsp;<b>(input type="text")</b>  <br>
+        &emsp;&emsp;&emsp;&emsp;Field two</br>
+        &emsp;&emsp;&emsp;&emsp;<b>(input type="text")<br>
+        &emsp;&emsp;<b>(/fieldset)<br>
+        &emsp;&emsp;   (fieldset)</b>   <br>
+        &emsp;&emsp;&emsp;&emsp;(legend)</b> 2dn field set: <b>(/legend)</b> <br>
+        &emsp;&emsp;&emsp;&emsp;Field three<br>
+        &emsp;&emsp;&emsp;&emsp;<b>(input type="text")</b> <br>
+        &emsp;&emsp;&emsp;&emsp;Field four:<br>
+        &emsp;&emsp;&emsp;&emsp;<b>(input type="text")  <br>
+            &emsp;&emsp;(/fieldset)<br>
+            &emsp;&ensp;(input type="submit" value="Submit")    <br>
+            (/form)</b> <br>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is : -->
+     <h4>Result</h4>
+    <p>
+        <form>
+            <fieldset>
+                <legend>1st field set</legend>
+                Field one:<br>
+                <input title="#" type="text"><br>
+                Field two</br>
+                <input title="#" type="text"><br>
+            </fieldset><br>
+            <fieldset>
+                <legend>2dn field set:</legend>
+                Field three<br>
+                <input title="#" type="text"><br>
+                Field four:<br><input title="#" type="text"><br>
+            </fieldset><br>
+            <input type="submit" value="Submit">
+        </form>
+    </p>
+
+    <h4>Browser Support</h4>
+
+    <p>Chrome, IE, Edge, Firefox, Safari and Opera's latest versions also supports the tag</p>
+
+    <br> <!-- Spacing line like enter -->
+
+
+                    <!-- Chapter 17 - Div Element -->
+    <h2>Chapter 17 - Div Element</h2>
+
+    <p>The div element in HTML is a container element that encapsulates other elements and can be used to group and separate oarts of a webpage. A div by itself does not inherently represent anything but it a powefull tool in web design. This topic covers the pupose and applications of the div element</p>
+    
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 17.1 - Basic usage -->
+    <h3> 17.1 - Basic usage </h3>
+
+    <p>The <b>(div)</b> element usually has no specific semantic meaning by itself, simply representing a devision, and is typically used for grouping and encapsulating other elements within an HTML document and separating those from other groups of content. As such, each <b>(div)</b> is best described by its contents.</p>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>(div)</b>    <br>
+    &emsp;&ensp;<b>(p)</b> <br>
+    &emsp;&emsp;&ensp;Hello! This is a Paragraph. <br>
+    &emsp;&ensp;<b>(/p)</b> <br>
+        <b>(/div)</b><br>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is : -->
+    <p>
+        <div>
+            <p>Helo! This is a Paragraph.</p>
+        </div>
+    </p>
+
+    <p>The div element is typically a block-level element, meaning that is it separates a block of an HTML document and occupying the maximum width of the page. Browsers typically have the following default CSS rule: </p>
+
+    div {
+         display: block
+    }
+
+    <p>it's strongly encouraged by the <b>The World wide Web Consortium(W3C)</b> to view the div element as an element of last resort, for when no other element is suitable. The use of more appropriate elements instead of the div element leads to better accessibility for readers and easier maintainability for authors.</p>
+
+    <p>For example, a blog post would be marked up using <b>(article)</b>, a page's navigation aids using <b>(nav)</b>, and a group of form controls using <b>(Fieldset).</b></p>
+
+    <p>div elements can be useful for stylistic purposes or to wrap multipule paragraps within paragraphs within a section that are all to be annotated in a similar way.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 17.2 - Nesting -->
+    <h3>17.2 - Nesting</h3>
+
+    <p>it is a common practice to place multiple <b>(div)</b>. This is usually referred to as "nesting" elements and allows for further diving elements into subsections or aid developers with CSS styling.</p>
+
+    <p>The <b>(div)</b> class="outer-div" is used to group togther two <b>(div class="inner-div")</b> elements. each containing a <b>(p)</b> element. </p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>(div class="outer-div")  <br>
+         &emsp;&ensp;(div class="inner-div")</b> <br>
+        &emsp;&emsp;&emsp;<b>(p)</b> This is a Paragraph <b>(/p)</b>  <br>
+        &emsp;&ensp;<b>(/div)</b>   <br>
+        &emsp;&ensp;<b>(div class="inner-div")</b>  <br>
+        &emsp;&emsp;&emsp;<b>(p)</b> This is another Paragraph <b>(/p)</b>    <br>
+        &emsp;&ensp;<b>(/div)   <br>
+        (/div)</b>  <br>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+
+    <p>This will yield the following result (CSS styles applied for clarity):</p>
+
+    <p>
+        <div class="outer-div">
+            <div class="inner-div">
+                <p>This is a Paragraph</p>
+            </div>
+            <div class="inner-div">
+                <p>This is another Paragrapp</p>
+            </div>
+        </div>
+    </p>
+
+    
+    <p><b>Nesting inline and block elements</b> while nesting elements you should keep in mind, that there are inline and block elements, while block elements "add a line break in the background", what means other nested elements are shown in the next line automatically.Inline elements can be positioned next to each toher by default.</p>
+
+    <h4>Avoid deep (div) nesting</h4>
+
+    <p>A deep and oftenly used nested container layouts shows a bad coding style.</p>
+
+    <p>Rounded corners or some similar functions often create such an HTML code. For most of the last generation browsers there are CSS3 counterparts. Try to use as little as possible HTML elements to increase the content to tag ratio and reduce page load, resulting in a bettter ranking in search engines.</p>
+
+    <p>div section Element should be not nested deeper than 6 layers.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+
+                    <!-- Chapter 18 - Sectioning Elements -->
+    <h2>Chapter 18 - Sectioning Element</h2>
+    
+    <!-- Chapter 18.1 Nav Element -->
+    <h3>18.1 Nav Element</h3>
+
+     <p> The <b>nav</b> element is primarily intended tot be used for sections that contain <b>main navigation blocks</b> for the website, this can include links to other parts of the web page (<i>e.g. anchors for a table of contents</i>) or other pages entirely.</p>
+
+    <h4>Inline items</h4>
+
+    <p>The following will display an inline set of hyperlinks.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>(nav)    <br>
+    &emsp;&emsp;(a href="https://google.com")</b> Google <b>(/a)</b>    <br>
+    &emsp;&emsp;<b>(a href="http://www.yahoo.com")</b> Yahoo! <b>(/a)</b>   <br>
+    &emsp;&emsp;<b>(a href="https://www.bing")</b> Bing <b>(/a)</b> <br>
+        <b>(/nav)</b> <br>
+    </p>
+
+     <p><b>Then Output code :</b></p>
+     <!-- Output code is : -->
+    <p>
+        <nav>
+            <a href="https://google.com">Google</a>
+            <a href="http://www.yahoo.com">Yahoo!</a>
+            <a href="https://www.bing">Bing!</a>
+        </nav>
+    </p>
+
+    <h4>Avoid unnecessary usage</h4>
+
+    <p><b>(footer)</b> elements may have a list of other parts of the site (FAQ, T&C, etc.). The footer element alone is sifficient in this case, you don't <i>need</i> to further wrap your links with a <b>(nav)</b> element in the <b>(footer)</b></p>
+
+    <p>(!-- the <b>(nav)</b> is not required in the <b>(footer)</b>--)</p>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>(footer)
+                (nav)
+                    (a href="")</b>
+                        ...
+                    <b>(/a)
+                (/nav)
+            (/footer)</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is : -->
+    <p>
+        <footer>
+            <nav>
+                <a href="">
+                    ...
+                </a>
+            </nav>
+        </footer>
+    </p>
+
+    <p>(!-- the footer alone is sufficient --)</p>
+
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>(footer)
+                (a href="")...(/a)
+            (/footer)</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is -->
+    <p>
+        <footer>
+            <a href="">...</a>
+        </footer>
+    </p>
+
+    <p><b>Notes:</b></p>
+    <ul>
+        <li><u><b>(main)</b> element </u> descendants are not allowed within a <b>(nav)</b></li>
+    </ul>
+
+    <p>Adding a role="navigation" <u>ARIA role</u> to the <b>(nav)</b> element is advised to aid user agents that don't support HTML5 and also to provide more context for those that do.</p>
+
+    <nav role="navigation">(!-- ... --)</nav>
+
+    <p><b>Screen Readers:</b> (<i>Software that allows blind or visually impaired users to navigate the site)</i></p>
+
+    <p>User agents like screen readers will interpret the <b>(nav)</b> element differently depending on their requirements.</p>
+
+    <ul>
+        <li>It could be give the <b>(nav)</b> element a higher priority when rendering the page</li>
+        <li>it could delay the rendering of the element</li>
+        <li>It could adapt the page in a specific way to tailor for the user's needs</li>
+    </ul>
+    <p><i> example:</i> make the text links within the <b>(nav)</b> elements larger for someone who's visually impaired.</p>
+
+    <a href="https://html.spec.whatwg.org/multipage/sections.html#the-nav-element"><u> Click here to read the official HTML5 specification for the <b>(nav)</b> element</u></a>
+
+    <br><!-- Spacing line like enter -->
+
+    <!-- Chapter 18.1 - Article Element -->
+    <h3> 18.2 - Article Element </h3>
+
+    <p>The <b>(article)</b> element contains <b>self-contained content</b> like articles, blog posts, user comments or an interactive widget that could be distributed outside the context or the page, for example by RSS.</p>
+
+    <ul>
+        <li>When article elements are nested, the contents of the inner article node should be related to the outer article element</li>
+    </ul>
+
+    <p>A blog (section) with multiple posts (article), and comments (article) might look something like this.</p>
+
+    <section>
+        <!-- Each Individual blog post in an <article> -->
+        <article>
+            <header>
+                <h1>Blog Post</h1>
+            </header>
+
+            
+            <p>The article element represents a self contained article or document.</p>
+            <p>The Section element represents a grouping of content</p>
+            
+            <section>
+                <h2>comments<small> relating to 'Blog Post' </small></h2>
+            
+                <!-- Related comment is also a self-contained article -->
+                <article id="user-comment-1">
+                    <p>Excellent!</p>
+                    <footer><p>...<time>...</time></p>
+                    </footer>
+                </article>
+            </section>
+        </article>
+        <!-- ./repeat: <article> -->
+    </section>
+
+    <!-- Content unrelated to the blog or posts should be outside the section. -->
+
+    <footer>
+        <p>This content should be unrelated to the blog.</p>
+    </footer>
+
+    <br><!-- Spacing line like enter -->
+
+    <h4> Avoid unnecesarry usage </h4>
+
+    <p> When the main of the page (excluding headers, footer, navigation bars, etc.) is simply one group of elements. You can omit the <b>(artile)</b> in favour the <b>(main) element.</b></p>
+
+    <article>
+        <p>
+            This doesn't make sensem this article has no real 'context'
+        </p>
+    </article>
+
+    <p> Instead, replace the article with a <b>(main)</b> element to indicate this is the main content for this page.</p>
+
+    <main>
+        <p>
+            I'm the main content, I don't need to belong to an article.
+        </p>
+    </main>
+
+    <p>If you use another element, ensure you specify the <u><b>(main)</b> ARIA role</u> for correct interpretation and rendering accross multiple devices and non HTML5 browsers.</p>
+
+    <section>
+        <p>This section is the main content of this page.</p>
+    </section>
+
+    <p><b>Notes</b></p>
+    <ul>
+        <li><u><b>(main)</b> element</u> descandants are not allowed within a <b>(article)</b></li>
+    </ul>
+
+    <p><a href="https://html.spec.whatwg.org/multipage/sections.html#the-article-element"><u>Click here to read the official HTML5 specification for the <b>(articke)</b></u></a></p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 18.3 - Main Element -->
+    <h3> 18.3 - Main Element </h3>
+
+     <p>The <b>(main)</b> element contains the <b>main content</b> for your web page. This content is unique to the individual page, and should not appear elsewhere on the side. Repeating content like headers, footers, navigation, logos, etc., is placed outside the element.</p>
+
+    <ul>
+        <li>The <b>(main)</b> element should only ever be used at most <b>once</b> on a single page.</li>
+        <li>The <b>(main)</b> element must not be included as a descandant of an article, aside, footer, header or nav element.</li>
+    </ul>
+
+    <p>In the following example, we're displaying a <b>single blog post</b> (and related information like references and comments).</p>
+
+    <body>
+        <header>
+            <nav>...</nav>
+        </header>
+        <main>
+            <h1>Individual Blog Post</h1>
+            <p>An introduction for the post</p>
+                <article>
+                    <h2>References</h2>
+                    <p>...</p>
+                </article>
+                <article>
+                    <h2>Comments</h2> ....
+                </article>
+        </main>
+        <footer> </footer>
+    </body>
+
+    <ul>
+        <li>The blog post is contained within the <b>(main)</b> element to indicate this is the main content for this page (and therefore, unique across the website)</li>
+        <li>The <b>(header)</b> and <b>(footer)</b> tag are <i>siblings</i> to the <b>(main)</b> element.</li>
+     </ul>
+
+     <p><b>Notes:</b></p>
+     <p>The HTML5 Specification recognizes the <b>(main)</b> element as a grouping element, and not aa <i>sectioning</i> element.</p>
+
+    <ul>
+        <li><a href="https://www.w3.org/TR/html-aria/"><u>ARIA role attribute: main</u></a><i>(default)</i>, <a href="https://html.spec.whatwg.org/multipage/dom.html#index-aria-presentation"><u>presentation</u></a></li>
+    </ul>
+
+    <br> <!-- Spacing line like enter -->
+
+    <p><a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-main-element"><u>Click here to read the official HTML5 specification for the <b>(main)</b></u></a></p>
+
+    <br><!-- Spacing line like enter -->
+
+
+    <!-- Chapter 18.4 - Header Element -->
+    <h3>18.4 - Header Element</h3>
+
+    <p>The <b>(header)</b> element represent introductory content of its neares ancestor sectioning content or sectioning root element. A <b>(header)</b> typically contains a group introductory or navigational aids.</p>
+
+    <p><b>Note:</b> The heaeder element is not sectioning content, it doesn't introduce a new section.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>(header) <br>
+    &emsp;&emsp;(p)</b> Welcome to ... <b>(/p) <br>
+    &emsp;&emsp;(h1)</b> voidwars! <b>(/h1) <br>
+        (/header)</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is -->
+    <p>
+        <header>
+            <p>Welcome to...</p>
+            <h1>voidwars</h1>
+        </header>
+    </p>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>
+            (article) <br>
+    &emsp;&emsp;(header)    <br>
+    &emsp;&emsp;&emsp;(h1)</b> Flexbox : The definitive guide <b>(/h1)</b>   <br>
+    &emsp;&emsp;<b>(/header)    <br>
+    &emsp;&emsp;(p)</b> <br>
+    &emsp;&emsp;&emsp;The guide about Flexbox was supposed to be here, but it turnd out Wes wasn'n a Flexbox expert either. <br>
+    &emsp;&emsp;<b>(/p)   <br>
+                (/article)</b>
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <article>
+            <header>
+                <h1>Flexbox : The definitive guide</h1>
+            </header>
+                <p>The guide about Flexbox was supposed to be here, but it turnd out Wes wasn'n a Flexbox expert either.</p>
+        </article>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 18.5 - Footer Element -->
+    <h3>18.5 - Footer Element</h3>
+    
+    <p>The <b>(footer)</b> element contains the footer part of the page.</p>
+    <p>Here is an example for <b>(footer)</b> element that contain p paragraph tag</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>(footer) <br>
+    &emsp;&emsp;(p)</b> All rights reserved <b>(/p) <br>
+            (/footer)</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output Code is: -->
+    <p>
+        <footer>
+            <p>All rights reserved</p>
+        </footer>
+    </p>
+
+    <br> <!-- spacing line like enter -->
+
+    <!-- Chapter 18.6 - Section Element -->
+    <h3>18.6 - Section Element</h3>
+
+    <p>The <b>(section)</b> element represents a generic section to thematically group content. Every section, typically, should be able to be identified wit a heading element as a child of the section.</p>
+
+    <ul>
+        <li>You can use the <b>(section)</b> element within an <b>(article)</b> and vice-versa</li>
+        <li>Every section should have a <i>theme</i> (a heading element identifying this region)</li>
+        <li> Don't use the <b>(section)</b> element as a general styling 'container'</li>
+    </ul>
+    <p>If you need a container to apply styling use a <b>(div)</b> instead.</p>
+
+    <p>In the following example, we're displaying a <b>single blog past</b> with multiple chapters each chapter is a section (<i>a set of thematically grouped content, which can be identified by the heading elements in each section</i>). </p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>(article)    <br>
+        &emsp;&emsp;(header)    <br>
+        &emsp;&emsp;&emsp;&emsp;(h2)</b> Blog Post <b>(/h2) <br>
+        &emsp;&emsp;(/header)   <br>
+        &emsp;&emsp;(p)</b> An introduction for the post. <b>(/p)   <br>
+        &emsp;&emsp;(section)   <br>
+        &emsp;&emsp;&emsp;&emsp;(h3)</b> Chapter 1 <b>(/h3) <br>
+        &emsp;&emsp;&emsp;&emsp;(p)</b> ... <b>(/p) <br>
+        &emsp;&emsp;(/section)  <br>
+        &emsp;&emsp;(section)   <br>
+        &emsp;&emsp;&emsp;&emsp;(h3)</b> Chapter 2 <b>(/h3)  <br>
+        &emsp;&emsp;&emsp;&emsp;(p)</b> ... <b>(/p) <br>
+        &emsp;&emsp;(/section)  <br>
+        &emsp;&emsp;(section)   <br>
+        &emsp;&emsp;&emsp;&emsp;(h3)</b> Comments <b></b>(/h3)</b>  <br>
+        &emsp;&emsp;&emsp;&emsp;... <br>
+        &emsp;&emsp;<b>(/section)   <br>
+            (/article)</b>
+    </p>
+
+    <p><b>Then Output code is</b></p>
+
+    <P>
+        <article>
+            <header>
+                <h2>Blog Post</h2>
+            </header>
+            <p>An introduction for the post.</p>
+            <section>
+                <h3>Chapter 1</h3>
+                <p>...</p>
+            </section>
+            <section>
+                <h3>Chapter 2</h3>
+                <p>...</p>
+            </section>
+            <section>
+                <h3>Comments</h3>
+                ...
+            </section>
+        </article>
+    </P>
+
+    <p><b>Notes:</b></p>
+    <p>Developers should use the <b>article</b> element when it makes sense to syndicate the contents of the element.</p>
+
+    <br> <!-- Spacing line like enter -->
+    
+    <p><a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-section-element"><u>Click here to read the official HTML5 specification for the <b>(main)</b> element</u></a></p>
+
+    <br> <!-- Spacing line like enter  -->
+
+
+                    <!-- Chapter 19 - Navigation Bars -->
+    <h2> Chapter 19 - Navigation </h2>
+
+    <!-- Chapter 19.1 Basic Navigation Bar -->
+    <h3>19.1 Basic Navigation Bar</h3>
+
+    <p>Navigation bars are essentiallt a list of links, so the ul and li elements are used ti encase navigation links.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (ul)    <br>
+    &emsp;&emsp;(li)(a href="#")</b> About <b>(/a)(/li)    <br>
+    &emsp;&emsp;(li)(a href="#")</b> Home <b>(/a)(/li)     <br>
+    &emsp;&emsp;(li)(a href="#")</b> Contact <b>(/a)(/li)   <br>
+            (/ul)
+        </b>
+    </p>
+
+    <p><b>Then Output code is</b></p>
+     <!-- Output code is : -->
+    <p>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 19.2 - HTML5 Navigation Bar -->
+    <h3> 19.2 - HTML5 Navigation Bar </h3>
+
+    <p>To make a navigation bar using the HTML5 nav element, encase the links within the nav tag.</p>
+
+    <p><b>Input this code is:</b></p>
+     
+    <p>
+        <b>
+            (nav)    <br>
+    &emsp;&emsp;(a href="#")</b> About <b>(/a)  <br>
+    &emsp;&emsp;(a href="#")</b> Home <b>(/a)   <br>
+    &emsp;&emsp;(a href="#")</b> Contact <b>(/a) <br>
+            (/nav)
+        </b>
+     </p>
+
+    <p><b>Then Output code is:</b></p>
+     <!-- Output code is : -->
+    <p>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+                        <!-- Chapter 20 - Label Element -->
+    <h2> Chapter 20 - Label Element </h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th><b>Attribute</b></th>
+                <th><b>Description</b></th>
+                <tr>
+                    <td>for</td>
+                    <td>Reference to the target ID element. i.e. for="surname"</td>
+                </tr>
+                <tr>
+                    <td>form</td>
+                    <td>within <b>form</b> element. If the form="someFormId" is provided this allows you to place the Labe anywhere in the document.</td>
+                </tr>
+            </tr>
+
+            <br> <!-- Spacing line like enter -->
+
+
+        </thead>
+    </table>
+
+    <!-- Chapter 20.1 - About Label -->
+    <h3> Chapter 20.1 - About Label </h3>
+
+    <p>The <b>(label)</b> element is used to reference a form action element.</p>
+
+    <p>in the scope of <b>User Interface</b> it's used to ease the target/selection of elements like type <small>radio</small> or <small>checkbox</small>.</p>
+
+    <p><b><small>(label)</small> as Wrapper</b></p>
+
+    <p>it can be enclosse the desire action element</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>(label)  <br>
+        &emsp;&emsp;(input type="checkbox" name="Cats") <br>
+            (/label)</b>    <br>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <label>
+            <input title="#" type="checkbox" name="Cats">
+        </label>
+    </p>
+
+    <p>(Clicking on the text the target input will toggle it's state/value)</p>
+
+    <p><b><small>(label)</small> as reference </b></p>
+    <p>Using the for attribute you don't have to place the control element as descandant of label-but the for must match it's ID</p>
+
+    <input type="type checkbox" id="cats" name="Cats">
+    <label for="cats">I like Cats</label>
+
+    <p><b>Note</b></p>
+    <p>Don't use more than one control Element within a <b>label</b> elementt</p>
+
+    <!-- Chapter 20.2 Basic Use-->
+    <h3> 20.2 Basic Use </h3>
+    <p> Simple form with labels....</p>
+    
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>(form action="/login" method="POST") <br>
+        &emsp;&emsp;(label for="USername")</b> Username: (/label)   <br>
+        &emsp;&emsp;(input type="text" id="username" name="username" /) <br>
+                
+        &emsp;&emsp;(label for="pass" type="password") Password: (/label)   <br>
+        &emsp;&emsp;(input type="passwor" id="pass" name="pass" /)  <br>
+            
+        &emsp;&emsp;(input type="submit" name="submit" /)   <br>
+        <b>(/form)</b>
+    </p>
+
+    <p><b>Then Ouput code is:</b></p>
+     <!-- Output code is -->
+    <!-- Emmet HTML code is: form[action="/login" method="POST"]>label[for="USername"]{Username:}+input[id="username" type="text" name="username"/>]+label[for="pass" type="password"]+input[id="pass" type="passwor" name="pass"/]+input[type="submit" name="submit" />]-->
+    
+    <form action="/login" method="POST">
+        <label for="USername"> Username: </label>
+        <input type="text" id="username" name="username" />
+        
+        <label for="pass" type="password"> Password: </label>
+        <input type="passwor" id="pass" name="pass" />
+        
+        <input type="submit" name="submit" />
+    </form>
+
+    <br> <!-- Spacing line like enter -->
+
+    <p><small>Version ≥ 5</small></p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>(form id="my-form" action="/login" method="POST")    <br>
+        &emsp;&emsp;&ensp;(input id="username" name="username" type="text" name="username "/) <br>
+        &emsp;&emsp;&ensp;(label for="pass")</b>  Password: <b>(/label)   <br>
+        &emsp;&emsp;&ensp;(input type="password" id="pass" name="pass")   <br>
+        &emsp;&emsp;&ensp;(input type="submit" name="submit" /)   <br>
+        (/form) <br>
+        
+        (label for="username" form="my-form")</b> Username: <b>(/label)</b> <br>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <form id="my-form" action="/login" method="POST">
+            <input id="username" name="username" type="text" name="username "/>
+            
+            <label for="pass">Password:</label>
+            
+            <input type="password" id="pass" name="pass">
+            
+            <input type="submit" name="submit" />="">
+        </form>
+        <label for="username" form="my-form">Username:</label>
+    </p>
+
+</body>
+</html>

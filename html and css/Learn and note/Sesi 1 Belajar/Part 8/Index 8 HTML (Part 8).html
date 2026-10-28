@@ -1,0 +1,2669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Material Part 8 - Learn HTML 5 Modern</title>
+</head>
+<body>
+    <!-- Continuoes The Material Part 7 - Learn HTML5 Modern -->
+    
+
+                    <!-- Chapter 36 - HTML 5 - Cache -->
+    <h2> Chapter 36 - HTML 5 Cache </h2>
+
+    <p>
+        this is our index.html file    <br>
+        <b>
+            &lt;!DOCTYPE html&gt;   <br>
+            &lt;html manifest="index.appcache"&gt;  <br>
+            &lt;body&gt;    <br>
+            &emsp;&emsp;&lt;p&gt;</b> Content <b>&lt;/p&gt;    <br>
+            &lt;/body&gt;   <br>
+            &lt;/html&gt;   <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>Then Output code is:</b> <br>
+        <!-- Output code is : -->
+
+        <!DOCTYPE html>
+        <html menifest="index.appcache">
+        <body>
+            <p>Content</p>
+        </body>
+        </html>
+
+        <br> <!-- Spacing line like enter -->
+
+        then we will create index.appcache file with below code <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>CACHE MANIFEST</b>   <br>
+        <small>index.html</small>   <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        write those files that you want to be cached load index.html then go for online mode and reload the tab    <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>Note:</b> The two files must be in the same folder in this example
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+
+                    <!-- Chapter 37 - HTML Eevent Attribute -->
+    <h2> Chapter 37 - HTML Event Attribute </h2>
+
+    <!-- Chapter 37.1 - HTML Form Events-->
+    <h3>37.1 - HTML Form Events</h3>
+
+    <p>Events triggered by actions inside a HTML form (applies to almost all HTML element, but is most used in form element):</p>
+
+    <!-- Emmet HTML code is table>(thead>tr>th*2)+(tbody>tr*10>td*2) -->
+    <table>
+        <thead>
+            <tr>
+                <th><b>Attribute</b></th>
+                <th><b>Description</b></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>onblur</td>
+                <td>Fires the moment that the element loses focus</tr>
+            </tr>
+            <tr>
+                <td>onchange</td>
+                <td>Fires the moment when the value of the element is changed</tr>
+            </tr>
+            <tr>
+                <td>oncontextmenu</td>
+                <td>Script to be run when a context menu is triggered</td>
+            </tr>
+            <tr>
+                <td>onfocus</td>
+                <td>Fires the moment when the element gets focus</td>
+            </tr>
+            <tr>
+                <td>oninput</td>
+                <td>Script to be run when a element gets user input</td>
+            </tr>
+            <tr>
+                <td>oninvalid</td>
+                <td>Script to be run when an element is invalid</td>
+            </tr>
+            <tr>
+                <td>onreset</td>
+                <td>Fires when the Reset button in a form is clicked</td>
+            </tr>
+            <tr>
+                <td>onsearch</td>
+                <td>Fires when the user writes something in search field (for&lt;input="search"&gt;)</td>
+            </tr>
+            <tr>
+                <td>onselect</td>
+                <td>Fires after some text has been selected in an element</td>
+            </tr>
+            <tr>
+                <td>onsubmit</td>
+                <td>First when a form is submitted</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 37.2 - Keyboard Events -->
+    <h3> 37.2 - Keyboard Events </h3>
+
+    <!-- Emmet HTML Code is: table>(thead>tr>th*2)+(tbody>tr*3>td*2) -->
+    <table>
+        <thead>
+            <tr>
+                <th><b>Attribute</b></th>
+                <th><b>Description</b></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>onkeydown</td>
+                <td>Fires when a user is pressing a key</td>
+            </tr>
+            <tr>
+                <td>onkeypress</td>
+                <td>Fires when a user presses a key</td>
+            </tr>
+            <tr>
+                <td>onkeyup</td>
+                <td>Fires when a user releases a key</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br><!-- Spacing line like enter -->
+
+
+                    <!-- Chapter 38 - Character Entities -->
+    <h2>Chapter 38 - Character  Entities</h2>
+
+    <!-- Chapter  38.1 - Character Entities in HTML -->
+    <h3>38.1 - Character Entities in HTML</h3>
+
+    <p>
+        Character Entities are predefined with 'Entitiy Name'-&entity_name;and'Entity Number'-&entity_number;so we need to use either of the two for the required symbol to be rendered on our page.    <br>
+
+        <br> <!--Spacing line like enter -->
+
+        The list of few character  Entities can be found at <a href="https://dev.w3.org/html5/html-author/charref"><u>https://dev.w3.org/html5/html-author/charref</u></a>  <br>
+
+        <br><!-- Spacing line like enter -->
+
+        &lt;input type="text" placeholder="&#128269; Search"/&gt;   <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>Then Output code is:</b>    <br>
+
+        <br> <!-- Spacing line like enter -->
+        
+        Which render as     <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <input type="text" placeholder="&#128269; Search" />
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 38.2 - Common Special Characters -->
+    <h3> 38.2 - Common Special Characters </h3>
+
+    <p>For this purposes, character entities are cheated. These are of the form <b>&entity_name;</b> or &entity_number;. The following are some of the available HTML entities.</p>
+
+    <!-- Emmet HTML code is table>(thead>tr>th*4)+(tbody>tr*10>td*4) -->
+    <table>
+        <thead>
+            <tr>
+                <th><b>Character</b></th>
+                <th><b>Description</b></th>
+                <th><b>Entity Name</b></th>
+                <th>Entity Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>""</td>
+                <td>non-breacking space</td>
+                <td>& nbsp;</td>
+                <td>&# 160;</td>
+            </tr>
+            <tr>
+                <td>"&lt;"</td>
+                <td>less than</td>
+                <td>& lt;</td>
+                <td>&# 60;</td>
+            </tr>
+            <tr>
+                <td>"&gt;"</td>
+                <td>greater than</td>
+                <td>& gt;</td>
+                <td>&# 62 ;</td>
+            </tr>
+            <tr>
+                <td>"&"</td>
+                <td>ampersand</td>
+                <td>& amp;</td>
+                <td>&# 38;</td>
+            </tr>
+            <tr>
+                <td>"__"</td>
+                <td>em dash</td>
+                <td>& mdash;</td>
+                <td>&# 8212;</td>
+            </tr>
+            <tr>
+                <td>"_"</td>
+                <td>en dash</td>
+                <td>& ndash;</td>
+                <td>&# 8211;</td>
+            </tr>
+            <tr>
+                <td>©</td>
+                <td>copyright</td>
+                <td>& copy;</td>
+                <td>&# 169 ;</td>
+            </tr>
+            <tr>
+                <td>®</td>
+                <td>registered trademark</td>
+                <td>& reg;</td>
+                <td>&# 174;</td>
+            </tr>
+            <tr>
+                <td>"™”</td>
+                <td>trademark</td>
+                <td>& reg ;</td>
+                <td>&# 8482;</td>
+            </tr>
+            <tr>
+                <td>“☎”</td>
+                <td>phone</td>
+                <td>& phone ;</td>
+                <td>&# 9742;</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>
+        Thus, to write  <br>
+        © <b>2016 Stack Exchange Inc.</b>   <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        the following HTML code is used:    <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        &lt;b&gt;<b>& copy;</b> 2016 Stack Exchange Inc. &lt;/b&gt;  <br>
+
+        <br><!-- Spacing line like enter -->
+
+        Then Output code is: <br>
+
+        <br><!-- Spacing line like enter -->
+
+        <b> &copy; 2016 Stack Exchange Inc. </b>
+    </p>
+
+    <br><!-- Spacing line like enter -->
+
+
+                    <!-- Chapter 39 - ARIA -->
+    <h2> Chapter 39 - ARIA </h2>
+
+    <!-- Chapter 39.1 - role="presentation" -->
+    <h3>39.1 - role="presentation"</h3>
+
+    <p>
+        An element whose implicit native role semantics will not be mapped to the accessibility API. <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        &lt;!-- mengubah attribute awal "role="float:...;" " pada element div satu(1) dan dua(2) di ubah menjadi "class="float:...;" " pada element div satu(1) dan dua(2) dan mengubah attribute awal " role="clear:both;" "  pada element div ketiga menjadi 
+        " class="clear:both;" " --&gt;  <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        &lt;div class="float:left;"&gt; Some Content on The left &lt;/div&gt;  <br>
+
+        &lt;div class="float:right;"&gt; Some content on the right &lt;/div&gt; <br>
+
+        &lt;div style="presentation" class="clear:both;"&gt; &lt;/div&gt; &lt;!-- Only used to clear floats --&gt; <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>Then Output Code is:</b>    <br>
+
+        <!-- mengubah attribute awal "role="float:...;" " pada element div satu(1) dan dua(2) di ubah menjadi "class="float:...;" " pada element div satu(1) dan dua(2) dan mengubah attribute awal " role="clear:both;" "  pada element div ketiga menjadi 
+        " class="clear:both;" " -->
+
+        <div class="float:left;">Some Content on The left</div> <br>
+        <div class="float:right;">Some Content on the right</div>   <br>
+        <div role="presentation" class="clear:both;">Presentation</div> <!-- Only used to clear floats -->
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.2 - role="alert" -->
+    <h3> 39.2 - role="alert" </h3>
+
+    <p>
+        A message with important, and usually time-sensitive, information.  <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        &lt;div role="alert" aria-live="assertive"&gt; Your session will expire in 60 seconds. &lt;/div&gt;     <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        Note that i've included bot role="alert" and aria-live="assertive" at the same time.    <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        Source - Heydon Pickering <a href="http://heydonworks.com/practical_aria_examples/#offline-alert"><u> 'Some Practical ARIA examples' </u></a>
+    </p>
+
+    <!-- Chapter 39.3 - role="alert dialog" -->
+    <h3> 39.3 - role="alert dialog" </h3>
+
+    <p>
+        A type of dialog that contains an alert message, where initial focus goes to an element within the dialog. <br>
+        
+        <br> <!-- Spacing line like enter -->
+        <b>
+        &lt;div role="alertdiaglog"&gt; <br>
+        &emsp;&lt;h1&gt;</b> Warning <b>&lt;/h1&gt;    <br>
+        &emsp;&lt;div role="alert"&gt;</b> Your session will expire in 60 seconds. &lt;/div&gt; </b> <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+
+        <div role="alertdialog">
+            <h1>Warning</h1>
+            <div role="alert">Your session wll expire in 60 seconds.</div>
+        </div>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.4 - role="application" -->
+    <h3>39.4 - role="application"</h3>
+
+    <p>
+        A region declared as a web application, as opposed to a web document. In this example, the application is a simple calculator that might add two number together.   <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+        &lt;div role="application"&gt;  <br>
+        &emsp;&lt;h1&gt;</b> Calculator <b>&lt;/h1&gt; <br>
+        &emsp;&lt;input title="#" type="text" id="num1"&gt;</b> + <b>&lt;input title="#" type="text" id="id=num2"&gt;  <br>
+        &emsp;&lt;span id="result"&gt; &lt;/span&gt;   <br>
+        &lt;/div&gt;    <br>
+        </b>
+        
+        <br><!-- Spacing line like enter -->
+
+        <!-- Output code is-->
+        <b>Then Output code is:</b> <br>
+
+        <div role="application">
+            <h1>Calculator</h1>
+            <input title="#" type="text" id="num1"> + <input title="#" type="text" id="id=num2">
+            <span id="result"></span>
+        </div>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.5 - role="article" -->
+    <h3>39.5 - role="article"</h3>
+
+    <p>
+        A section of a page that consists of a composition that forms an independent part of a document, page, or site.     <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <a href="https://www.w3.org/TR/html-aria/#sec-strong-native-semantics"><u>Setting an ARIA role and/or aria-* attribute that matches the default implicit ARIA semantics is unnecessary and is not recommended as these properties are already set by the browser.</u></a>   <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;article&gt; <br>
+            &emsp;&lt;h1&gt;</b> My First article <b>&lt;/h1&gt;   <br>
+            &emsp;&lt;p&gt;</b> Lorem ipsum... <b>&lt;/p&gt;   <br>
+            &lt;/article&gt;    <br>
+            </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+
+        <article>
+            <h1>My First article</h1>
+            <p>Lorem ipsum...</p>
+        </article>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39. - role="" -->
+    <h3> 39.6 - role="benner"</h3>
+
+    <p>
+        A region that contains mostly site-oriented content, rather than page-specific content.     <br>
+
+        <br> <!-- Spacing line like enter -->
+        <b>
+            &lt;div role="banner"&gt;   <br>
+            &emsp;&lt;h1&gt;</b> My Site <b>&lt;/h1&gt;    <br>
+            
+            <br>
+
+            &emsp;&emsp;&lt;ul&gt;    <br>
+            &emsp;&emsp;&lt;li a="" href=""&gt;</b> Home <b>&lt;/li&gt; <br>
+            &emsp;&emsp;&lt;li a="" href="/about"&gt;</b> About <b>&lt;/li&gt;  <br>
+            &emsp;&emsp;&lt;li a="" href="/contact"&gt;</b> Contact <b>&lt;/li&gt;  <br>
+            &emsp;&lt;/ul&gt;   <br>
+            &lt;/div&gt;   <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+        
+        <b>Then Output code :</b>   <br>
+
+        <!-- Emmet HTML code is : div[role="banner"]>(h1{My Site})>(ul>li[a href=""]{Home}+li[a href="/about"]{About}+li[a href="/contact"]{Contact}) -->
+
+        <div role="banner">
+            <h1>My Site</h1>
+            <ul>
+                <li a="" href="">Home</li>
+                <li a="" href="/about">About</li>
+                <li a="" href="/contact">Contact</li>
+            </ul>
+        </div>
+    </p>
+
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.7 - role="button" -->
+    <h3> 39.7 - role="button"</h3>
+    
+    <p>
+        An input that allows for user-triggered actions when clicked or pressed. <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        &lt;button role="button"&gt; Add  &lt;/button&gt;   <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b>  <br>
+
+        <button role="button">Add</button>
+    </p>
+
+    <br><!-- Spacing line like enter -->
+
+    <!-- Chapter 39.8 - role="cell" -->
+    <h3> 39.8 - role="cell"</h3>
+
+    <p>
+        A cell in a tabular container. <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Emmet HTML code is table>(thead{&lt;!--etc--&gt;})+(tbody>td[role="cell"]{95}+td[role="cell"]{14}+td[role="cell"]{25}) -->
+
+        <b>
+            &lt;table&gt;   <br>
+            &emsp;&lt;thead&gt; <br>
+            &emsp;&ensp;&lt;!--etc--&gt;    <br>
+            &emsp;&lt;/thead&gt;    <br>
+            &emsp;&lt;tbody&gt; <br>
+            &emsp;&emsp;&lt;td role="cell"&gt;</b> 95 <b>&lt;/td&gt; <br>
+            &emsp;&emsp;&lt;td role="cell"&gt;</b> 14 <b>&lt;/td&gt; <br>
+            &emsp;&emsp;&lt;td role="cell"&gt;</b> 25 <b>&lt;/td&gt; <br>
+            &emsp;&lt;/tbody>    <br>
+            &lt;/table&gt;    <br>
+        </b>
+
+        <!-- Output code is : -->
+        <b>Then Output code is:</b> <br>
+        
+        <!-- Emmet HTML code is table>(thead{&lt;!--etc--&gt;})+(tbody>td[role="cell"]{95}+td[role="cell"]{14}+td[role="cell"]{25}) -->
+
+        <table>
+            <thead>
+                &lt;!--etc--&gt;
+            </thead>
+            <tbody>
+                <td role="cell">95</td>
+                <td role="cell">14</td>
+                <td role="cell">25</td>
+            </tbody>
+        </table>
+    </p>
+
+
+
+    <!-- Chapter 39.9 - role="checkbox" -->
+    <h3> 39.9 - role="checkbox"</h3>
+
+    <p&gt;>
+        A checkable input that has three possible value: true, false, or mixed.     <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;p&gt;   <br>
+            &emsp;&lt;input title="#" type="checkbox" role="checkbox" aria-checked="false"&gt;</b>  <br>
+            &emsp;I agree to the terms  <br>
+            &lt;/p&gt;  <br>
+        </b>
+
+        <br> <!-- Spacing like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+
+        <p>
+            <input title="#" type="checkbox" role="checkbox" aria-checked="false">
+            I agree to the terms
+        </p>
+    </p>
+
+    <br><!-- Spacing line like enter -->
+
+
+    <!-- Chapter 39.10 - role="columnheader" -->
+    <h3> 39.10 - role="columnheader"</h3>
+
+    <p>
+        A containing header information for a column. <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Emmet HTML code is -->
+        <b>
+            &lt;table&gt;   <br>
+            &emsp;&lt;thead&gt; <br>
+            &emsp;&ensp;&lt;tr&gt;  <br>
+            &emsp;&emsp;&lt;th role="columnheader"&gt;</b> Day 1 <b>&lt;/th&gt;  <br>
+            &emsp;&emsp;&lt;th role="columnheader"&gt;</b> Day 2 <b>&lt;/th&gt;  <br>
+            &emsp;&emsp;&lt;th role="columnheader"&gt;</b> Day 3 <b>&lt;/th&gt;  <br>
+            &emsp;&ensp;&lt;/tr&gt;    <br>
+            &emsp;&lt;/thead&gt;    <br>
+            &emsp;&lt;tbody&gt;   <br>
+            &emsp;&emsp;&lt;!--etc--&gt;    <br>
+            &emsp;&lt;/tbody&gt;    <br>
+            &lt;/table&gt;    <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: table>(thead>tr>th*3)+(tbody>tr>td*3) -->
+        <b>Then Output code is:</b> <br>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th role="columnheader">Day 1</th>
+                    <th role="columnheader">Day 2</th>
+                    <th role="columnheader">Day 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--etc-->
+            </tbody>
+        </table>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.11 - role="combobox" -->
+    <h3> 39.11 - role="combobox"</h3>
+
+    <p>
+        A presentation of a select; usually similar to a textbox where users can type ahead to select an option, or type to enter arbitary text as a new item in the list.  <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;input type="text" role="combobox" aria-expanded="false"&gt;  <br>
+            &emsp;&lt;input title="#"<!-- aria-autocomplete="list--> "&gt;  <br>
+            &lt;/div&gt;    <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+        <p>
+            <input title="#" type="text" role="combobox" aria-expanded="false">   <br>
+        </p>
+
+
+        Typically, you would use JavaScript to build the rest of the typehead or list select functionallity.    <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        Example (materi tambahan and just optional) :    <br>
+        <!--
+        <b>
+            &lt;div role="combobox" aria-haspopup="listbox"&gt;  <br>
+            &emsp;&lt;input title="#" type="text" aria-autocomplete="list"&gt;</b>  <br>
+            &emsp;&lt;ul role="listbox"&gt;   <br>
+            &emsp;&emsp;&lt;li role="option"&gt;</b> Option 1 <b>&lt;/li&gt;    <br>
+            &emsp;&emsp;&lt;li role="option"&gt;</b> Option 2 <b>&lt;/li&gt;    <br>
+            &emsp;&emsp;&lt;li role="option"&gt;</b> Option 3 <b>&lt;/li&gt;    <br>
+            &emsp;&lt;/ul&gt;   <br>
+            &lt;/div&gt;    <br>
+        </b>
+        -->
+
+        <!-- Emmet HTML code is div[role="combobox" aria-haspopup="listbox"]>(input[title="#" type="text" aria-autocomplete="list"])+(ul[role="listbox"]>li[role="option"]{Option 1}+li[role="option"]{Option 2}+li[role="option"]{Option 3}) -->
+         
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+        
+        <!-- Just optional to be added " aria-expanded="false" arial-control="my-listbox" " -->
+        <div role="combobox" aria-haspopup="listbox" aria-expanded="false" arial-control="my-listbox">
+            <input title="#" type="text" aria-autocomplete="list">
+            <ul role="listbox">
+                <li role="option">Option 1</li>
+                <li role="option">Option 2</li>
+                <li role="option">Option 3</li>
+            </ul>
+        </div>
+    </p>
+
+
+
+    <!-- Chapter 39.12 - role="complenmentary" -->
+    <h3> 39.12 - role="complenmentary"</h3>
+
+    <p>
+        A supporting section of the document, designed to be complementary to the main content at a similar level in the DOM hierarchy, but remains meaningful when separated from the main content.     <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Emmet HTML code is div[role="complementary"]>(h1{More Articles})+(ul{!--etc--}) -->
+        <b>
+            &lt;div role="complementary"&gt;  <br>
+            &emsp;&lt;h1&gt;</b> More Articles <b>&lt;/h1&gt;    <br>
+            &emsp;&lt;ul&gt;</b> &lt;!--etc--&gt;
+            <b>&lt;/ul&gt;   <br>
+            &lt;/div&gt;    <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+        <div role="complementary">
+            <h1>More Articles</h1>
+            <ul><!--etc--></ul>
+    </p>
+
+    <br><!-- Spacing line like enter -->
+
+    <!-- Chapter 39.13 - role="contentinfo" -->
+    <h3> 39.13 - role="contentinfo"</h3>
+
+    <p>
+        A large perceivable region that contains information about the parent document.     <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>First</b> <br>
+
+        &lt;p role="contentinfo"&gt;
+            Author : Albert Einstein <br> 
+            Published : August 15, 1940
+        &lt;/p&gt;   <br>
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+        <p role="contentinfo">
+            Author : Albert Einstein <br> 
+            Published : August 15, 1940
+        </p>
+
+        <br><!-- Spacing line like enter -->
+
+        <b>Second</b> <br>
+
+        <!-- Emmet HTML code is div[role="contentinfo"]>(h1{About Us})+(p{We are a company that...}) -->
+
+        <b>
+            &lt;div role="contentinfo"&gt;  <br>
+            &emsp;&lt;h1&gt;</b> About Us <b>&lt;/h1&gt;    <br>
+            &emsp;&lt;p&gt;</b> We are a company that... <b>&lt;/p&gt;   <br>
+            &lt;/div&gt;    <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+        <div role="contentinfo">
+            <h1>About Us</h1>
+            <p>We are a company that...</p>
+        </div>
+    </p>
+
+    <br><!-- Spacing line like enter -->
+
+    <!-- Chapter 39.14 - role="definition" -->
+    <h3> 39.14 - role="definition"</h3>
+
+    <p>
+        A definition of a term or concept.    <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>First</b> <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        &lt;!-- Emmet HTML code is span[role="term" aria-labelledby="def1"]{Love}+(span[id="def1" role="definition"]{an intense feeling of deep affection}) --&gt;   <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;span role="term" aria-labelledby="def1"&gt;</b> Love <b>&lt;/span&gt;   <br>
+            &lt;span id="def1" role="definition"&gt;</b> an intense feeling of deep affection <b>&lt;/span&gt;
+        </b>   <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <span role="term" aria-labelledby="def1">Love</span>    <br>
+        <span id="def1" role="definition">an intense feeling of deep affection</span>   <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>Second</b>   <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;div role="definition"&gt;  <br>
+            &emsp;&lt;h1&gt;</b> Definition of ARIA <b>&lt;/h1&gt;    <br>
+            &emsp;&lt;p&gt;</b> ARIA stands for Accessible Rich Internet Applications. It is a set of attributes that define ways to make web content and web applications more accessible to people with disabilities. <b>&lt;/p&gt;   <br>
+            &lt;/div&gt;    <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+        <div role="definition">
+            <h1>Definition of ARIA</h1>
+            <p>ARIA stands for Accessible Rich Internet Applications. It is a set of attributes that define ways to make web content and web applications more accessible to people with disabilities.</p>
+        </div>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.15 - role="diaglog" -->
+    <h3> 39.15 - role="diaglog"</h3>
+
+    <p>
+        A dialog is an application window that is designed to interupt the current processing of an application in order to prompt the user to enter information or require a response.     <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>First</b>    <br>
+
+        &lt;!-- Emmet HTML code is div[div="dialog"]>(p{Are you sure?})+(button[role="button"]{Yes})+(button[role="button"]{No}) --&gt;   <br>
+
+        <br> <!-- Spacing line like enter -->
+        <b>
+            &lt;div role="dialog"&gt;  <br>
+            &emsp;&lt;p&gt;</b> Are you sure? <b>&lt;/p&gt;    <br>
+            &emsp;&lt;button role="button"&gt;</b> Yes <b>&lt;/button&gt;    <br>
+            &emsp;&lt;button role="button"&gt;</b> No <b>&lt;/button&gt;    <br>
+            &lt;/div&gt;    <br>
+        </b>
+        
+        <br> <!-- Spacing line like enter -->
+        
+        <!-- Output code is -->
+        <b>Then Output code is:</b> <br>
+
+        <!-- Emmet HTML code is: div[div="dialog"]>(p{Are you sure?})+(button[role="button"]{Yes})+(button[role="button"]{No}) -->
+        <div role="dialog">
+            <p>Are you sure?</p>
+            <button role="button">Yes</button>
+            <button role="button">No</button>
+        </div>   <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>Second</b>   <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;div role="dialog"&gt;  <br>
+            &emsp;&lt;h1&gt;</b> Dialog Title <b>&lt;/h1&gt;    <br>
+            &emsp;&lt;p&gt;</b> Dialog content goes here... <b>&lt;/p&gt;   <br>
+            &lt;/div&gt;    <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+        <div role="dialog">
+            <h1>Dialog Title</h1>
+            <p>Dialog content goes here...</p>
+        </div>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.16 - role="directory" -->
+    <h3> 39.16 - role="directory"</h3>
+
+    <p>
+        A list of references to members of a group, such a static of contents.  <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>First</b>    <br>
+
+        &lt;ul role="directory"&gt;   <br>
+            &lt;li&gt;&lt;a href="/chapter1"&gt;Chapter 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="/chapter2"&gt;Chapter 2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="/chapter3"&gt;Chapter 3&lt;/a&gt;&lt;/li&gt;
+        </ul>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+
+        <!-- jadi permasalahan nya ada pada role nya, seharusnya role="list" agar tidak terjadi erro pada element dan attribute li atau menambahkan role="directory" pada semua element "li"-->
+        <ul role="directory">
+            <li role="directory">
+                <a href="/chapter1">Chapter 1</a>
+            </li>
+            <li role="directory">
+                <a href="/chapter2">Chapter 2</a>
+            </li>
+            <li role="directory">
+                <a href="/chapter3">Chapter 3</a>
+            </li>
+        </ul>
+
+        <b>Second</b>   <br>
+
+        &lt;!-- Emmet HTML code is nav[role="directory"]>(h1{Table of Contents})+(ul>li>a[href="#Chapter1"]{Chapter 1}+li>a[href="#Chapter2"]{Chapter 2}+li>a[href="#Chapter3"]{Chapter 3}) --&gt;   <br>
+        
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;nav role="directory"&gt;  <br>
+            &emsp;&lt;h1&gt;</b> Table of Contents <b>&lt;/h1&gt;    <br>
+            &emsp;&lt;ul&gt;</b>   <br>
+            &emsp;&emsp;&lt;li&gt; &lt;a href="#Chapter1"&gt;</b> Chapter 1 <b>&lt;/li&gt;    <br>
+            &emsp;&emsp;&lt;li&gt; &lt;a href="#Chapter2"&gt;</b> Chapter 2 <b>&lt;/li&gt;    <br>
+            &emsp;&emsp;&lt;li&gt; &lt;a href="#Chapter3"&gt;</b> Chapter 3 <b>&lt;/li&gt;    <br>
+            &emsp;&lt;/ul&gt;   <br>
+            &lt;/nav&gt;    <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+
+        <!-- Emmet HTML code is nav[role="directory"]>(h1{Table of Contents})+(ul>li>a[href="#Chapter1"]{Chapter 1}+li>a[href="#Chapter2"]{Chapter 2}+li>a[href="#Chapter3"]{Chapter 3}) --&gt; -->
+
+        <b>Then Output code is:</b> <br>
+        <nav role="directory">
+            <h1>Table of Contents</h1>
+            <ul>
+                <li><a href="#Chapter1">Chapter 1</a></li>
+                <li><a href="#Chapter2">Chapter 2</a></li>
+                <li><a href="#Chapter3">Chapter 3</a></li>
+            </ul>
+        </nav>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.17 - role="document" -->
+    <h3> 39.17 - role="document"</h3>
+
+    <p>
+        A region declared as a web document, as opposed to a web application.     <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>First</b>    <br>
+        &lt;!-- Emmet HTML code is div[role="document"]>(h1{The life of Albert Einstein})+(p{Lorem ipsum...}) --&gt;   <br>
+        <b>
+            &lt;div role="document"&gt;  <br>
+                &emsp;&lt;h1&gt;</b> The life of Albert Einstein <b>&lt;/h1&gt;    <br>
+                &emsp;&lt;p&gt;</b> Lorem ipsum... <b>&lt;/p&gt;   <br>
+            &lt;/div&gt;    <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+        <div role="document">
+            <h1>The life of Albert Einstein</h1>
+            <p>Lorem ipsum...</p>
+        </div>   <br>
+
+        <b>Second</b>   <br>
+        
+        <!-- Emmet HTML code is div[role="document"]>(h1{My Document})+(p{This is a simple document with some text content.}) --> 
+
+        <b>
+            &lt;div role="document"&gt;  <br>
+            &emsp;&lt;h1&gt;</b> My Document <b>&lt;/h1&gt;    <br>
+            &emsp;&lt;p&gt;</b> This is a simple document with some text content. <b>&lt;/p&gt;   <br>
+            &lt;/div&gt;    <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+        <div role="document">
+            <h1>My Document</h1>
+            <p>This is a simple document with some text content.</p>
+        </div>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+
+    <!-- Chapter 39.18 - role="form" -->
+    <h3> 39.18 - role="form"</h3>
+
+    <P>
+        A landmark region that contains a collection of items and objects that, as a whole, combine to create a form.     <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>First</b>    <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        &lt;!-- Emmet HTML code is : form[action=""]>fieldset>(legend{Login Form})+(div>label[for="username"]{Your username}+input[type="text" id="username" aria-describedby="username-tip" required /]+div[role="tooltip" id="username-tip"]{Your username is your email address})+(div>label[for="password"]{Your Password}+input[type="text" id="password" aria-describedby="password-tip" required/]+div[role="tooltip" id="password-tip"]{Was emailed to you when you signed up}) --&gt;   <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;form action=""&gt;  <br>
+            &emsp;&lt;fieldset&gt;   <br>
+            &emsp;&emsp;&lt;legend&gt;</b> Login Form <b>&lt;/legend&gt;    <br>
+            &emsp;&emsp;&lt;div&gt;  <br>
+            &emsp;&emsp;&emsp;&lt;label for="username"&gt;</b> Your username <b>&lt;/label&gt;   <br>
+            &emsp;&emsp;&emsp;&lt;input type="text" id="username" aria-describedby="username-tip" required /&gt;   <br>
+            &emsp;&emsp;&emsp;&lt;div role="tooltip" id="username-tip"&gt;</b> Your username is your email address <b>&lt;/div&gt;    <br>
+            &emsp;&emsp;&lt;/div&gt;   <br>
+            &emsp;&emsp;&lt;div&gt;  <br>
+            &emsp;&emsp;&emsp;&lt;label for="password"&gt;</b> Your Password <b>&lt;/label&gt;   <br>
+            &emsp;&emsp;&emsp;&lt;input type="text" id="password" aria-describedby="password-tip" required /&gt;   <br>
+            &emsp;&emsp;&emsp;&lt;div role="tooltip" id="password-tip"&gt;</b> Was emailed to you when you signed up <b>&lt;/div&gt;    <br>
+            &emsp;&emsp;&lt;/div&gt;   <br>
+            &lt;/fieldset&gt;    <br>
+            &lt;/form&gt;    <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+
+        <!-- Emmet HTML code is : form[action=""]>fieldset>(legend{Login Form})+(div>label[for="username"]{Your username}+input[type="text" id="username" aria-describedby="username-tip" required /]+div[role="tooltip" id="username-tip"]{Your username is your email address})+(div>label[for="password"]{Your Password}+input[type="text" id="password" aria-describedby="password-tip" required/]+div[role="tooltip" id="password-tip"]{Was emailed to you when you signed up}) -->
+
+        <form action="">
+            <fieldset>
+                <legend>Login Form</legend>
+                <div>
+                    <label for="username">Your username</label>
+                    <input type="text" id="username" aria-describedby="username-tip" required/>
+                    <div role="tooltip" id="username-tip">Your username is your email address</div> <br>
+                </div>
+                <div>
+                    <label for="password">Your Password</label>
+                    <input type="text" id="password" aria-describedby="password-tip" required/>
+                    <div role="tooltip" id="password-tip">Was emailed to you when you signed up</div>
+                </div>
+            </fieldset> <br>
+
+        <B>Second</B>   <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        &lt;!-- Emmet HTML code is form[role="form"]>(h1{Contact Us})+(label[for="name"]{Name:}+input[type="text" id="name" name="name"])+(label[for="email"]{Email:}+input[type="email" id="email" name="email"])+(label[for="message"]{Message:}+textarea[id="message" name="message"])+(button[type="submit" role="button"]{Send}) --&gt;   <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;form role="form"&gt;  <br>
+            &emsp;&lt;h1&gt;</b> Contact Us <b>&lt;/h1&gt;    <br>
+            &emsp;&lt;label for="name"&gt;</b> Name: <b>&lt;/label&gt;   <br>
+            &emsp;&lt;input type="text" id="name" name="name"&gt;   <br>
+            &emsp;&lt;label for="email"&gt;</b> Email: <b>&lt;/label&gt;  <br>
+            &emsp;&lt;input type="email" id="email" name="email"&gt;    <br>
+            &emsp;&lt;label for="message"&gt;</b> Message: <b>&lt;/label&gt;    <br>
+            &emsp;&lt;textarea id="message" name="message"&gt; &lt;/textarea&gt;  <br>
+            &emsp;&lt;button type="submit" role="button"&gt;</b> Send <b>&lt;/button&gt;    <br>
+            &lt;/form&gt;    <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+
+        <!-- Emmet HTML code is form[role="form"]>(h1{Contact Us})+(label[for="name"]{Name:}+input[type="text" id="name" name="name"])+(label[for="email"]{Email:}+input[type="email" id="email" name="email"])+(label[for="message"]{Message:}+textarea[id="message" name="message"])+(button[type="submit" role="button"]{Send}) -->
+        <form role="form">
+            <h1>Contact Us</h1>
+            <label for="name">Name:</label> <br>
+            <input type="text" id="name" name="name">   <br>
+            <label for="email">Email:</label>   <br>
+            <input type="email" id="email" name="email">    <br>
+            <label for="message">Message:</label>   <br>
+            <textarea id="message" name="message"></textarea>   <br>
+            <button type="submit" role="button">Send</button>   <br>
+        </form> <br>
+    </P>
+
+    <p> You would use role=form on non-semantic elements (not recommended, invalid) </p>
+
+    <p>
+        <b>
+            &lt;div role="form"&gt;</b>  <br>
+            &emsp;&lt;input type="email" placeholder="Your email address"&gt;   <br>
+            &emsp;&lt;button&gt;</b> sign up <b>&lt;/button&gt;    <br>
+            &lt;/div&gt;    <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+
+        <div role="form">
+            <input type="email" placeholder="Your email address">
+            <button>sign up</button>
+        </div>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.19 - role="grid" -->
+    <h3> 39.19 - role="grid"</h3>
+
+    <p>
+        A grid is an active control which contains cells of tabular data arranged in rows and columns, like a table. <br>
+
+        <br> <!-- Spacing line like enter-->
+
+        <b>First</b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Emmet HTML code is: table[role="grid"]>(thead{!--etc--}+tbody{!--etc--})-->
+
+        <b>
+            &lt;table role="grid"&gt;   <br>
+            &emsp;&lt;thead&gt;</b> <br>
+            &emsp;&emsp;&lt;!--etc--&gt;    <br>
+            <b>&emsp;&lt;/thead&gt;    <br>
+            &emsp;&lt;tbody&gt; <br>
+            &emsp;&emsp;&lt;</b>!--etc--&gt;  <br>
+            <b>&emsp;&lt;/tbody&gt;    <br>
+            &lt;/table&gt;    <br>
+        </b>
+
+        <br> <!-- Spacing line like counter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is: </b>    <br>
+        
+        <!-- Emmet HTML code is: table[role="grid"]>(thead{!--etc--})+(tbody{!--etc--}) -->
+
+        <table role="grid">
+            <thead>
+                <!--etc-->  etc
+            </thead>    <br>
+            <tbody>
+                <!--etc-->  etc
+            </tbody>
+        </table>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Emmet HTML code is table[role="grid"]>(thead>tr>th*3)+(tbody>tr>td*3) -->
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>Second</b>   <br>
+
+        &lt;!-- Emmet HTML code is table[role="grid"]>(thead>tr>th*3)+(tbody>tr>td*3) --&gt;   <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;table role="grid"&gt;   <br>
+            &emsp;&lt;thead&gt; <br>
+            &emsp;&ensp;&lt;tr&gt;  <br>
+            &emsp;&emsp;&lt;th role="columnheader"&gt;</b> Day 1 <b>&lt;/th&gt;  <br>
+            &emsp;&emsp;&lt;th role="columnheader"&gt;</b> Day 2 <b>&lt;/th&gt;  <br>
+            &emsp;&emsp;&lt;th role="columnheader"&gt;</b> Day 3 <b>&lt;/th&gt;  <br>
+            &emsp;&ensp;&lt;/tr&gt;    <br>
+            &emsp;&lt;/thead&gt;    <br>
+            &emsp;&lt;tbody&gt;   <br>
+            &emsp;&emsp;&lt;tr&gt;  <br>
+            &emsp;&emsp;&emsp;&lt;td role="gridcell"&gt;</b> 95 <b>&lt;/td&gt;    <br>
+            &emsp;&emsp;&emsp;&lt;td role="gridcell"&gt;</b> 14 <b>&lt;/td&gt;    <br>
+            &emsp;&emsp;&emsp;&lt;td role="gridcell"&gt;</b> 35 <b>&lt;/td&gt;    <br>
+            &emsp;&emsp;&lt;/tr&gt;    <br>
+            &emsp;&lt;/tbody&gt;    <br>
+            &lt;/table&gt;    <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+        <!-- Output code is: table[role="grid"]>(thead>tr>th*3)+(tbody>tr>td*3) -->
+        <b>Then Output code is:</b> <br>
+        <table role="grid">
+            <thead>
+                <tr>
+                    <th role="columnheader">Day 1</th>
+                    <th role="columnheader">Day 2</th>
+                    <th role="columnheader">Day 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td role="gridcell">95</td>
+                    <td role="gridcell">14</td>
+                    <td role="gridcell">35</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.20 - role="gridcell" -->
+    <h3> 39.20 - role="gridcell"</h3>
+
+    <p>
+        A cell in a grid or treegrid.   <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        &lt;!-- Emmet HTML code is: table[role="grid"]>(thead{!----})+(tbody>tr>td[role="gridcell"]{17}+td[role="gridcell"]{64}+td[role="gridcell"]{18}) --&gt;    <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;table role="grid"&gt;   <br>
+            &emsp;&lt;thead&gt; <br>
+            &emsp;&emsp;&lt;!----   <br>
+            &emsp;&lt;/thead&gt;    <br>
+            &emsp;&lt;tbody&gt; <br>
+            &emsp;&lt;tr&gt;    <br>
+            &emsp;&emsp;&lt;td role="gridcell"&gt;</b> 17 <b>&lt;/td&gt;   <br>
+            &emsp;&emsp;&lt;td role="gridcell"&gt;</b> 64 <b>&lt;/td&gt;   <br>
+            &emsp;&emsp;&lt;td role="gridcell"&gt;</b> 18 <b>&lt;/td&gt;   <br>
+            &emsp;&emsp;&lt;/tr&gt; <br>
+            &emsp;&lt;/tbody&gt;    <br>
+            &lt;/table&gt;  <br>
+        </b>
+
+        <br><!-- Spacing line like enter -->
+
+        <!-- Output code is : -->
+        <b>Then Output code is:</b>
+
+        <!-- Emmet HTML code is: table[role="grid"]>(thead{!----})+(tbody>tr>td[role="gridcell"]{17}+td[role="gridcell"]{64}+td[role="gridcell"]{18}) -->
+
+        <table role="grid">
+            <thead>
+                <!---->
+            </thead>
+            <tbody>
+                <tr>
+                    <td role="gridcell">17</td>
+                    <td role="gridcell">64</td>
+                    <td role="gridcell">18</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.21 - role="group" -->
+    <h3> 39.21 - role="group"</h3>
+
+    <p>
+        A set of user interface objects which are not intended to be included in page summary or table of contents by assistive technologies. <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;div role="group"&gt;    <br>
+            &emsp;&lt;button role="button"&gt;</b> Previous <b>&lt;/button&gt; <br>
+            &emsp;&lt;button role="button"&gt;</b> Next <b>&lt;/button&gt; <br>
+            &lt;/div&gt;    <br>
+        </b>
+
+        <br><!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b>
+
+        <!-- Emmet HTML code is: div[role="group"]>(button[role="button"]{Previous})+(button[role="button"]{Next}) -->
+
+        <div role="group">
+            <button role="button">Previous</button>
+            <button role="button">Next</button>
+        </div>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.22 - role="heading" -->
+    <h3> 39.22 - role="heading"</h3>
+
+    <p&gt;>
+        A heading for a section of the page.    <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;h1 role="heading"&gt;</b> Introduction <b>&lt;/h1&gt;  <br>
+            &lt;p&gt;</b> Lorem ipsum... <b>&lt;/p&gt; <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b>
+        <h1 role="heading">introduction</h1>
+        <p>Lorem ipsum...</p>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.23 - role="img" -->
+    <h3> 39.23 - role="img"</h3>
+
+    <p>
+       A container for a collection of elements that form an image. <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;figure title="#" role="img"&gt;   <br>
+            &emsp;&lt;img src="albert.jpg" alt="A cute cat."&gt;    <br>
+            &emsp;&lt;figcaption&gt;</b> This is my cat, Albert <b></figcaption> <br>
+            &lt;/figure&gt;   <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b>
+
+        <figure title="#" role="img">
+            <img src="albert.jpg" alt="A cute cat.">
+            <figcaption>This is my cat, Albert</figcaption>
+        </figure>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.24 - role="link" -->
+    <h3> 39.24 - role="link"</h3>
+
+    <p>
+        An interactive reference to an internal or external resource that, when activated, cause the user agent to navigate to that resource. <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        In the majority of cases setting an ARIA role and/or aria-* attribute that matches the <a href="https://www.w3.org/TR/html-aria/#sec-strong-native-semantics"><u>default implicit ARIA semantices</u></a> is unnecessary and not recommended as these properties are already set by the browser.    <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        Source: <a href="https://www.w3.org/TR/html5/dom.html#aria-usage-note"><u>https://www.w3.org/TR/html5/dom.html#aria-usage-note</u></a>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.25 - role="list" -->
+    <h3> 39.25 - role="list"</h3>
+
+    <p>
+        A group of non-interactive list items.     <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;ul role="list"&gt;   <br>
+            &emsp;&lt;li role="listitem"&gt; One &lt;/li&gt;    <br>
+            &emsp;&lt;li role="listitem"&gt; Two &lt;/li&gt;    <br>
+            &emsp;&lt;li role="listitem"&gt; Three &lt;/li&gt;  <br>
+            &lt;/ul&gt;   <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b>
+
+        <!-- Emmet HTML code is: ul[role="list"]>(li[role="listitem"])*3 -->
+        <ul role="list">
+            <li role="listitem">one</li>
+            <li role="listitem">Two</li>
+            <li role="listitem">Three</li>
+        </ul>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.26 - role="listbox" -->
+    <h3> 39.26 - role="listbox"</h3>
+
+    <p>
+        A widget that allows the user to select one or more items from a list of choices.   <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        &lt;ul role="listbox"&gt; <br>
+        &emsp;&lt;li&gt; One &lt;/li&gt;    <br>
+        &emsp;&lt;li&gt; Two &lt;/li&gt;    <br>
+        &emsp;&lt;li&gt; Three &lt;/li&gt;  <br>
+        </ul>
+
+        <br> <!-- Spacing like enter -->
+
+        <!-- Output code is : -->
+        <b> Then Output code is: </b>
+
+        <!-- just optional to be added title on the ul "title="listbox", add role="option" to at all li "-->
+        <ul title="listbox" role="listbox">
+            <li role="option">One</li>
+            <li role="option">Two</li>
+            <li role="option">Three</li>
+        </ul>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+    
+    <!-- Chapter 39.27 - role="listiem" -->
+    <h3> 39.27 - role="listiem"</h3>
+
+    <p>
+        A single item in a list or directory.   <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;ul role="list"&gt;  <br>
+            &emsp;&lt;li role="listitem"&gt;</b> One <b>&lt;/li&gt;    <br>
+            &emsp;&lt;li role="listitem"&gt;</b> Two <b>&lt;/li&gt;    <br>
+            &emsp;&lt;li role="listitem"&gt;</b> Three <b>&lt;/li&gt;  <br>
+            &lt;/ul&gt; <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b>
+
+        <ul role="list">
+            <li role="listitem">One</li>
+            <li role="listitem">Two</li>
+            <li role="listitem">Three</li>
+        </ul>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.28 - role="log" -->
+    <h3> 39.28 - role="log"</h3>
+
+    <p>
+        A type of live region where new information is added in meaningful order and old information may disappear.     <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;ul role="log"&gt;   <br>
+            &emsp;&lt;li&gt;</b> User 1 Logged in. <b>&lt;/li&gt;  <br>
+            &emsp;&lt;li&gt;</b> User 2 Logged in. <b>&lt;/li&gt;  <br>
+            &emsp;&lt;li&gt;</b> User 3 Logged in. <b>&lt;/li&gt;  <br>
+            &lt;/ul&gt;   <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b>
+        <!-- just optional to be added " role="log" " at all li elements -->
+        <ul role="log">
+            <li role="log">User 1 Logged in.</li>
+            <li role="log">User 2 Logged in.</li>
+            <li role="log">User 3 Logged in.</li>
+        </ul>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.29 - role="main" -->
+    <h3> 39.29 - role="main"</h3>
+
+    <p>
+        The main content of a document.     <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;!-- header & nav here --&gt;<br>
+            &lt;div role="main"&gt; <br>
+            &emsp;&lt;p&gt; Lorem ipsum ... &gt;/p&gt;   <br>
+            &lt;/div&gt;  <br>
+            &lt;!-- Footer here --&gt;    <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b>
+        <!-- header & nav here -->
+            <div role="main">
+                <p>Lorem ipsum...</p>
+            </div>
+            <!-- Footer here -->
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.30 - role="marquee" -->
+    <h3> 39.30 - role="marquee"</h3>
+
+    <p>
+        A type of live region where non-essential information changers frequently.  <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;ul role="marquee"&gt;   <br>
+            &emsp;&lt;li&gt; Dow +0.26% &lt;/li&gt; <br>
+            &emsp;&lt;li&gt;Nasdaq +0.54% &lt;/li&gt;   <br>
+            &emsp;&lt;li&gt; S& amp;p +0.44% &lt;/li&gt;    <br>
+            &lt;/ul&gt; <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+        <!-- Just optional to be added " role="marquee" to at all li element li "-->
+        <ul role="marquee">
+            <li role="marquee"> Dow +0.26% </li>
+            <li role="marquee"> Nasdaq +0.54% </li>
+            <li role="marquee"> S&amp;p +0.44% </li>
+        </ul>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.31 - role="math" -->
+    <h3> 39.31 - role="math"</h3>
+
+    <p>
+        Content that represents a mathematical expression.  <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        &lt;img src="slope.png" alt="y=mx+b" role="math"&gt;    <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Ouput code is:</b>  <br>
+        <img src="slope.png" alt="y=mx+b" role="math">
+    </p>
+
+
+    <!-- Chapter 39.32 - role="menu" -->
+    <h3> 39.32 - role="menu"</h3>
+
+    <p>
+        A type of widget that offers a list of choices to the user.     <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;ul role="menu"&gt;  <br>
+            &emsp;&lt;li role="menuitem"&gt;</b> New <b>&lt;/li&gt;    <br>
+            &emsp;&lt;li role="menuitem"&gt;</b> Open <b>&lt;/li&gt;   <br>
+            &emsp;&lt;li role="menuitem"&gt;</b> Save <b>&lt;/li&gt;    <br>
+            &emsp;&lt;li role="menuitem&gt;</b> Close <b>&lt;/li&gt;   <br>
+            &lt;/ul&gt; <br>
+        </b>
+
+        <br><!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b>
+        <ul role="menu">
+            <li role="menuitem">New</li>
+            <li role="menuitem">Open</li>
+            <li role="menuitem">Save</li>
+            <li role="menuitem">Close</li>
+        </ul>
+    </p>
+
+    <br><!-- Spacing line like enter -->
+
+    <!-- Chapter 39.33 - role="menubar" -->
+    <h3> 39.33 - role="menubar"</h3>
+
+    <p>
+        A presentation of menu that usually remains visible and is usually presented horizontally.  <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;ul role="menubar"&gt;   <br>
+            &emsp;&lt;li role="menuitem"&gt;</b> File <b>&lt;/li&gt;   <br>
+            &emsp;&lt;li role="menuitem"&gt;</b> Edit <b>&lt;/li&gt;   <br>
+            &emsp;&lt;li role="menuitem"&gt;</b> View <b>&lt;/li&gt;   <br>
+            &emsp;&lt;li role="menuitem"&gt;</b> Help <b>&lt;/li&gt;   <br>
+            &lt;/li&gt;   <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b>
+
+        <ul role="menubar">
+            <li role="menuitem">File</li>
+            <li role="menuitem">Edit</li>
+            <li role="menuitem">View</li>
+            <li role="menuitem">Help</li>
+        </ul>
+    </p>
+
+    <!-- Chapter 39.34 - role="menuitem" -->
+    <h3> 39.34 - role="menuitem"</h3>
+
+    <p>
+        An option in a group of choices contained by a menu or menubar.     <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;ul role="menubar"&gt;   <br>
+            &emsp;&lt;li role="menuitem"&gt;</b> File <b>&lt;/li&gt;   <br>
+            &emsp;&lt;li role="menuitem"&gt;</b> Edit <b>&lt;/li&gt;   <br>
+            &emsp;&lt;li role="menuitem"&gt;</b> View <b>&lt;/li&gt;   <br>
+            &emsp;&lt;li role="menuitem"&gt;</b> Help <b>&lt;/li&gt;   <br>
+            &lt;/li&gt;   <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is</b>
+
+        <ul role="menubar">
+            <li role="menuitem">File</li>
+            <li role="menuitem">Edit</li>
+            <li role="menuitem">View</li>
+            <li role="menuitem">Help</li>
+        </ul>
+    </p>
+
+
+    <!-- Chapter 39.35 - role="menuitemcheckbox" -->
+    <h3> 39.35 - role="menuitemcheckbox"</h3>
+
+    <p>
+        A checkable menuitem that has three possible value: true, false, mixed.     <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;ul role="menu"&gt;  <br>
+            &emsp;&lt;li role="menuitem"&gt;</b> Console <b>&lt;/li&gt;    <br>
+            &emsp;&lt;li role="menuitem"&gt;</b> Layout <b>&lt;/li&gt;    <br>
+            &emsp;&lt;li role="menuitemcheckbox" aria-checked="true"&gt;</b> Word Wrap <b>&lt;/li&gt;  <br>
+            &lt;/li&gt; <br>
+        </b>
+
+        <br><!-- Spacing line like enter -->
+
+        <!-- Output code is -->
+        <b>Then Output code is:</b>
+        <ul role="menu">
+            <li role="menuitem">Console</li>
+            <li role="menuitem">Layout</li>
+            <li role="menuitemcheckbox" aria-checked="true">Word Wrap</li>
+       </ul>
+    </p>
+
+
+    <!-- Chapter 39.36 - role="menuitemradio" -->
+    <h3> 39.36 - role="menuitemradio"</h3>
+
+    <p>
+        A checkable menuitem in a group of menu item radio roles, only one of which can be checked at a time.     <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;ul role="menu"&gt;  <br>
+            &emsp;&lt;li role="menuitemradio" aria-checked="true"&gt;</b> Left <b>&lt;/li&gt;  <br>
+            &emsp;&lt;li role="menuitemradio" aria-checked="false"&gt;</b> Center <b>&lt;/li&gt;  <br>
+            &emsp;&lt;li role="menuitemradio" aria-checked="false"&gt;</b> Right <b>&lt;/li&gt;    <br>
+            &lt;/li&gt; <br>
+        </b>
+
+        <br><!-- Spacing line like -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b>
+        <ul role="menu">
+            <li role="menuitemradio" aria-checked="true">Left</li>
+            <li role="menuitemradio" aria-checked="false">Center</li>
+            <li role="menuitemradio" aria-checked="false">Right</li>
+        </ul>
+    </p>
+
+
+    <!-- Chapter 39.37 - role="navigation" -->
+    <h3> 39.37 - role="navigation"</h3>
+
+    <p>
+        A collection of navigational elements (usually links) for navigating the document or related documents. <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;ul role="navigation"&gt;    <br>
+            &emsp;&lt;li role="navigation"&gt; &lt;a href="/"&gt;</b> Home <b>&lt;/a&gt; &lt;/li&gt;   <br>
+            &emsp;&lt;li role="navigation"&gt; &lt;a href="/About"&gt;</b> About <b>&lt;/a&gt; &lt;/li&gt; <br>
+            &emsp;&lt;li role="navigation"&gt; &lt;a href="/contact"&gt;</b> Contact <b>&lt;/a&gt; &lt;/li&gt;   <br>
+            &lt;/li&gt;   <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b>
+        <!-- Just optional to added " role="navigation" " to at all li element -->
+        
+        <ul role="navigation">
+            <li role="navigation"><a href="/">Home</a></li>
+            <li role="navigation"><a href="/About">About</a></li>
+            <li role="navigation"><a href="/contact">Contact</a></li>
+        </ul>
+    </p>
+
+
+    <!-- Chapter 39.38 - role="note" -->
+    <h3> 39.38- role="note"</h3>
+
+    <p>
+        A sectin whose content is paranthetic or ancillary to the main content of the resource.     <br>
+
+        <br><!-- Spacing line like enter -->
+
+        <b>
+            &lt;p&gt;</b> Lorem ipsum... <b>&lt;/p&gt;    <br>
+            &lt;p&gt;</b> Lorem ipsum...<b>&lt;/p&gt;  <br>
+            &lt;p role="note"&gt;</b> Lorem ipsum... <b>&lt;/p&gt;  <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b>
+        <p>Lorem ipsum...</p>
+        <p>Lorem ipsum...</p>
+        <p role="note">Lorem ipsum...</p>
+    </p>
+
+    <br><!-- Spacing line like enter -->
+
+    <!-- Chapter 39.39 - role="option" -->
+    <h3> 39.39 - role="option"</h3>
+
+    <p>
+        A selectable item in a select list.     <br>
+
+        <br><!-- Spacing line like enter -->
+
+        <b>
+            &lt;ul title="#" role="listbox"&gt; <br>
+            &emsp;&lt;li role="option"&gt; Option 1 &lt;/li&gt; <br>
+            &emsp;&lt;li role="option"&gt; Option 2 &lt;/li&gt; <br>
+            &emsp;&lt;li role="option"&gt; Option 3 &lt;/li&gt; <br>
+            &lt;/li&gt; <br>
+        </b>
+
+        <br><!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b>
+        <ul title="#" role="listbox">
+            <li role="option">Option 1</li>
+            <li role="option">Option 2</li>
+            <li role="option">Option 3</li>
+        </ul>
+    </p>
+
+
+    <!-- Chapter 39.40 - role="progresbar" -->
+    <h3> 39.40 - role="progresbar"</h3>
+
+    <p>
+        An element that displays the progress status for tasks that take a long time.   <br>
+        
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;progress title="#" role="progressbar" value="25" max="100"&gt; 25 &lt;/progress&gt; <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is:-->
+        <b>Then Output code is:</b> <br>
+        <progress title="#" role="progressbar" value="25" max="100">25</progress>
+    </p>
+
+    <br><!-- Spacing line like enter -->
+    
+    <!-- Chapter 39.41 - role="radio" -->
+    <h3> 39.41 - role="radio"</h3>
+
+    <p>
+        A checkable input in a group of radio roles, only one of which can be checked at a time.    <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;div role="radiogroup"&gt;   <br>
+
+            &emsp;&lt;input title="#" type="radio" role="radio" aria-checked="true"&gt;</b> One <b>&lt;br&gt;  <br>
+
+            &emsp;&lt;input title="#" type="radio" role="radio" aria-checked="false"&gt;</b> Two <b>&lt;br&gt;  <br>
+            
+            &emsp;&lt;input title="#" type="radio" role="radio" aria-checked="false"&gt;</b> Three
+            <b>&lt;/div&gt; <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+
+        <div role="radiogroup">
+            <input title="#" type="radio" role="radio" aria-checked="true"> One <br>
+            <input title="#" type="radio" role="radio" aria-checked="false"> Two <br>
+            <input title="#" type="radio" role="radio" aria-checked="false"> Three
+        </div>
+    </p>
+
+
+    <!-- Chapter 39.42 - role="region" -->
+    <h3> 39.42 - role="region"</h3>
+
+    <p>
+       A large perceivable section of a web page or document, that the author feels is important enough to be included in a page summary or table of contents, for example, an area of the page containing live sporting event statistics. <br>
+
+       <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;div role="region"&gt; <br> </b>
+            &emsp;Home team: 4 <b>&lt;br&gt;</b>   <br>
+            &emsp;Away team: 2    <br>
+            <b>&lt;/div&gt;</b>  <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+        <div role="region">
+            Home team: 4 <br>
+            Away team: 2
+        </div>
+    </p>
+
+
+    <!-- Chapter 39.43 - role="radiogroup" -->
+    <h3> 39.43 - role="radiogroup"</h3>
+
+    <p>
+        A group of radio buttons.    <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;div role="radiogroup"&gt;   <br>
+
+            &emsp;&lt;input title="#" type="radio" role="radio" aria-checked="true"&gt;</b> One <b>&lt;br&gt;  <br>
+
+            &emsp;&lt;input title="#" type="radio" role="radio" aria-checked="false"&gt;</b> Two <b>&lt;br&gt;  <br>
+            
+            &emsp;&lt;input title="#" type="radio" role="radio" aria-checked="false"&gt;</b> Three  <br>
+            <b>&lt;/div&gt; <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+
+        <div role="radiogroup">
+            <input title="#" type="radio" role="radio" aria-checked="true"> One <br>
+            <input title="#" type="radio" role="radio" aria-checked="false"> Two <br>
+            <input title="#" type="radio" role="radio" aria-checked="false"> Three
+        </div>
+    </p>
+
+    <!-- Chapter 39.44 - role="row" -->
+    <h3> 39.44 - role="row"</h3>
+
+    <p>
+        A row of cells in a tabular container.  <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;table&gt;    <br>
+            &emsp;&lt;thead&gt;</b> &lt;!--etc--&gt; <b>&lt;/thead&gt;   <br>
+            &emsp;&lt;tbody&gt; <br> 
+            &emsp;&emsp;&lt;tr role="row"&gt;</b> &lt;!--etc--&gt; <b>&lt;/tr&gt;   <br>
+            &emsp;&lt;/tbody&gt    <br>
+            &lt;/table&gt;    <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b>
+        <table>
+            <thead><!--etc--></thead>   <br>
+            <tbody>
+                <tr role="row">
+                    <td><!--etc--></td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
+
+    <br><!-- Spacing line like enter -->
+
+    <!-- Chapter 39.45 - role="rowgroup" -->
+    <h3> 39.45 - role="rowgroup"</h3>
+
+    <p>
+        A group containing one or more row elements in a grid.  <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;table&gt;    <br>
+            &emsp;&lt;thead role="rowgroup"&gt;</b> &lt;!--etc--&gt; <b>&lt;/thead&gt;   <br>
+            &emsp;&lt;tbody role="rowgroup"&gt;</b> &lt;!--etc--&gt; <b>&lt;/tbody&gt;    <br>
+            &lt;/table&gt;    <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b>
+        <table>
+            <thead><!--etc-->row - 1st</thead>   <br>
+            <tbody row="rowgroup"> <!--etc-->row - 2nd</tbody>
+        </table>
+        </b>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.46 - role="rowheader" -->
+    <h3> 39.46 - role="rowheader"</h3>
+
+    <p>
+        A cell containing header information for a row in a grid.   <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        &lt;!-- Emmet HTML code is table[role="grid"]>(thead{&lt;!--etc--&gt;})+(tbody>tr>th[role="rowheader"]{Day 1}+td{65})+(tr>th[role="rowheader"]{Day 2}+td{74}) --&gt;   <br>
+
+        <br><!-- Spacing line like enter -->
+
+        <b>
+            &lt;table role="grid"&gt;   <br>
+            &emsp;&lt;thead&gt; <!--etc--> &lt;/thead&gt;   <br>
+            &emsp;&lt;tbody&gt; <br>            
+            &emsp;&emsp;&lt;tr&gt;    <br>            
+            &emsp;&emsp;&emsp;&lt;th role="rowheader"&gt;</b> Day 1 <b>&lt;/th&gt; <br>            
+            &emsp;&emsp;&emsp;&lt;td&gt;</b> 65 <b>&lt;/td&gt; <br>
+            &emsp;&emsp;&lt;/tr&gt;   <br>           
+            &emsp;&lt;/tbody&gt;    <br>            
+           &emsp;&emsp;&lt;tr&gt;    <br>           
+            &emsp;&emsp;&emsp;&lt;th role="rowheader"&gt;</b> Day 2 <b>&lt;/th&gt; <br>            
+            &emsp;&emsp;&emsp;&lt;td&gt;</b> 74 <b>&lt;/td&gt; <br>           
+            &emsp;&emsp;&lt;tr&gt;   <br>           
+            &lt;/table&gt;    <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is : -->
+        <b>Then Output code is:</b> <br>
+
+        <!-- Emmet HTML code is table[role="grid"]>(thead{!--etc--})+(tbody>tr>th[role="rowheader"]{Day 1}+td{65})+(tr>th[role="rowheader"]{Day 2}+td{74}) -->
+
+        <table role="grid">
+            <thead><!--etc--></thead>
+            <tbody>
+                <tr>
+                    <th role="rowheader">Day 1</th>
+                    <td>65</td>
+                </tr>
+            </tbody>
+            <tr>
+                <th role="rowheader">Day 2</th>
+                <td>74</td>
+            </tr>
+        </table>
+
+    </p>
+
+
+    <!-- Chapter 39.47 - role="scollbar" -->
+    <h3> 39.47 - role="scollbar"</h3>
+
+    <p>
+        A graphical object that controls the scrolling of content within a viewing area, regardless of wheter the content is fully display within the viewing area.     <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Emmet HTML code is: (div[ide="conten1"]{Lorem ipsum ...})+div[role="scollbar" aria-control="content1" aria-orientation="vertical" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25"]>div[class="srollhandle"] -->
+
+        <b>
+            &lt;div id="conten1"&gt;</b> Lorem ipsum ... <b>&lt;/div&gt;  <br>
+            &lt; div    <br>
+            &emsp;role="scrollbar"   <br>
+            &emsp;aria-controls="content1"   <br> 
+            &emsp;aria-orientation="vertical"   <br>
+            &emsp;aria-valuemax="100"   <br>
+            &emsp;aria-valuemin="0"     <br>
+            &emsp;aria-label="Scrollbar"    <br>
+            &emsp;aria-valuenow="25"&gt;   <br>
+            &emsp;&emsp;&lt;div class="scrollhandle"&gt; &lt;/div&gt;    <br>
+            &lt;/div&gt;    <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b>
+        <!-- Emmet HTML code is: (div[ide="conten1"]{Lorem ipsum ...})+div[role="scollbar" aria-control="content1" aria-orientation="vertical" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25"]>div[class="srollhandle"] -->
+
+        <div id="content1">Lorem ipsum ...</div>
+        <div 
+            role="scrollbar"
+            aria-controls="content1"
+            aria-orientation="vertical"
+            aria-valuemax="100"
+            aria-valuemin="0"
+            aria-valuenow="25"
+            aria-label="Scrollbar">
+                <div class="scrollhandle"></div>
+        </div>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.48 - role="searc" -->
+    <h3> 39.48 - role="search"</h3>
+
+    <p>
+        A landmark region that contains a collection of items and object that, as a whole, combine to create a search facility.     <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Emmet HTML code is : div[role="search"]>input[role="searchbox" type="text"]+(button[role="button"]{searh})-->
+        <b>
+            &lt;div role="search"&gt;    <br>
+            &emsp;&lt;input title="#" type="text" role="searchbox"&gt;  <br>
+            &emsp;&lt;button role="button"&gt;</b> Searh <b>&lt;/button&gt;   <br>
+            &lt;/div&gt;    <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b>
+        <div role="search">
+            <input title="#" type="text" role="searchbox">
+            <button role="button">Searh</button>
+        </div>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+
+    <!-- Chapter 39.49 - role="searchbox" -->
+    <h3> 39.49 - role="searchbox"</h3>
+
+    <p>
+        A type pf textbox intended for specifying search criteria.  <br>
+
+        <br><!-- Spacing line like enter -->
+
+        <b>
+            &lt;div role="search"&gt;    <br>
+            &emsp;&lt;input title="#" type="text" role="searchbox"&gt;  <br>
+            &emsp;&lt;button role="button"&gt;</b> Searh <b>&lt;/button&gt;   <br>
+            &lt;/div&gt;    <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b>
+        <div role="search">
+            <input title="#" type="text" role="searchbox">
+            <button role="button">Searh</button>
+        </div>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.50 - role="separator" -->
+    <h3> 39.50 - role="separator"</h3>
+
+    <p>
+        A divider that separates and distinguishes section of content or groups of menitems.    <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;p&gt;</b> Lorem ipsum... <b>&lt;/p&gt;   <br>
+            &lt;hr role="separator"&gt;   <br>
+            &lt;p&gt;</b> Lorem ipsum... <b>&lt;/p&gt;</b>    <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is : -->
+        <b>Then Output code is:</b> <br>
+
+        <p>Lorem ipsum...</p>
+        <hr role="separator">
+        <p>Lorem ipsum...</p>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.51 - role="slider" -->
+    <h3> 39.51 - role="slider"</h3>
+
+    <p>
+        <b>
+            &lt;div     <br>
+            &emsp;role="slider" <br>
+                aria-voluemax="100"    <br>
+                aria-valuemin="0"   <br>
+                aria-valuenow="25"&gt; <br>
+            &emsp;&emsp;&lt;div class="sliderhandle"&lt; &lt;/div&gt;
+            &lt;/div&gt;    <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b>
+
+        <!-- Just added aria-label="slider" dan tabindex="0" -->
+        <div role="slider" 
+            aria-valuemax="100" 
+            aria-valuemin="0"
+            aria-label="slider" 
+            tabindex="0"
+            aria-valuenow="25">
+                <div class="sliderhandle"></div>
+        </div>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+    
+    <!-- Chapter 39.52 - role="spinbutton" -->
+    <h3> 39.52 - role="spinbutton"</h3>
+
+    <p>
+        A form of range that expects the user to select from among discrete choices.    <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;input   <br>
+            &emsp;type="number" <br> 
+            &emsp;role="spinbutton"     <br>
+            &emsp;aria-valuemax="100"   <br>
+            &emsp;aria-valuemin="0"     <br>
+            &emsp;aria-valuenow="25"    <br>
+            &emsp;value="25"&gt;    <br>
+        </b>
+        
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+        <!-- Just added aria="spinbutton"-->
+        <input 
+            type="number" 
+            role="spinbutton" 
+            aria-valuemax="100" 
+            aria-valuemin="0" 
+            aria-valuenow="25"
+            aria-label="spinbutton" 
+            value="25">
+    </p>
+
+    <br><!-- Spacing line like enter -->
+
+    <!-- Chapter 39.53 - role="status" -->
+    <h3> 39.53 - role="status"</h3>
+
+    <p>
+        A container whose content is advisory information for the user but is not importan enough to justify an alert, often but not necessary presented as a status bar.   <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;div role="status"&gt; Online &lt;/div&gt;   <br>
+        </b>
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b>
+        <div role="status">Online</div>
+    </p>
+    
+    <br> <!-- Spacing line like enter -->
+    
+    <!-- Chapter 39.54 - role="switch" -->
+    <h3> 39.54 - role="switch"</h3>
+
+    <p>
+        A type of checkbox that represents on/off values, as opposed to checked/unchecked values.   <br>
+
+        <br><!-- Spacing line like enter -->
+
+        <b>
+            &lt;select title="#" role="switch" aria-checked="false"&gt; <br>
+            &emsp;&lt;option&gt;</b> On <b>&lt;/option&gt; <br>
+            &emsp;&lt;option selected&gt;</b> Off <b>&lt;/option&gt;  <br>
+            &lt;/select&gt; <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code</b> <br>
+        <select title="#" role="switch" aria-checked="false">
+            <option> On </option>
+            <option selected>Off</option>
+        </select>
+    </p>
+
+    <br><!-- Spacing line like enter -->
+
+    <!-- Chapter 39.55 - role="tab" -->
+    <h3> 39.55 - role="tab"</h3>
+
+    <p>
+        A grouping label providing a mechanism for selecting the tab content that is to be rendered to the user.    <br>
+
+        <br><!-- Spacing line like enter -->
+
+        <b>
+            &lt;ul role="tablist"&gt; <br>
+            &emsp;&lt;li role="tab"&gt;</b> Introduction <b>&lt;/li&gt;    <br>
+            &emsp;&lt;li role="tab"&gt;</b> Chapter 1 <b>&lt;/li&gt;   <br>
+            &emsp;&lt;li role="tab"&gt;</b> Chapter 2 <b>&lt;/li&gt;   <br>
+            &lt;/li&gt;   <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is:-->
+        <b>Then Output code is:</b>
+        <ul role="tablist">
+            <li role="tab">Introduction</li>
+            <li role="tab">Chapter 1</li>
+            <li role="tab">Chapter 2</li>
+        </ul>
+    </p>
+
+
+    <!-- Chapter 39.56 - role="table" -->
+    <h3> 39.56 - role="table"</h3>
+
+    <p>
+        A section containing data arranged in rows and columns. The table role is intended for tabular containers which are not interactive.    <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;table role="table"&gt;  <br>
+            &emsp;&lt;thead&gt; &lt;!----&gt; &lt;/thead&gt;  <br>
+            &emsp;&lt;tbody> &lt;!----&gt; &lt;/tbody&gt;   <br>
+            &lt;/table&gt;  <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+        
+        <!-- Spacing line like enter -->
+        <b>Then Output code is:</b>
+        <table role="table">
+            <thead><!----></thead>
+            <tbody><!----></tbody>
+        </table>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.57 - role="tablist" -->
+    <h3> 39.57 - role="tablist"</h3>
+
+    <p>
+        A list of tab elements, which are references to tabpanel elements.  <br>
+
+        <br> <!-- Spacing like enter -->
+
+        <b>
+            &lt;ul role="tablist"&gt; <br>
+            &emsp;&lt;li role="tab"&gt;</b> Introduction <b>&lt;/li&gt;    <br>
+            &emsp;&lt;li role="tab"&gt;</b> Chapter 1 <b>&lt;/li&gt;   <br>
+            &emsp;&lt;li role="tab"&gt;</b> Chapter 2 <b>&lt;/li&gt;   <br>
+            &lt;/li&gt;   <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is:-->
+        <b>Then Output code is:</b>
+        <ul role="tablist">
+            <li role="tab">Introduction</li>
+            <li role="tab">Chapter 1</li>
+            <li role="tab">Chapter 2</li>
+        </ul>
+    </p>
+
+
+    <!-- Chapter 39.58 - role="tabpanel" -->
+    <h3> 39.58 - role="tabpanel"</h3>
+
+    <p>
+        A container for the resources associated with a tab, where each tab is contained in a tablist.  <br>
+
+        <br><!-- Spacing line like enter -->
+
+        <b>
+            &lt;ul role="tablist"&gt; <br>
+            &emsp;&lt;li role="tab"&gt;</b> Introduction <b>&lt;/li&gt;    <br>
+            &emsp;&lt;li role="tab"&gt;</b> Chapter 1 <b>&lt;/li&gt;   <br>
+            &emsp;&lt;li role="tab"&gt;</b> Chapter 2 <b>&lt;/li&gt;   <br>
+            &lt;/li&gt;   <br>
+            &lt;div role="tabpanel"&gt; &lt;!----&gt; &lt;/div&gt;  <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is:-->
+        <b>Then Output code is:</b>
+        <ul role="tablist">
+            <li role="tab">Introduction</li>
+            <li role="tab">Chapter 1</li>
+            <li role="tab">Chapter 2</li>
+        </ul>
+        <div role="tabpanel">
+            <!---->
+        </div>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.49 - role="textbox" -->
+    <h3> 39.59 - role="textbox"</h3>
+
+    <p>
+        Input that allows free-form text as its value. <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;textarea title="#" role="textbox"&gt; &lt;/textarea&gt;<br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+        <textarea title="#" role="textbox"></textarea>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.60 - role="timer" -->
+    <h3> 39.60 - role="timer"</h3>
+
+    <p>
+        A type of live region containing a numerical counter which indicates an amount of elapsed time from a start point or the time remaining until an end point.     <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;p&gt;   <br>
+            &emsp;&lt;span role="timer"&gt; 60second &lt;/span&gt; <br>
+            &emsp;Second remaining  <br>
+            &lt;/p&gt;  <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+        <p>
+            <span role="timer"> 60 second </span>    <br>
+            Second remaining
+        </p>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.61 - role="toolbar" -->
+    <h3> 39.61 - role="toolbar"</h3>
+
+    <p>
+        <b>
+            &lt;ul role="toolbar"&gt;   <br>
+            &emsp;&lt;li&gt;&lt;img src="New.png" alt="New"&gt;</b> New <b>&lt;/li&gt; <br>
+            &emsp;&lt;li&gt;&lt;img src="Open.png" alt="Open"&gt;</b> Open <b>&lt;/li&gt;  <br>
+            &emsp;&lt;li&gt;&lt;img src="Save.png" alt="Save"&gt;</b> Save <b>&lt;/li&gt; <br>
+            &emsp;&lt;li&gt;&lt;img src="Close.png" alt="close"&gt;</b> Close <b>&lt;/li&gt;   <br>
+            &lt;/ul&gt; <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+        <ul role="toolbar">
+            <li><img src="New.png" alt="New"> New </li>
+            <li><img src="Open.png" alt="Open"> Open </li>
+            <li><img src="Save.png" alt="Save"> Save </li>
+            <li><img src="Close.png" alt="close"> Close </li>
+        </ul>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.62 - role="tooltip" -->
+    <h3> 39.62 - role="tooltip"</h3>
+
+    <p>
+        A contextual popup that displays a description for an element. <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            &lt;pan aria-describedby="slopedesc"&gt;</b> Slope <b>&gt;/span&gt;    <br>
+            &lt;div role="tooltip" id="slopedesc"&gt;</b> y=mx+b <b>&lt;/div&gt;   <br>
+        </b>
+
+        <br><!-- Spacing line like enter -->
+
+        <!-- Output code is: -->
+        <b>Then Output code is:</b> <br>
+        <span aria-describedby="slopedesc">Slope</span>
+        <div role="tooltip" id="slopedesc">y=mx+b</div>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+    
+    <!-- Chapter 39.63 - role="tree" -->
+    <h3> 39.63 - role="tree"</h3>
+
+    <p>
+        A type of list that may contain sub-level nested groups that can be collapsed and expanded.     <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Emmet HTML code is: ul[role="tree"]>((li[role="treeitem"]){Part 1}>ul>(li[role="treeitem"]{Chapter})*3)+((li[role="treeitem"]){Part 2}>ul>(li[role="treeitem"]{Chapter})*3)+((li[role="treeitem"]){part 3}>ul>li[role="treeitem"]{Chapter}*3)-->
+
+        <b>
+            &lt;ul role="tree"&gt;  <br>
+            &emsp;&lt;li role="treeitem"&gt;    <br>            
+            &emsp;&emsp;Part 1  <br>           
+            &emsp;&emsp;&lt;ul role="group"&gt; <br>            
+           &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 1 <b>&lt;/li&gt;  <br>            
+            &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 2 <b>&lt;/li&gt;  <br>
+            &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 3 <b>&lt;/li&gt;  <br> 
+            &emsp;&emsp;&lt;/ul>   <br>
+            &emsp;&lt;/li&gt;   <br>
+            &emsp;&lt;li role="treeitem"&gt;    <br>            
+            &emsp;&emsp;Part 2  <br>           
+            &emsp;&emsp;&lt;ul role="group"&gt; <br>            
+           &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 4 <b>&lt;/li&gt;  <br>            
+            &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 5 <b>&lt;/li&gt;  <br>
+            &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 6 <b>&lt;/li&gt;  <br> 
+            &emsp;&emsp;&lt;/ul>   <br>
+            &emsp;&lt;/li&gt;   <br>
+            &emsp;&lt;li role="treeitem"&gt;    <br>            
+            &emsp;&emsp;Part 3  <br>           
+            &emsp;&emsp;&lt;ul role="group"&gt; <br>            
+           &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 7 <b>&lt;/li&gt;  <br>            
+            &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 8 <b>&lt;/li&gt;  <br>
+            &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 9 <b>&lt;/li&gt;  <br> 
+            &emsp;&emsp;&lt;/ul>   <br>
+            &emsp;&lt;/li&gt;   <br>
+            &lt;/ul&gt; <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is:: -->
+        <b>Then Output code is:</b>  <br>
+        
+        <!-- Emmet HTML code is: ul[role="tree"]>((li[role="treeitem"]){Part 1}>ul>(li[role="treeitem"]{Chapter})*3)+((li[role="treeitem"]){Part 2}>ul>(li[role="treeitem"]{Chapter})*3)+((li[role="treeitem"]){part 3}>ul>li[role="treeitem"]{Chapter}*3)-->
+
+        <!-- Just added "li aria-expended="false" " -->
+        <ul role="tree" aria-expanded="false">
+            <li role="treeitem">
+                Part 1
+                <ul role="group">
+                    <li role="treeitem">Chapter 1</li>
+                    <li role="treeitem">Chapter 2</li>
+                    <li role="treeitem">Chapter 3</li>
+                </ul>
+            </li>
+            <li role="treeitem"></li>
+                Part 2
+                <ul role="group">
+                    <li role="treeitem">Chapter 4</li>
+                    <li role="treeitem">Chapter 5</li>
+                    <li role="treeitem">Chapter 6</li>
+                </ul>
+            </li>
+            <li role="treeitem">
+                part 3
+                <ul role="group">
+                    <li role="treeitem">Chapter 7</li>
+                    <li role="treeitem">Chapter 8</li>
+                    <li role="treeitem">Chapter 9</li>
+                </ul>
+            </li>
+        </ul>
+    </p>
+    
+    <br><!-- Spacing line like enter -->
+    
+    <!-- Chapter 39.64 - role="treegrid" -->
+    <h3> 39.64 - role="treegrid"</h3>
+
+    <p>
+        A grid whose rows can be expanded and collapsed in the same manner as for a tree     <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Emmet HTML code is: ul[role="tree"]>((li[role="treeitem"]){Part 1}>ul>(li[role="treeitem"]{Chapter})*3)+((li[role="treeitem"]){Part 2}>ul>(li[role="treeitem"]{Chapter})*3)+((li[role="treeitem"]){part 3}>ul>li[role="treeitem"]{Chapter}*3)-->
+
+        <b>
+            &lt;ul role="tree"&gt;  <br>
+            &emsp;&lt;li role="treeitem"&gt;    <br>            
+            &emsp;&emsp;Part 1  <br>           
+            &emsp;&emsp;&lt;ul role="group"&gt; <br>            
+           &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 1 <b>&lt;/li&gt;  <br>            
+            &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 2 <b>&lt;/li&gt;  <br>
+            &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 3 <b>&lt;/li&gt;  <br> 
+            &emsp;&emsp;&lt;/ul>   <br>
+            &emsp;&lt;/li&gt;   <br>
+            &emsp;&lt;li role="treeitem"&gt;    <br>            
+            &emsp;&emsp;Part 2  <br>           
+            &emsp;&emsp;&lt;ul role="group"&gt; <br>            
+           &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 4 <b>&lt;/li&gt;  <br>            
+            &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 5 <b>&lt;/li&gt;  <br>
+            &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 6 <b>&lt;/li&gt;  <br> 
+            &emsp;&emsp;&lt;/ul>   <br>
+            &emsp;&lt;/li&gt;   <br>
+            &emsp;&lt;li role="treeitem"&gt;    <br>            
+            &emsp;&emsp;Part 3  <br>           
+            &emsp;&emsp;&lt;ul role="group"&gt; <br>            
+           &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 7 <b>&lt;/li&gt;  <br>            
+            &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 8 <b>&lt;/li&gt;  <br>
+            &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 9 <b>&lt;/li&gt;  <br> 
+            &emsp;&emsp;&lt;/ul>   <br>
+            &emsp;&lt;/li&gt;   <br>
+            &lt;/ul&gt; <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is:: -->
+        <b>Then Output code is:</b>  <br>
+        
+        <!-- Emmet HTML code is: ul[role="tree"]>((li[role="treeitem"]){Part 1}>ul>(li[role="treeitem"]{Chapter})*3)+((li[role="treeitem"]){Part 2}>ul>(li[role="treeitem"]{Chapter})*3)+((li[role="treeitem"]){part 3}>ul>li[role="treeitem"]{Chapter}*3)-->
+
+        <!-- Just added "li aria-expended="false" " -->
+        <ul role="tree" aria-expanded="false">
+            <li role="treeitem">
+                Part 1
+                <ul role="group">
+                    <li role="treeitem">Chapter 1</li>
+                    <li role="treeitem">Chapter 2</li>
+                    <li role="treeitem">Chapter 3</li>
+                </ul>
+            </li>
+            <li role="treeitem"></li>
+                Part 2
+                <ul role="group">
+                    <li role="treeitem">Chapter 4</li>
+                    <li role="treeitem">Chapter 5</li>
+                    <li role="treeitem">Chapter 6</li>
+                </ul>
+            </li>
+            <li role="treeitem">
+                part 3
+                <ul role="group">
+                    <li role="treeitem">Chapter 7</li>
+                    <li role="treeitem">Chapter 8</li>
+                    <li role="treeitem">Chapter 9</li>
+                </ul>
+            </li>
+        </ul>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 39.65 - role="treeitem" -->
+    <h3> 39.65 - role="treeitem"</h3>
+
+    <p>
+        An option item of a tree. This is an element within a tree that may be expanded or collapsed if it contains a sublevel group of treeitems.     <br>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Emmet HTML code is: ul[role="tree"]>((li[role="treeitem"]){Part 1}>ul>(li[role="treeitem"]{Chapter})*3)+((li[role="treeitem"]){Part 2}>ul>(li[role="treeitem"]{Chapter})*3)+((li[role="treeitem"]){part 3}>ul>li[role="treeitem"]{Chapter}*3)-->
+
+        <b>
+            &lt;ul role="tree"&gt;  <br>
+            &emsp;&lt;li role="treeitem"&gt;    <br>            
+            &emsp;&emsp;Part 1  <br>           
+            &emsp;&emsp;&lt;ul role="group"&gt; <br>            
+           &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 1 <b>&lt;/li&gt;  <br>            
+            &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 2 <b>&lt;/li&gt;  <br>
+            &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 3 <b>&lt;/li&gt;  <br> 
+            &emsp;&emsp;&lt;/ul>   <br>
+            &emsp;&lt;/li&gt;   <br>
+            &emsp;&lt;li role="treeitem"&gt;    <br>            
+            &emsp;&emsp;Part 2  <br>           
+            &emsp;&emsp;&lt;ul role="group"&gt; <br>            
+           &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 4 <b>&lt;/li&gt;  <br>            
+            &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 5 <b>&lt;/li&gt;  <br>
+            &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 6 <b>&lt;/li&gt;  <br> 
+            &emsp;&emsp;&lt;/ul>   <br>
+            &emsp;&lt;/li&gt;   <br>
+            &emsp;&lt;li role="treeitem"&gt;    <br>            
+            &emsp;&emsp;Part 3  <br>           
+            &emsp;&emsp;&lt;ul role="group"&gt; <br>            
+           &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 7 <b>&lt;/li&gt;  <br>            
+            &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 8 <b>&lt;/li&gt;  <br>
+            &emsp;&emsp;&emsp;&lt;li role="treeitem"&gt;</b> Chapter 9 <b>&lt;/li&gt;  <br> 
+            &emsp;&emsp;&lt;/ul>   <br>
+            &emsp;&lt;/li&gt;   <br>
+            &lt;/ul&gt; <br>
+        </b>
+
+        <br> <!-- Spacing line like enter -->
+
+        <!-- Output code is:: -->
+        <b>Then Output code is:</b>  <br>
+        
+        <!-- Emmet HTML code is: ul[role="tree"]>((li[role="treeitem"]){Part 1}>ul>(li[role="treeitem"]{Chapter})*3)+((li[role="treeitem"]){Part 2}>ul>(li[role="treeitem"]{Chapter})*3)+((li[role="treeitem"]){part 3}>ul>li[role="treeitem"]{Chapter}*3)-->
+
+        <!-- Just added "li aria-expended="false" " -->
+        <ul role="tree" aria-expanded="false">
+            <li role="treeitem">
+                Part 1
+                <ul role="group">
+                    <li role="treeitem">Chapter 1</li>
+                    <li role="treeitem">Chapter 2</li>
+                    <li role="treeitem">Chapter 3</li>
+                </ul>
+            </li>
+            <li role="treeitem"></li>
+                Part 2
+                <ul role="group">
+                    <li role="treeitem">Chapter 4</li>
+                    <li role="treeitem">Chapter 5</li>
+                    <li role="treeitem">Chapter 6</li>
+                </ul>
+            </li>
+            <li role="treeitem">
+                part 3
+                <ul role="group">
+                    <li role="treeitem">Chapter 7</li>
+                    <li role="treeitem">Chapter 8</li>
+                    <li role="treeitem">Chapter 9</li>
+                </ul>
+            </li>
+        </ul>
+    </p>
+
+    
+</body>
+</html>

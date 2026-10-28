@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Material Part 5 - Learn HTML5 Modern</title>
+</head>
+<body>
+    <!-- Continue Material Part 4 - Learn HTML 5 Modern -->
+
+                    <!--Chapter 21 - Output Element -->
+    <h2> Chapter 21 - Output Element </h2>
+
+    <!-- Emmet HTML code is table>(thead>tr>th*2)+(tbody>tr*4>td*2) -->
+     <table>
+        <thead>
+            <tr>
+                <th><b>Attribute</b></th>
+                <th><b>Description</b></th>
+            <tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Global</td>
+                <td>Attribute that are available to any HTML5 element. For comprehensive documentation of there attribute see <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes"><u>MDN Global Attributes</u></a></td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td>A string representing the name of an output. As a form element, output can be referenced by it's name using the document. forms property. This attribute is also used for collecting values on a form submit.</td>
+                </tr>
+                <tr>
+                    <td>for</td>
+                    <td>A space separated list of form element ids (e.g. <b>(input id="inp1) for value is "inp1")</b> that the output is meant to display calculations for.</td>
+                </tr>
+                <tr>
+                    <td>form</td>
+                    <td>A string representing the <b>(form)</b> that is associated to the output. If the output is actually outside the <b>(form)</b>, this attribute will ensure that the output still belongs to the <b>(form)</b> and subject to collectios and submitted of said <b>(form)</b>.</td>
+                </tr>                
+            </tbody>
+    </table>
+
+    <!-- Chapter 21.1 - Output Element Using For and Form Attributes -->
+    <h3> 21.1 - Output Element Using For and Form Attributes </h3>
+
+    <p> The following demo features an <b>(output)</b> element's use of the [for] and [form] attribute. Keep in mind, <b>(ouput)</b> need JavaScript in order to function. Inline JavaScript is commonly used in forms as this example demonstrates. Although the <b>(inpu)</b> element are type="number", their values are not number, they are text. So if you require the values to be calculated, you must convert each value into a number using methods such as: parsenInt(), perseFloat(), Number(), etc.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <p><u><a href="http://pagedemos.com/jhvyqchzm29u/2"> Live Demo </a></u></p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (form action="" id="form1" name="form1" oniput="out1.value = parseInt(in1.value, 10) + parseInt(in2,value,10)")  <br>
+        
+            &emsp;(fieldset)  <br>
+            &emsp;&emsp;(legend)</b> Output Example <b>(/legend)  <br>
+            &emsp;&emsp;&emsp;(input type="number" id="in1" name="in1" value="0")   <br>
+            &emsp;&emsp;(br /)  <br>
+            &emsp;&emsp;+   <br>
+            &emsp;&emsp;(input type="number" name="in2" value="0")    <br>
+            &emsp;(/fieldset) <br>
+            (/form)</b>
+
+            <p> (!-- {for} attribute enables out1 to display calculations for in1 and in2 --)
+                (!-- {form} attribute designates form1 as the form owner of out1 even if it isn;t a descandants. --)    <br>
+                
+                <b>(output name="out1" for="in1 in2" form="inp1 inp2") 0 (/output)
+
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is : -->
+
+    <p><!--Form1 will collect the values of in1 and in2 on 'input' event -->
+    <!--out1 value will be the sum of in1 and in2 values.-->
+
+    <form action="" id="form1" name="form1" oniput="out1.value = parseInt(in1.value, 10) + parseInt(in2,value,10)">
+        <fieldset>
+            <legend>Output Example</legend>
+                <input title="input1" type="number" id="in1" name="in1" value="0">
+            <br/>
+            +
+            <input title="input2" type="number" name="in2" value="0">
+        </fieldset>
+    </form>
+
+    <!-- {for} attribute enables out1 to display calculations for in1 and in2 -->
+     <!-- {form} attribute designates form1 as the form owner of out1 even if it isn;t a descandants. -->
+    
+    <p>
+        <output name="out1" for="in1 in2" form="inp1 inp2">0</output>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+    
+
+    <!-- Chapter 21.2 Ouput Element with Attributes -->
+    <h3> 21.2 Output Element with Attributes </h3>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (output name="out1" form="form1" for="inp1 inp 2") (/output) </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is : -->
+    <p>
+        <output name="out1" form="form1" for="inp1 inp 2"></output>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+
+                        <!-- Chapter 22 - Void Elements -->
+    <h2> Chapter 22 - Void Elements </h2>
+
+    <p>Not all HTML tags are of the same structure. While most elements require an opening tag, a closing, and contents, some elements - known as void elements -  onlyu require tag as they themselves do not contain any elemenets. This topic explains and demonstrates the propers usage of void elements in HTML </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 22.1 - Void elements -->
+    <h3> 22.1 - Void elements </h3>
+    
+    <p> HTML 4.01/XHTML 1.0 Strict includes the following void elements:</p>
+
+    <ul>
+        <li>area - clickable, defined are in an image</li>
+        <li>base - specifies a base URL from which all links base</li>
+        <li>br - line break</li>
+        <li>col - column in a table [depracated]</li>
+        <li>hr - horizontal rule (line)</li>
+        <li>img - image</li>
+        <li>input - field where users enter data</li>
+        <li>link - links an external resource to the document</li>
+        <li>meta - provides information about the document</li>
+        <li>param - defines parameters for plugins</li>
+    </ul>
+
+    <p>HTML 5 standards include all non-depracated tags from the previous list and </p>
+
+    <ul>
+        <li>command - represents a command users can invoke (obsolete)</li>
+        <li>keygen - facilitates public key generation for web certificates (deprecated)</li>
+        <li>source - specifies media sources for picture, audio, and video elements</li>
+    </ul>
+
+    <p>The example below does <b>not</b> include void elements:</p>
+
+    <p><b>Input this code is: </b></p>
+
+    <p>
+        <b>(div)    <br>
+    &emsp;&emsp;(a href="http://stackoverflow.com/")</b> Stack Overflow! <b>(/a)   <br>
+    &emsp;&emsp;(button onclick="alert('Hello!')")</b> Say Hello! <b>(/button) <br>
+    &emsp;&emsp;(p)</b> My favorite language is <b>HTML</b> Here are my others: <b>(/p) <br>
+    &emsp;&emsp;(ol)    <br>
+    &emsp;&emsp;&emsp;(li)</b> CSS <b>(/li)    <br>
+    &emsp;&emsp;&emsp;(li)</b> JavScript <b>(/li)  <br>
+    &emsp;&emsp;&emsp;(li)</b> PHP <b>(/li)    <br>
+    &emsp;&emsp;(/ol)   <br>
+            (/div)</b>
+    </p>
+
+    <p><b>Then Ouput code is:</b></p>
+    <!-- Output code is : -->
+    <!-- Emmet HTML Code is div>a[href="http://stackoverflow.com/">]+button[onclick="alert('Hello!')"]{Say Hello!}+(p{My favorite language is}>b{HTML}{Here are my others:})+ol>li{CSS}+li{JavScript}+li{PHP}-->
+    <p>
+        <div>
+            <a href="http://stackoverflow.com/">Stack Overflow!</a><button onclick="alert('Hello!')">Say Hello!</button>
+            <p>My favorite language is<b>HTML</b>Here are my others:</p>
+            <ol>
+                <li>CSS</li>
+                <li>JavScript</li>
+                <li>PHP</li>
+            </ol>
+        </div>
+    </p>
+
+    <p>Notice how every element has an opening tag, a closing tag, and text or other elements inside the opening and closing tags. Void tags however, are shown in the example below:</p>
+
+    <p><b>Input this code</b></p>
+
+    <p>
+        <b>
+        (img src="https://cdn.sstacic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png" /)  <br>
+        (br)    <br>
+        (hr)    <br>
+        (input type="number" placeholder="Enter your favorite number")  <br>
+        </b>
+    </p>
+
+    <p><b>Then Outputc code is:</b></p>
+    <p>
+        <img src="https://cdn.sstacic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png" alt="" /> 
+        <br>
+        <hr>
+        <input type="number" placeholder="Enter your favorite number">
+    </p>
+
+    <p>With the exception of the img tag, all of these void elements have only an opening tag. The img tag, unlike any other tag, has a self closing / before the greater than sign of the opening tag. It is best practice to have a space before the slash</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 23 - Media Element -->
+     <h2>Chapter 23 - Media Element </h2>
+
+    <!-- Emmet HTML code is table>(thead>tr>th*2)+(tbody>tr*10>td*2)-->
+    
+    <table>
+        <thead>
+            <tr>
+                <th><b>Attribute</b></th>
+                <th><b>Details</b></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>width</td>
+                <td>Sets the element's width in pixels.</td>
+            </tr>
+            <tr>
+                <td>height</td>
+                <td>Sets the element's height in pixels</td>
+            </tr>
+            <tr>
+                <td><b>(source)</b></td>
+                <td>Defines resource of the audio or video files</td>
+            </tr>
+            <tr>
+                <td>track</td>
+                <td>Defines the text track for media elements</td>
+            </tr>
+            <tr>
+                <td>controls</td>
+                <td>Displays controls</td>
+            </tr>
+            <tr>
+                <td>autoplay</td>
+                <td>Automatically start playing the media</td>
+            </tr>
+            <tr>
+                <td>loop</td>
+                <td>Plays the media in repeated cycle</td>
+            </tr>
+            <tr>
+                <td>muted</td>
+                <td>Plays the media without sound</td>
+            </tr>
+            <tr>
+                <td>poster</td>
+                <td>Assigns an image to display until a video is loaded</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 23.1 - Audio -->
+    <h3> 23.1 - Audio </h3>
+
+    <p>HTML5 provides a new standard for embedding an audio file on a web page.</p>
+
+    <p>You can embed an audio file to a page using the <b>(audio)</b> element:</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <!-- Emmet HTML Code is audio[controls]>(source[src="file.mp3" type="audio/mpeg"]){Your browser does not support the audio element -->
+        <b>
+            (audio controls)  <br>
+            &emsp;(source src="file.mp3" type="audio/mpeg")</b>   <br>
+            Your browser does not support the audio element <b> <br>
+            (/audio)    <br>
+        </b> <br>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+       <!-- Emmet HTML Code is audio[controls]>(source[src="file.mp3" type="audio/mpeg"]){Your browser does not support the audio element}-->
+
+        <audio controls>
+            <source src="file.mp3" type="audio/mpeg">
+            Your browser does not support the audio element
+        </audio>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 23.2 - Video -->
+    <h3> 23.2 Video </h3>
+
+    <p>You can embed also a video to webpage using the <b>(video)</b> element:</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (video width="500" height="700" controls="controls")    <br>
+            &ensp;&ensp;(source src="video.mp4" type="video/mp4")</b>   <br>
+            Your browser does not support the video tag. <b>   <br>
+            (/video)
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is :-->
+    <p>
+        <!-- Emmet HTML code is video[width="500" height="700" controls]>(source[src="video.mp4" type=video/mp4]){Your browser does not support the video tag.} -->
+
+        <video width="500" height="700" controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 23.3 - Using '<video>' element to display audio/video content -->
+    <h3> 23.3 - Using '<b>(video)</b>' element to display audio/video content </h3>
+
+    <p>Use the HTML or <b>(audio)</b> element embed video/audio content in a document. The video/audio element contains one or more video/audio sources. To specify a source, use either the src attribute or the <b>(source)</b> element; the browser will choose the most suitable one.</p>
+
+    <p>Audio tag example :</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        (!-- <B>simple video example</B> --)
+        <!-- <B>simple video example</B> -->   
+
+        <br> <!-- Spacing line like enter -->
+        <br> <!-- Spacing line like enter -->
+
+        (!-- Emmet HTML code is: video[src="videofile.webm" autoplay poster="postimage.jpg"]>({Sorry, your browser doesn't support embeded videos, but don't worry, you can }>a[href="videofile.webm"]{download it}){and watch it with your favorite video player} --)
+
+        <br> <!-- Spacing line like enter -->
+        <br> <!-- Spacing line like enter -->
+
+        <b>
+            (video src="videofile.webm" autoplay poster="postimage.jpg")</b>   <br>
+                &emsp;&ensp;Sorry, your browser doesn't support embeded videos, but don't worry, you can <br>
+                &emsp;&ensp;<b>(a href="videofile.webm")</b>     
+                download it <b>(/a)</b> <br> 
+                &emsp;&ensp; and watch it with your favorite video player  <br>
+        <b>(/video)</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output this code is: -->
+    <p>
+        <!-- simple video example -->
+
+        <!-- Emmet HTML code is: video[src="videofile.webm" autoplay poster="postimage.jpg"]>({Sorry, your browser doesn't support embeded videos, but don't worry, you can }>a[href="videofile.webm"]{download it}){and watch it with your favorite video player} -->
+        
+        <video src="videofile.webm" autoplay poster="postimage.jpg">
+            Sorry, your browser doesn't support embeded videos, but don't worry, you can <a href="videofile.webm">download it
+            </a>and watch it with your favorite video player
+        </video>
+    </p>
+    
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        (!-- video with Subtitles --)   <br>
+
+        <!-- Emmet HTML code is: video[src="foo.webm"]>track[kind="subtitles" src="foo.en.vtt" srclang="en" label="English"]+track[kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska"] -->  <br>
+
+        <b> 
+            (video src="foo.webm")  <br>
+        &emsp;&ensp;(track kind="subtitles" src="foo.en.vtt" srclang="en" label="English")  <br>
+        &emsp;&ensp;(track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska")  <br>
+            (/video)
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!--Output code is : -->
+
+    <p>
+        <!-- video with Subtitles -->
+
+        <!-- Emmet HTML code is: video[src="foo.webm"]>track[kind="subtitles" src="foo.en.vtt" srclang="en" label="English"]+track[kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska"] -->
+
+        <b> 
+            <video src="foo.webm">
+                <track kind="subtitles" src="foo.en.vtt" srclang="en" label="English">
+                <track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska">
+            </video>
+        </b>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <!-- Simple Video example -->
+
+        <!-- Emmet HTML code is : video>[width="480" controls poster="https://archive.org/download/WebmVp8Vorbis/webmvp8.gif"]>(source[src="https://archive.org/download/WebmVp8Vorbis/webmvp8.webm" type="video/webm"]+source[src="https://archieve.org/download/WebmVp8Vorbis/webmvp8_512kb.mp4" type="video/webm"]+source[src="https://archieve.org/download/webmVp8Vorbis/webmvp8/ogv" type="video/ogg"]){Your browser does not Support HTML video tag}-->
+
+        <b>
+            (video width="480" controls="controls" poster="https://archive.org/download/WebmVp8Vorbis/webmvp8.gif") <br>
+
+            &emsp;&ensp;(source src="https://archive.org/download/WebmVp8Vorbis/webmvp8.webm" type="video/webm")    <br>
+
+            &emsp;&ensp;(source src="https://archieve.org/download/WebmVp8Vorbis/webmvp8_512kb.mp4" <br>    
+            &emsp;&ensp;type="video/webm")  <br>
+
+            &emsp;&ensp;(source src="https://archieve.org/download/webmVp8Vorbis/webmvp8/ogv" type="video/ogg") </b>    <br>
+
+            &emsp;&ensp;Your browser does not Support HTML video tag <br>
+            <b>
+            (/video)
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Ouput code is : -->
+    <p>
+        <!-- Simple Video example -->
+
+        <!-- Emmet HTML code is : video[width="480" controls poster="https://archive.org/download/WebmVp8Vorbis/webmvp8.gif"]>(source[src="https://archive.org/download/WebmVp8Vorbis/webmvp8.webm" type="video/webm"]+source[src="https://archieve.org/download/WebmVp8Vorbis/webmvp8_512kb.mp4" type="video/webm"]+source[src="https://archieve.org/download/webmVp8Vorbis/webmvp8/ogv" type="video/ogg"]){Your browser does not Support HTML video tag}-->
+
+        <video width="480" controls="controls" poster="https://archive.org/download/WebmVp8Vorbis/webmvp8.gif">
+            <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8.webm" type="video/webm">
+            <source src="https://archieve.org/download/WebmVp8Vorbis/webmvp8_512kb.mp4" type="video/webm">
+            <source src="https://archieve.org/download/webmVp8Vorbis/webmvp8/ogv" type="video/ogg">
+            Your browser does not Support HTML video tag
+        </video>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 23.4 - Video header or background -->
+    <h3> 23.4 - Video header or background </h3>
+
+    <p> Adding a video that will autoplay on a loop and has no controls or sound. Perfect for a video header or background. </p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <!-- Emmet HTML code is video[width="1200" height="720" {autoplay muted loop} poster="video.jpg" id="videobg"]>(source[src="video.mp4" type="video/mp4"])+(source[src="video.webm" type="video/webm"])+(source[src="video.ogg" type="video/ogg"]) -->
+        <b>
+            (video width="1200" height="720" autoplay muted loop poster="video.jpg" id="videobg")   <br>
+            &emsp;&emsp;(source src="video.mp4" type="video/mp4")   <br>
+            &emsp;&emsp;(source src="video.webm" type="video/webm") <br>
+            &emsp;&emsp;(source src="video.ogg" type="video/ogg")   <br>
+            (/video)
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Ouput code is : -->
+    <p>
+        <!-- Emmet HTML code is video[width="1200" height="720" {autoplay muted loop} poster="video.jpg" id="videobg"]>(source[src="video.mp4" type="video/mp4"])+(source[src="video.webm" type="video/webm"])+(source[src="video.ogg" type="video/ogg"]) -->
+
+        <video width="1200" height="720" autoplay muted loop poster="video.jpg" id="videobg">
+            <source src="video.mp4" type="video/mp4">
+            <source src="video.webm" type="video/webm">
+            <source src="video.ogg" type="video/ogg">
+        </video>
+    </p>
+
+    <p>This CSS provides a fallback if the video cannot be loaded. Note that is it recommended to use the first frame of the video as the poster video.jpg.</p>
+
+    #videobg {
+        background: url(video.jpg) no-repeat;
+        background-size: cover;
+        <!--
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        -->
+    }
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 24 - Progress Element -->
+     <h2> Chapter 24 - Progress Element </h2>
+
+    <!-- Emmet HTML code is table>(thead>tr>th*2)+(tbody>tr*4>td*2) -->
+     <table>
+        <thead>
+            <tr>
+                <th><b>Parameter</b></th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>max</td>
+                <td>How much work the task requires in total</td>
+            </tr>
+            <tr>
+                <td>value</td>
+                <td>How much of the work has been accomplished already</td>
+            </tr>
+            <tr>
+                <td>position</td>
+                <td>This attribute returns the current position of the <b>(progress)</b> element</td>
+            </tr>
+            <tr>
+                <td>labels</td>
+                <td>this attribute returns a list of <b>(progress)</b> element labels (if any)</td>
+            </tr>
+        </tbody>
+     </table>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 24.1 - Progress -->
+    <h3> 24.1 - Progress </h3>
+
+    <p> The <b>(progress)</b> element is new in HTML5 and is used to represent the progress of a task </p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (progress value="22" max="100")(/progress)
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is : -->
+    <p>
+        <progress value="22" max="100"></progress>
+    </p>
+
+    <p>This creates a bar filled 22%</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 24.2 - Changing the color of a progress bar-->
+    <h3> 24.2 - Changing the color of a progress bar </h3>
+
+    <p>Progress bar can be styled with the progress [value] selector.</p>
+
+    <p>This example gives a progress bar a width of 250px and a hight of 20px</p>
+
+    <p>
+        progress: [value] { <br>
+        &emsp;width: 250px;   <br>
+        &emsp;height: 20px;   <br>
+        }
+    </p>
+
+    <p>Progress bars can be especially difficult to style.</p>
+
+    <h4> Chrome/Safari/Opera </h4>
+
+    <p> These browsers use the <small> -webkit-appearance </small> selector to style the progress tag. To override thism we can reset the appearance. </p>
+
+    <p>
+        progress[value] {   <br>
+        &emsp;-webkit appearance: none;   <br>
+        &emsp;appearance: none;   <br>
+        }
+    </p>
+
+    <p>Now, we can style the container itself</p>
+
+    <p>
+        progress[value] {   <br>
+        &emsp;background-color: "green";  <br>
+        }
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <h4> Firefox </h4>
+
+    <p>Firefox styles the progress bar little differently. We have to use these styles</p>
+
+    <p>
+        Progress[value] {   <br>
+        &emsp;-moz-appearance: none;    <br>
+        &emsp; appearance: none;    <br>
+        &emsp; border: none;  &emsp;&emsp;&emsp;&emsp;/*Firefox also renders a border*/    <br> 
+        }
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <h4> Internet Explorer</h4>
+
+    <p>Internet Explorer 10+ supports the progress element. However, it does not support the background-color property. You'll need to use te color property instead.</p>
+
+    <p>
+        progress[value] {   <br>
+            &emsp;-webkit-appearance: none; <br>
+        &emsp;&emsp;-moz-appearance:  none; <br>
+        &emsp;&emsp;&emsp;appearance: none; <br>
+
+        &emsp;border: none;   &emsp;&emsp;&emsp;&emsp;&emsp; /*Remove &border from firefox*/    <br>    <br>
+        &emsp;width:250px;  <br>
+        &emsp;height: 20px; <br>
+        <br>
+        &emsp;color: blue;  <br>
+        }
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 24.3 - HTML Fallback -->
+    <h3> 24.3 - HTML Fallback </h3>
+
+    <p>For the browser that do not support the progress element, you can use this as a workaround.</p>
+
+    <p>
+        <progress max="100" value="20">
+            <div class="progress-bar">
+                <span style="width: 20%;">Progress 20%</span>
+            </div>
+        </progress>
+    </p>
+
+    <p>Browser that support the progress tag will ignore the div nested inside. Legacy browsers which cannot identify the progress tag will render the div instead.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+
+                    <!-- Chapter  25 - Selection Menu Controls -->
+    <h2> Chapter  25 - Selection Menu Controls </h2>
+
+    <!-- Chapter 25.1 - Select Menu -->
+    <h3> 25.1 - Select Menu </h3>
+
+    <p>The <b>(select)</b> element generae a drop-down menu from which the user can choose an option.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (select name="")  <br>
+            &emsp;<b>(option value="1")</b> One (/option)</b>  <br>
+            &emsp;<b>(option value="2")</b> Two (/option)</b> <br>
+            &emsp;<b>(option value="3")</b> Three (/option)</b>   <br>
+            &emsp;<b>(option value="4")</b> Four (/option)</b>    <br>
+            <b>(/select)
+        </b>
+    </p>
+
+    <p><b>Then Ouput code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <select title="#" name="">
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+        </select>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <h4>Changing the Size</h4>
+
+    <p>You can change the size of the selection menu with the size attribute. A size of 0 or 1 displays the standard drop-down style menu. A size grater than 1 will convert the drop-down into box displaying that many lines, with one option per line and a scrollbar in order to scroll through the available options.</p>
+
+    <p><b>Input this code is:</b></p>
+    
+    <p><b>(select name="" size="4")(/select)</b></p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is : -->
+    <p>
+        <select title="#" name="" size="4"></select>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <h4>Multi-option Selection menus</h4>
+
+    <p>By default, user can only select a single option. Adding the multiple attribute allows users to select multiple options at once and submit all selected options with the form. Using the <small>multiple</small> attribute automatically convert the drop-down menu into a boz as if it had a size defined. The default size when this occurs is determined by the specific browser you are using, and it is not possible to change it back to a drop-down style menu while allowing multiple selections.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p><b>(select name="" multiple)(/select)</b></p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is:-->
+    <p> <select title="#" name="" multiple></select> </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <p>When using the multiple attribute, there is a difference between using 0 and 1 for the size, whereas no difference exist when not using the attribute. Uisng 0 will cause the browser to behave in whatever default manner it is programmed to do. Using 1 will explicitly set the size of resulting box to only one row high.</p>
+
+    <br><!-- Spacing line like enter -->
+
+    <!-- Chapter 25.2 - Options -->
+    <h3> 25.2 - Options </h3>
+
+    <p>The options inside a selection menu are what the user will be selectio. The normal syntax for an option is as follows:</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p><b>(option)</b>Some Option<b>(/option)</b></p>
+
+    <p><b>Then Output Code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <option>Some Option</option>
+    </p>
+
+    <p>However, it's important to note that the next inside the <b>(option)</b> element itself is not always used, and essentially becomes the default value for attributes which are not specified.</p>
+
+    <p>The attributes which control the actual appearance and funtion of the option are value and label. The label represents the next which will be displayed in the drop-down menu (what you're looking at and will click on to select it). The value represents the next which will be sent along with form submission. If either of there values is omitted, it uses the next inside the ellement as the value instead. So the exmaple we gave above could be "expanded" to this : </p>
+
+    <p><b>Input this code is</b></p>
+
+    <p><b> (option value="Some Option" label="Some Option") (/option) </b></p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <option value="Some Option" label="Some Option"> </option>
+    </p>
+
+    <p>Note the omission of the inside text and end tag which are not required to actually construct an option inside the menu. If they were included, the inside text would be ignored because both attribute are already specified and te text is not needed. However, you probably won't see a lot of people writing them this way. The most common way it's written is with a value that will be sent to the server, along with the inside text which eventually becomes the label attribute, like so:</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (option value="option1")</b> Some Option <b>(/option)
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is : -->
+    <p>
+        <option value="option1" {Some Option}=""></option>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <h4>Selecting an option by default</h4>
+
+    <p>You can also specify a certain option to be selected in the menu by default by attaching the <small>selected</small> attribute to it. by default, if no options is specified as selected in the menu, the first option in the menu will be selected when rendered. If more that one option has the <small>selected</small> by default.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (option value="option1" selected) </b> Some option <b>(/option)
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is : -->
+    <p>
+        <Some value="optin1" selected>Some option</option>
+    </p>
+
+    <p>If you're using the attribute in a multi-option selection menu, then all the options with the attribute will be selected by default, and none will be selected in no options have the attribute.</p>
+
+    <p><b>Input this code is:</b></p>
+    <!-- input code is: -->
+    <p>
+        <b>
+            (select multiple)   <br>
+            &emsp;(option value="option1" selected)</b> Some Option <b>(/option)    <br>
+            &emsp;(option value="option2" selected)</b> Some option <b>(/option)    <br>
+            (/select)
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <select title="#" multiple>
+            <option value="option1" selected> Some Option </option>
+            <option value="option2" selected> Some option </option>
+        </select>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 25.3 - Option Group -->
+    <h3> 25.3 - Option Group </h3>
+
+    <p> You can neatly group your options within a selection menu in order to provide a more structured layout in a long list of options by using the <b>(optgroup)</b> element.</p>
+
+    <p>The syntax is very basic, by simply using the element with a label attribute to identify the title for the group, and containing zero more options that should be within that group. </p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <!-- Emmet HTML code is select[name=""]>option[value="milk"]{Milk}+(optgroup[label="Fruits"]>option[value="banana"]{Bananas}+option[value="strawberry"]{Strawberries})+(optgroup[label="Vegetables" disabled]>option[value="carrot"]{carrots}+option[value="zucchini"]{zucchini}) -->
+        <b>
+            (select name="")    <br>
+            &emsp;(option value="milk")</b> Milk <b>(/option)    <br>
+            &emsp;(optgroup label="Fruits")   <br>
+            &emsp;&emsp;(option value="banana")</b> Bananas <b>(/option)   <br>
+            &emsp;&emsp;(option value="strawberry")</b> Strawberries <b>(/option)  <br>
+            &emsp;(/optgroup) <br>
+            &emsp;(optgroup label="Vegetables" disabled="disabled")   <br>
+            &emsp;&emsp;(option value="carrot")</b> carrots <b>(/option)   <br>
+            &emsp;&emsp;(option value="zucchini")</b> zucchini <b>(/option>)   <br>
+            &emsp;(/optgroup) <br>
+            (/select) 
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+
+    <p>
+        <select title="#" name="">
+                <option value="milk">Milk</option>
+                <optgroup label="Fruits">
+                    <option value="banana">Bananas</option>
+                    <option value="strawberry">Strawberries</option>
+                </optgroup>
+                <optgroup label="Vegetables" disabled="disabled">
+                    <option value="carrot">carrots</option>
+                    <option value="zucchini">zucchini</option>
+                </optgroup>
+            </select>
+    </p>
+
+    <p>When using option groups, not all options need to be contained within a group. As well, disabling an option group will disable all options within the group, and it is not possible to manually re-enable a single option within a disabled group.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 25.4 - Datalist -->
+    <h4>25.4 - Datalist</h4>
+
+    <p>The <b>(datalist)</b> tag specifies a list of pre-defined options for an <b>(input)</b> elememt. It provide an "autocomplete" feature on <b>(input)</b> elements. Users will see a drop-down list of options as they write.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+    <!-- Emmet HTML code is input[list="Languages"]+(datalist[id="Languages"]>option[value="PHP"]+option[value="Perl"]+option[value="Python"]+option[value="Ruby"]+option[value="C++"])-->
+        <b>
+            (input list="Languages")    <br>
+            (datalist id="Languages")   <br>
+            &emsp;(option value="PHP")    <br>
+            &emsp;(option value="Perl")   <br>
+            &emsp;(option value="Python") <br>
+            &emsp;(option value="Ruby")   <br>
+            &emsp;(option value="C")  <br>
+            (/datalist)
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+
+        <!-- Emmet HTML code is input[list="Languages"]+(datalist[id="Languages"]>option[value="PHP"]+option[value="Perl"]+option[value="Python"]+option[value="Ruby"]+option[value="C++"])-->
+
+        <input title="#" list="Languages">
+        <datalist id="Languages">
+            <option value="PHP"></option>
+            <option value="Perl"></option>
+            <option value="Python"></option>
+            <option value="Ruby"></option>
+            <option value="C"></option>
+        </datalist>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <h4>Browser Support</h4>
+
+    <!-- Emmet HTML code is: table>(thead>tr>th*5+tr>td*5) -->
+    <table>
+        <thead>
+            <tr>
+                <th><b>Chrome</b></th>
+                <th><b>Edge</b></th>
+                <th><b>Mozila</b></th>
+                <th><b>Safari</b></th>
+                <th><b>Opera</b></th>
+                <tr>
+                    <td>20.0</td>
+                    <td>10.0</td>
+                    <td>4.0</td>
+                    <td>Not Supported</td>
+                    <td>9.0</td>
+                </tr>
+            </tr>
+        </thead>
+    </table>
+
+</body>
+</html>

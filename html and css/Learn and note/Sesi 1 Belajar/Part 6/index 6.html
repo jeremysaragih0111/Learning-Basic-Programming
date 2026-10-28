@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Material Part 6 - Learn HTML 5 Modern</title>
+</head>
+<body>
+    <!-- Continue The Material Part 5 - Learn HTML 5 Modern -->
+
+    <!-- Chapter 26 - Embed -->
+    <h2>chapter 26 - Embed</h2>
+
+    <!-- Emmet HTML code is table>(thead>tr>th*2)+(tbody>tr*4>td*2) -->
+    <!-- Perbaikan: data baris dipisah ke dalam <tbody> -->
+    <table>
+        <thead>
+            <tr>
+                <th><b>Parameters</b></th>
+                <th><b>Details</b></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>src</td>
+                <td>Address the resource</td>
+            </tr>
+            <tr>
+                <td>type</td>
+                <td>Type of embeded resource</td>
+            </tr>
+            <tr>
+                <td>width</td>
+                <td>Horizontal dimension</td>
+            </tr>
+            <tr>
+                <td>height</td>
+                <td>Vertical dimension</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 26.1 - Basic usage -->
+    <h3>26.1 - Basic usage</h3>
+
+    <p>The embed tag is new in HTML5. This element provides an integration point of an external (typically non-HTML) application or interactive content</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (embed src="myflash.swf")
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is : -->
+    <p><embed src="myflash.swf"></p>
+
+    <br> <!-- Output code is:-->
+
+    <!-- Chapter 26.2 - Defining the MIME type -->
+    <h3>26.2 - Defining the MIME type</h3>
+
+    <!-- Perbaikan: anchor membungkus teks "MIME" -->
+    <p>The <a href="https://datatracker.ietf.org/doc/html/rfc2046"><u>MIME</u></a> type must be defined using the type attribute.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (embed src="video.mp4" type="video/mp4" width="640" height="480")
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <embed src="video.mp4" type="video/mp4" width="640" height="480">
+    </p>
+
+    <br> <!-- Spacing line like enter  -->
+
+    <!-- Chapter 27 - Iframes -->
+    <h2>Chapter 27 - Iframes</h2>
+
+    <!-- Emmet HTML Code is table>(thead>tr>th*2)+(tbody>tr*7>td*2) -->
+    <!-- Perbaikan: data baris dipisah ke dalam <tbody> -->
+    <table>
+        <thead>
+            <tr>
+                <th><b>Attribute</b></th>
+                <th><b>Details</b></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>name</td>
+                <td>Sets element's name, to be used with an a tag to change the iframe's src.</td>
+            </tr>
+            <tr>
+                <td>width</td>
+                <td>Sets the element's width in pixels.</td>
+            </tr>
+            <tr>
+                <td>height</td>
+                <td>Sets the element's height in pixels.</td>
+            </tr>
+            <tr>
+                <td>src</td>
+                <td>Specifies the page that will be displayed in the frame.</td>
+            </tr>
+            <tr>
+                <td>srcdoc</td>
+                <td>Specifies the content that will be displayed in the frame, assuming the browser supports it. The content must be valid HTML.</td>
+            </tr>
+            <tr>
+                <td>sandbox</td>
+                <td>When set, the contents of the iframe is treated as being from a unique origin and features including scripts, plugins, forms and popups will be disabled. Restrictions can be selectively relaxed by adding a space separated list of values. See the table in Remarks for possible values.</td>
+            </tr>
+            <tr>
+                <td>allowfullscreen</td>
+                <td>Whether to allow the iframe's contents to use <small>requestFullscreen</small>()</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 27.1 - Basic of an Inline Frame -->
+    <h3>27.1 - Basic of an Inline frame</h3>
+
+    <p>The term "Iframe" means Inline Frame. It can be used to include another page in your page. This will yield a small frame which shows the exact contents of the base.html.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (iframe src="base.html")(/iframe)
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <iframe title="#" src="base.html"></iframe>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 27.2 - Sandboxing -->
+    <h3>27.2 - Sandboxing</h3>
+
+    <p>The following embeds an untrusted web page all restrictions enabled</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p><b> (iframe sandbox src="http://example.com/")(/iframe) </b></p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <iframe title="#" sandbox src="http://example.com/"></iframe>
+    </p>
+
+    <p>To allow the page to run scripts and submit forms, add allow-script and allow-forms to the sandbox attribute.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (iframe src="http://example.com/" sandbox="allow-scripts allow-forms")(/iframe)
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is:-->
+    <p>
+        <iframe title="#" sandbox="allow-scripts allow-forms" src="http://example.com/"></iframe>
+    </p>
+
+    <p>If there is untrusted content (such as user comments) on the same domain as the parent web page, an iframe can be used to disable scripts while still allowing the parent document to interact with its content using JavaScript.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (iframe src="http://example.com/untrusted/comments/page2" sandbox="allow-same-origin allow-top-navigation")
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is -->
+    <p>
+        <!-- Perbaikan: iframe ditutup dengan </iframe> -->
+        <iframe title="#" src="http://example.com/untrusted/comments/page2" sandbox="allow-same-origin allow-top-navigation"></iframe>
+    </p>
+
+    <p>The parent document can add event listeners and resize the IFrame to fit its contents. This, along with allow allow-top-navigation, can make the sandboxed iframe appear to be part of parent document.</p>
+
+    <p>This sandbox is not a replacement for sanitizing input but can be used as part of a <u>defense in depth</u> strategy.</p>
+
+    <p>Also be aware that this sandbox can be subverted by an attacker convincing a user to visit the iframe's source directly. The <u>Content Security Policy</u> HTTP header can be used to mitigate this attack.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 27.3 - Setting the Frame Size -->
+    <h3>27.3 Setting the Frame Size</h3>
+
+    <p>The IFrame can be resized using the width and height attributes, where the values are represented in pixels (HTML 4.01 allowed percentage values, but HTML 5 only allows values in CSS pixels).</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (iframe src="base.html" width="800" height="600")(/iframe)
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <iframe title="#" src="base.html" width="800" height="600"></iframe>
+    </p>
+</body>
+</html>

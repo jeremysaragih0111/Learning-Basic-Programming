@@ -1,0 +1,1789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> The Material Part 3 Learn HTML 5 Modern </title>
+</head>
+<body>
+    <!-- Continue Material Part 2 - Learn HTML 5 Modern -->
+
+                    <!-- Chapter 11 - Include JavaScript Code in HTML  -->
+    <h2> 11 - Include JavaScript Code in HTML </h2>
+
+    <!-- Emmet HTML code is table>(thead>tr>th*2+tr*7>td*2) -->
+    <table>
+        <thead>
+            <tr>
+                <th><b>Attribute</b></th>
+                <th><b>Details</b></th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>src</td>
+                <td>Specifies the path to JavaScript file. Either a relative or absolute URL.</td>
+            </tr>
+            <tr>
+                <td>type</td>
+                <td>Specifies the MIME type. This attribute is required in HTML 4, but optional in HTML5.</td>
+            </tr>
+            <tr>
+                <td>async</td>
+                <td>Specifies that the script shall be executed asynchronously (only for external scripts). This attribute does not require any value (except of XHTML).</td>
+            </tr>
+            <tr>
+                <td>defer</td>
+                <td>Specifies that the script shall be executed when the page has finished parsing (only for external scripts). This attribute does not require any value (Except of XHTML).</td>
+            </tr>
+            <tr>
+                <td>charset</td>
+                <td>Specifies the character encoding used in an external script fil, e.g. UTF-8</td>
+            </tr>
+            <tr>
+                <td>crossorigin</td>
+                <td>How the element handles crossorigin requests</td>
+            </tr>
+            <tr>
+                <td>nonce</td>
+                <td>Cryptographic nonce used in <i>Content Security Policy</i> checks <u><a href="https://www.w3.org/TR/CSP3/">CSP3</a></u></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 11.1 - Handling disabled Javascript -->
+    <h3>  11.1 - Handling disabled Javascript </h3>
+    
+    <p>It is possible that the client browser does not support Javascript execution disabled, perhaps due to security reasons. To be able to tell users that a script is supported to execute in the page, the <b>(noscript)</b> tag can be used. The content of <b>(noscript)</b> is displayed whenever Javasript is disabled for the current page. </p>
+
+    <p><b>Input this code:</b></p>
+
+    <p> 
+        <b>(script)</b> <br>
+            &emsp;document.write(<b>"Hello, World"</b>); <br>
+        <b>(/script)</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <script>
+            document.write("Hello, World");
+        </script>
+        <noscript>This browser does not support Javascript</noscript>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 11.2 Linking to an external JavaScript file -->
+     <h3> 11.2 Linking to an external JavaScript file </h3>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        (<b>script src="example.js"</b>) <br>
+        (<b>/script)</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+
+    <!-- Output code is: -->
+    <script src="example.js"></script>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 11.3 Directly including JavaScript Code -->
+    <h3> 11.3 Directly including JavaScript Code </h3>
+
+    <p>Instead of thinking to an external file, you can do also include ths JS code as-is in your HTML:</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        (<b>script) </b> <br>
+         &emsp;//JavaScript Code <br>
+        <b>(/script)</b>
+    </p>
+
+    <p>
+        <!-- Then Output code is: -->
+        <script>
+            //JavaScript Code
+        </script>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+     <!-- Chapter 11.4 Including a JavaScript file executing asynchronously -->
+    <h3> 11.4 Including a JavaScript file executing asynchronously </h3>
+
+    <p><b>Input This code:</b></p>
+    
+     <p>
+        (<b>script type="text/javasript" src="URL" async</b>) <br>
+
+        <b>(/script)</b>
+     </p>
+
+     <!-- Then Output code is: -->
+     <p>
+        <script type="text/javascript" src="URL" async></script>
+     </p>
+
+     <br> <!-- Spacing line like enter -->
+
+                <!-- Chapter 12 - Using HTML with CSS -->
+    <h2> Chapter 12 - Using HTML with CSS </h2>
+
+    <p> CSS provides styles to HTML elements on the page. Inline styling involves usage of the style attribute in tags, and is highly discouraged. Internal stylesheets use the <b>(style)</b> tag and are used to declare rules for directed partions of the page. External stylesheets may be used through a <b>(link)</b> tag which takes an external file of CSS and applies the rules to the document. This topic cover usage of all three methods of attachment. </p>
+
+    <!-- Chapter 12.1 - External stylesheet Use -->
+    <h3> 12.1 - External stylesheet Use </h3>
+
+    <p>Use the link attribute in document's head:</p>
+
+    <p><b>Input this code is:</b></p>
+     <!-- Output code is: -->
+    <p>
+        <b>(head)</b>
+            (<b>link= rel="stylesheet" type="text/css" href="stylesheet.css"</b>)
+        <b>(/head)</b>
+    </p>
+
+    <!--Then Output code is: -->
+    <p><b>Then Output code is:</b></p>
+    <p>
+        <head>
+            <link rel="stylesheet" href="stylesheet/css" type="text/css">
+        </head>
+    </p>
+
+    <p> You can also use stylesheet proviced from website via a content delivery network, or CDN for short. (for example, Bootstrap):</p>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>(head)</b> <br>
+            <link rel="stylesheet" href="https://maxcdn.boostrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384    BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">  <br>
+        <b>(/head)</b>
+
+    </p><b>Then Output code is:</b><p>
+    <!-- Then Output Code: -->
+    
+    <p>
+        <head>
+            <link rel="stylesheet" href="https://maxcdn.boostrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384    BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        </head>
+    </p>
+
+    <p> Generally, you can find CDN support for a framework on its website. </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 12.2 Internal Stylesheet -->
+    <h3> 12.2 - Internal Stylesheet </h3>
+    
+    <p> You can also include CSS elements internally by using the <b>(style)</b> tag: </p>
+
+    <p><b>Input this code :</b></p>
+
+     <b>(head)</b>  <br>
+    &emsp;<b>(style)</b>  <br>
+    &emsp;&emsp;<b>body { <br>
+    &emsp;&emsp;&emsp;background-color: gray; <br>
+    &emsp;&emsp;} </b> <br>
+    &emsp;<b>(/style)</b> <br>
+    <b>(/head)</b>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Then Output code is: -->
+    <p>
+        <head>
+            <style>
+                body {
+                    background-color: gray;
+                }
+            </style>
+        </head>
+     </p>
+     
+    <p> Multiple internal stylesheets can be included in a program as well: </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 12.3 - Inline style-->
+      <h3> 12.3 - Inline style </h3>
+      <p>You can style a specific element by using the style attribute:</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        (<b>span style="color : red"</b>) This text will appear in red. <b>(/span)</b>
+    </p>
+
+    <p><b> Then Output code is: </b></p>
+    <!-- Output code is -->
+    <p>
+        <!-- Then Output Code is: -->
+        <span style="color : red"> This text will appear in red.</span>
+    </p>
+
+    <p><b>Note : </b>Try to avoid this the point of CSS os to separate from presentation.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 12.4 - Multiple Stylesheets -->
+    <h3> 12.4 - Multiple Stylesheets </h3>
+
+    <p> It's possible to load multiple stylesheet: </p>
+
+    <p><b>Input this code :</b></p>
+
+    <p>
+        <b>(head)</b>   <br>
+            &emsp;(<b> link  rel="stylesheet" type="text/css" href="general.css"</b>)   <br>
+            &emsp;(<b> link  rel="stylesheet" type="text/css" href="specific.css"</b>)  <br>
+        <b>(/head)</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!--Then Output code: -->
+    <p>
+        <head>
+            <link  rel="stylesheet" type="text/css" href="general.css"></link>
+            <link rel="stylesheet" type="text/css" href="specific.css"></link>
+        </head>
+    </p>
+
+    <p> Note that <b>later files and declaration will override earlier ones.</b> So if general.css contains: </p>
+
+    <p><b>Input this code:</b></p>
+
+    <p> 
+        body { <br>
+        &emsp;&emsp;background-color: red;  <br>
+        }
+    </p>
+
+    <p>and specifies.css contains:</p>
+    
+    <p>        
+        body {  <br>
+        &emsp;&emsp;background-color:blue;  <br>
+        }   <br>
+    </p>
+
+    <p> If both ae used, the background of the document will be blue </p>
+
+    <br> <!-- Spacing line like enter -->
+
+
+                    <!-- Chapter 13 - Images -->
+    <h2> Chapter 13 - Images </h2>
+
+    <!-- Emmet HTML code is table>(thead>tr>th*2)+(tbody>tr*9>td*2) -->
+
+    <table>
+        <thead>
+            <tr>
+                <th>Parameters</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>src</td>
+                <td>Specifies the URL of the image</td>
+            </tr>
+            <tr>
+                <td>srcset</td>
+                <td>image to use in different situation (e.g., high-resolution displays, small monitors, etc)</td>
+            </tr>
+            <tr>
+                    <td>sizes</td>
+                    <td>image sizes between breakpoints</td>
+            </tr>
+                <tr>
+                <td>crossorigin</td>
+                <td>How the element handles crossorigin requests</td>
+            </tr>
+            <tr>
+                <td>usemap</td>
+                <td>Name of image map to use</td>
+            </tr>
+            <tr>
+                <td>ismap</td>
+                <td>Whether the image is a server-side image map</td>
+            </tr>
+            <tr>
+                <td>alt</td>
+                <td>alternative text that should be displayed if for some reason the image could not be displayed</td>
+            </tr>
+            <tr>
+                <td>width</td>
+                <td>Specifies the width of the image (optional)</td>
+            </tr>
+            <tr>
+                <td>height</td>
+                <td>Specifies the height of the image (optional)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 13.1 - Creating an image -->
+    <h3> 13.1 - Creating an image </h3>
+
+    <p> To add an image to a page, use the image tag.</p>
+    <p>Image tag <b>(img)</b> do not have closing tags/ The two main attributes you give to the img tag are src, the image source and alt, which is alternative text describing the image.</p>
+
+    <p><b>Input this code</b></p>
+
+    <p>
+        <b>
+            (img src="=images/hello.png" alt="Hello World")
+        </b>
+    </p>
+    
+    <p><b>Then Output code is:</b></p>
+    <!-- Then Output code is: -->
+    <p>
+        <img src="=images/hello.png" alt="Hello World">
+    </p>
+    
+    <br> <!-- Spacing line like enter -->
+    
+    <p>You can also get images from a web URL:</p>
+    
+    <p><b>Input this code:</b></p>
+
+    <p>
+        <b>
+            (img src="https://i.stack.imgur.com/AlgZi.jpg?s=48&g=1" alt="StackOverflow user caled kleveter"
+        </b>)
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Then Output code is: -->
+    <p>
+        <!-- Then Output code is: -->
+        <img src="https://i.stack.imgur.com/AlgZi.jpg?s=48&g=1" alt="StackOverflow user Caleb Kleveter">
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <p>Note: Images are not technically inserted into an HTML page, images are linked to HTML pages. The <b>(img)</b> tag creates a holding space for the referenced image.</p>
+
+    <p>It is also possible to embed images directly inside the page using base64:</p>
+
+    <p><b>Input this Code:</b></p>
+
+    <p>
+        (<b>img src="data:image/png;base64,iVBOR..." alt="Hello World"</b>)
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Then Output code is -->
+    <p>
+        <img src="data:image/png;base64,iVBOR..." alt="Hello World">
+    </p>
+
+    <p> Tip: To link an image to another document, simply nest the <b>(img)</b> tag inside <b>(a)</b> tags.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 13.2 - Choosing alt text -->
+    <h3> 13.2 - Choosing alt text </h3>
+
+    <p> Alt-text is used by screen readers for visually impaired users and by search engines. It's therefore important to write good alt-text for your images.</p>
+
+    <p>The text should look correct even if you replace the image with its alt attribute. For example:</p>
+
+    <p><b>The wrong input Code: </b></p>
+
+    <p>
+        <!-- Incorrect -->
+        -- incorrect -- <br>
+        (<b>img src="anonymous.png" alt="anonymous user avatar"</b> /) An anonymous user wrote: <br> (<b>blockquote</b>) Lorem ipsum dolor sed. <b>(/blockquote)</b>    <br>
+        (<b>a href="https://google.com/</b>") (<b>img src="edit.png" alt="Edit icon"</b> /) <b>(/a)</b> /   <br>
+        (<b>a href="https://google.com/</b>")(<b>img src="delete.png" alt="delete icon"</b> /) <b>(/a)</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Then Output code is: -->
+    <p>
+        <img src="anonymous.png" alt="anonymous user avatar" /> An anonymous user wrote: <blockquote> Lorem ipsum dolor sed. </blockquote>
+        <a href="https://google.com/"> <img src="edit.png" alt="Edit icon" /> </a> / 
+        <a href="https://google.com/"><img src="delete.png" alt="delete icon" /> </a>
+    </p>
+
+    <p>Without the image, this would look like: </p>
+
+    <p> Anonymous user avatar An anonymous user wrote:</p>
+    
+    <p>Lore ipsum dolor sed.</p>
+
+    <a href="editicon.com"> <u>Edit Icon/</u></a>
+    <a href="deleteicon.com">Delete icon</a>
+
+    <p>To correct this: </p>
+    <ul>
+        <li>Remove the alt-text for the avatar. This image adds information for sighted users (an easily idetifiable icon to show that user in anonymous) but this information is already available in the text.1</li>
+        <li>Remove the "icon" from the alt-text for the icons. Knowing that this would be an icon if it were there does not help to convey its actual purpose.</li>
+    </ul> 
+    
+    <p><b>The Correct Input this code is:</b></p>
+
+    <p>
+        <!-- The Correct Output Code is -->
+        (<b>img src="anonymous.png" alt=""</b> /)An anonymous user wrote: <br> (<b>blockquote</b>) Lorem ipsum dolor sed. <b>(/blockquote)</b>  <br>
+        (<b>a href="https://google.com"</b>)(<b>img src="Edit.png" alt="Edit"</b>/) <b>(/a)</b> /    <br>
+        (<b>a href="https://google.com"</b>)(<b>img src="delete.png" alt="Delete"</b>/) <b>(/a)</b>
+    </p>
+
+    <p><b>Then the Correct Output Code is:</b></p>
+
+    <p>
+        <!-- The Correct Output Code is -->
+        <img src="anonymous.png" alt=" " />An anonymous user wrote: <blockquote> Lorem ipsum dolor sed.</blockquote>
+        <a href="https:google.com"><img src="edit.png" alt="Edit" /> </a> /
+        <a href="goole.com"><img src="delete.png" alt="Delete"/> </a>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 13.3 - Responsive image using the srcset attribute -->
+    <h3 >13.3 - Responsive image using the srcset attribute </h3>
+
+    <h4> Using srcset with sizes </h4>
+
+    <p><b>Input This code: </b></p>
+
+    <p>
+        (<b>img sizes="(min-width:1200px) 500px, (min-width: 640px) 48vw, 98vw"
+        srcset="img/hello-300.jpg 300w, 
+        img/hello-600.jpg 600w,
+        img/hello-900.jpg 900w,
+        img/hello-1200.jpg 1200w"
+        src="img/hello-900.jpg" alt="hello"</b>)
+    </p>
+
+    <p>
+        <!-- Then Output This code: -->
+        <img sizes="(min-width:1200px) 500px, (min-width: 640px) 48vw, 98vw"
+        srcset="img/hello-300.jpg 300w, 
+        img/hello-600.jpg 600w,
+        img/hello-900.jpg 900w,
+        img/hello-1200.jpg 1200w"
+        src="img/hello-900.jpg" alt="hello">
+    </p>
+
+    <p> Sizes are like media queries, describing how much space the image takes of the viewport.</p>
+    <ul>
+        <li>if viewport is larger that 1200px, image is exactly 580px (for example our content is centered in container which is max 1200px wide. Image taks half of it minus margins).</li>
+        <li>if viewport is between 640px and 1200px, image takes 48% of viewport (for example image scales with our page and takes half of viewport width minus margins).</li>
+        <li>if viewport is any other size, in our case less than 640px, image take 98% of viewport  (for example image scales with our page and takes full width of viewport minus margins). <b>Media condition must be omiited for last item</b>.</li>
+    </ul>
+
+    <p> srcset is just telling the browser what images we have available, and what are their sizes.</p>
+
+    <ul>
+        <li>img/hello-300.jpg is 300px wide,</li>
+        <li>img/hello-600.jpg is 600px wide,</li>
+        <li>img/hello-900.jpg is 900px wide,</li>
+        <li>img/hello-1200.jpg is 1200px wide</li>
+    </ul>
+
+    <p>src is always mandatory image source. In case of using with srcset, src will serve fallback image in case browser is not supporting srcset</p>
+
+    <h4> Using srcset without sizes</h4>
+
+    <img src="img/hello-300.jpg" alt="hello"
+        srcset="img/hello-300.jpg 1x,
+        img/hello-600.jpg 2x,
+        img/hello-1200.jpg 3x">
+
+    <p>srcset provides list of available image, with device-pixel ratio x descriptor.</p>
+
+    <ul>
+        <li>if device-pixel ratio is 1, use img/hello-300.jpg</li>
+        <li>if device-pixel ratio is 2, use img/hello-600.jpg</li>
+        <li>if device-pixel ratio is 3, use img/hello-1200.jpg</li>
+    </ul>
+
+    <p>src is always mandatory image source. In case of using with srcset, src will server fallback image in case browser is not supporting srcset.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 13.4 - Responsive image using picture element -->
+    <h3> 13.4 - Responsive image using picture element </h3>
+
+    <h4> Code </h4>
+
+    <p><b>Input this code:</b></p>
+
+    <p>
+        <b>(picture)</b> <br>
+        &emsp;&emsp;<b>(source media="(min-width: 600px)" srcset="large_image.jpg")</b> <br>
+        &emsp;&emsp;<b>(source media="min-width: 450px" srcset="small_image.jpg")</b>   <br>
+        &emsp;&emsp;<b>(img src="default_image.jpg" alt="width:auto;")</b>   <br>
+        <b>(/picture)</b>
+    </p>
+
+    <p><b>Then Outpun Code is: </b></p>
+    <!-- Then Output code is: -->
+    <p>
+        <picture>
+            <source media="(min-width: 600px)" srcset="large_image.jpg">
+            <source media="min-width: 450px" srcset="small_image.jpg">
+            <img src="default_image.jpg" alt="width:auto;">
+        </picture>
+    </p>
+
+    <h4> Usage </h4>
+
+    <p> To display different images under different screen width, you must include all image using the source tag in a picture tag as shown in the above example. </p>
+
+    <h4>Result</h4>
+
+    <ul>
+        <li>On screens with screen width > 600px, it shows large_image.jpg</li>
+        <li>On screens with screen width > 450px, it shows small_image.jpg</li>
+        <li>On screen with other screen width, it shows default_image.jpg</li>
+    </ul>
+
+    <br> <!-- Spacing line like enter -->
+
+
+    <!-- Chapter 14 - Image Maps -->
+    <h2> Chapter 14 - Image Maps </h2>
+    
+    <!-- Emmet HTML code is: table>(thead>tr>th*2)+(tbody>tr*9>td*2) -->
+     <table>
+        <thead>
+            <tr>
+                <th><b>Tag/Attribute</b></th>
+                <th><b>Value</b></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>(img)</b></td>
+                <td>Below are the image map-specific attribute to use with <b>(img)</b>. Regular <b>(img)</b> attribute apply.</td>
+            </tr>
+            <tr>
+                <td>usemap</td>
+                <td>The name of the map with a hash symbol prepended to it. For examplem for a map with name=<b>"map"</b> the image should have usemap="<b>#map</b>".</td>
+            </tr>
+            <tr>
+                <td><b>(map)</b></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td>The name of the map to identify it. To be used with the image's usemap attribute.</td>
+            </tr>
+            <tr>
+                <td><b>(area)</b></td>
+                <td>Below are <b>(area)</b>specific attributes. When href is specified, making the <b>(area)</b> a link, <b>(area)</b> also support all of the attributes of the anchor tag <b>(a)</b> except ping. See them at the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a"> <u>MDN docs</u> </a> </td>
+            </tr>
+            <tr>
+                <td>alt</td>
+                <td>The alternate text to display if images are not supported. This is only necessary if href is also set on the <b>(area)</b></td>
+            </tr>
+            <tr>
+                <td>coords</td>
+                <td>The coordinates outlining the selectable area. When shape="polygon", this should be set to a list of "x,y" pairs separated by commas (i.e., shape=<b>"polygon"</b> coords=<b>"x1, y1, x2, y2, x3, y3, ...."</b>). When shape=<b>"rectangle"</b>, this should be set to left, top, right, bottom. When shape="circle",
+                    this should be set to centerX, centerY, radius.</td>
+            </tr>
+            <tr>
+                <td>href</td>
+                <td>The URL of the hyperlink, if specified,. If it omitted, then the <b>(area)</b>  will not represent a hyperlink.</td>
+            </tr>
+            <tr>
+                <td>shape</td>
+                <td>The shape of the <b>(area)</b>. Can be set to default to select the entire image (no coords attribute necessary), cicle or circ for a cicle, retangle, and polygon or poly for polygonal area specified by corner points.</td>
+            </tr>
+        </tbody>
+     </table>
+
+     <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 14.1 - Introduction to Image Maps -->
+    <h3> 14.1 - Introduction to Image Maps </h3>
+
+    <h4> Description</h4>
+
+    <p>An image maps is an image with clickable areas that usually act has hyperlinks.</p>
+
+    <p> The image is defined by the <b>(img)</b> tag, and the map is defined by a <b>(map)</b>  tags with <b>(area)</b> tags to denote each clickable area. Use the usemap and name attribute to bind the image and the map.</p>
+
+    <h4>Basic Example</h4>
+
+    <p>To create an image map so that each of the shapes in the image below are clickable:</p>
+
+    <p>The code would be as follows:</p>
+
+    <p><b>Input this code:</b></p>
+
+    <p>
+        <b>(img src="http://jaced.com/blogpix/2007/trisquarecircle/002.gif" usemap="#shape")</b>    <br>
+        <b>(map name="shape")</b>   <br>
+        &emsp;&emsp;<b>(area shape="polygon" coords="79,6,5,134,153,134")</b> <br>
+        &emsp;&emsp;<b>(area shape="retangle" coords="177,6,306, 134")</b>  <br>
+        &emsp;&emsp;<b>(area shape="circle" coords="397,71,65")</b> <br>
+        <b>(/map)</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is-->
+    <p>
+        <!-- Then Ouput Code is-->
+        <img src="http://jaced.com/blogpix/2007/trisquarecircle/002.gif" usemap="#shape">
+        <map name="shape">
+            <area shape="polygon" coords="79,6,5,134,153,134">
+            <area shape="retangle" coords="177,6,306, 134">
+            <area shape="circle" coords="397,71,65">
+        </map>
+    </p>
+
+    <p>You should see that the browser recognizes the areas when the cursor becomes a pointer. See a <a href="https://jsfiddle.net/jlam55555/xvpdbk6u/"><u>Live demo</u></a> on JSFifiddle</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 15 - Input Control Elements -->
+     <h2> Chapter 15 - Input Control Elements </h2>
+
+    <!-- Emmet HTML Code is table>(thead>tr>th*2)+(tbody>tr*15>td*2)-->
+
+    <table>
+        <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>class</td>
+                <td>Indicates the class of the input</td>
+            </tr>
+            <tr>
+                <td>id</td>
+                <td>Indicates the ID of the input</td>
+            </tr>
+            <tr>
+                <td>type</td>
+                <td>Identifies the type of input control to display. Acceptable values are hiddenm textm tel, url, email.password, date, time, number, range, color, checkbox, radio, file, submitm image, reset, and button. Default to text if not specified, if the value is invalid, or if the browser does not support the type specified.</td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td>Indicates the name of the input</td>
+            </tr>
+            <tr>
+                <td>disabled</td>
+                <td>Boolean value that indicates the input should be disabled. Disabled controls cannot be editted, are not sent on form submissoion, and cannot receive focus.</td>
+            </tr>
+            <tr>
+                <td>checked </td>
+                <td>When the values of the type attribute is radio or checkbox, the presence of this Boolean attribute indicates that the control is selected by default, otherwise it is ignored.</td>
+            </tr>
+            <tr>
+                <td>multiple</td>
+                <td><b>HTML5</b> Indicates multiple files or values can be passed (Applies only to file and email type inputs)</td>
+            </tr>
+            <tr>
+                <td>Placeholder</td>
+                <td><b>HTML5</b> A hint to the user of what can be entered in the control. The Placeholder text must not contain carriage returns or line-feeds</td>
+            </tr>
+            <tr>
+                <td>autocomplete</td>
+                <td><b>HTML5</b> Indicates whether the value of the control can be automatically completed by the browser. Boolean value that indicates the input is not editable. Readonly controls are still sent on form submission, but will not receive focus</td>
+            </tr>
+            <tr>
+                <td>readonly</td>
+                <td>Boolean value that indicates the input is not editable. Readonly controls are still sent on form submission, but will not receive focus. <b>HTML5</b>: This attribute is ignored when the value of type attribute is either set to hidden, range, color checkbox, radio, file or button.</td>
+            </tr>
+            <tr>
+                <td>required</td>
+                <td><b>HTML5</b> Indicates a value must be present or the element must be checked in order for the form to be submitted.</td>
+            </tr>
+            <tr>
+                <td>alt</td>
+                <td>An alternative text for images, in case the are not displayed.</td>
+            </tr>
+            <tr>
+                <td>autofocus</td>
+                <td>The <b>(input)</b> element should get the focus when page loads.</td>
+            </tr>
+            <tr>
+                <td>value</td>
+                <td>Specifies the value of <b>(input)</b> element.</td>
+            </tr>
+            <tr>
+                <td>step</td>
+                <td>The step attribute specifies the legal number intervals. It works with the following input types: numberm rangem date, datetime-local, month, time and week</td>
+            </tr>
+            <tr>
+                <td>min and max</td>
+                <td>Specifies the minimum and maximum values for number, range, date, datetime-local, month, time and week input types.</td>
+            </tr>
+        </tbody>
+    </table>
+
+     <p>A key component of interactive web systems, input tags are HTML elements designed to take a specific form of input from users. Different types of input elements can regulate the data entered to fit a specified format and provide security to password entry.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 15.1 - Text -->
+    <h3>15.1 - Text </h3>
+
+    <p>The most basic input type and the default input if no type is specified. This input type defines a single-line text field witht line-breaks automatically removed from the input value. All other character can be entered into this. <b>(input)</b> elements are used within a <b>(form)</b> element to declare input controls that allo users to input data.</p>
+
+    <h4>Syntax</h4>
+
+    <p>Input this code</p>
+
+    <p><b>(Input</b> type="text")</p>
+
+    <p>or (withoutspecifyng a type using the default attribute).</p>
+      
+    <p><b>(input)</b></p>
+
+    <p>The default width of a text field input is 20 characters. This can be changed by specifying a value for the size attribute like this: </p>
+    
+    <p><b>(input type="text" size="50")</b></p>
+
+    <p>The size attribute is distinctly different that setting aa width with CSS. using a width defines a specific value (in number of pixel, percentage of the parent element, etc.) that the input must always be wide. Using the size calculates the amount if width to allocate based on the font being used and how wide the characters normally are.</p>
+
+    <p><b>Note:</b> Using the size attribute does not inherently limit the number of characters which can be entered into the box, only how wide the box is displayed, for limiting the length, see input validation.</p>
+
+    <p>An input field only allows one line of text. If you need a multi-line text input for subtantial amount of text, use a <b>(textarea)</b> element instead.</p>
+
+    <br>  <!--Spacing line like enter -->
+
+    <!-- Chapter 15.2 - Checkbox and Radio Button -->
+    <h3> 15.2 - Checkbox and Radio Button </h3>
+
+    <h4> Overview </h4>
+
+    <p>Checkboxes and radion buttons are written with the HTML tag <b>(input)</b>, and their behavior is defined in the <a href="https://html.spec.whatwg.org/multipage/forms.html#radio-button-state-(type=radio)"> <u>HTML Specification</u></a> </p>
+
+    <p>The Simplest checkbox or radio button is an <b>(input)</b> element with a type attribute of checkbox or radio, respectively:</p>
+
+    <p><b>(input type="checkbox")</b></p>
+    <p><b>(input type="radio")</b></p>
+
+    <p> A single stand-alon checkbox element is used for a single binary option such as yes-or-no question. Checkboxes are independent, meaning the user may select as many choices as they would like in a group of checkboxes. In other words, checking one checkbox does <i>not</i> uncheck the other checkbox in checkbox group.</p>
+
+    <p>Radio button usually come in groups (if it's not grouped with another radio button, you probably meant to use a checkbox instead) identified by using the same attribute on all buttons within, that group. The selection of radio button are <i>mutually exclusive</i>, meaing the user may only select one choice from a group of radio buttons. When a radio button is checked, any other radio button with the same name that previously checked becomes unchecked.</p>
+
+    <p><b>Input This code : </b></p>
+
+    <p><b>Example:</b></p>
+
+    <p><b>Input This code : </b></p>
+
+    <p>
+        <b>(input type="radio" name="color" id="red" value="#0F0")</b>  <br>
+        <b>(input type="radio" name="color" id="green" value="#0F0")</b> <br>
+        <b>(input type="radio" name="color" id="blue" value="#00F")</b> <br>
+    </p>
+
+    <p><b>Then Output code is : </b></p>
+    <!-- Output code is: -->
+    <p>
+        <input type="radio" name="color" id="red" value="#F00">
+        <input type="radio" name="color" id="green" value="#0F0">
+        <input type="radio" name="color" id="blue" value="#00F">
+    </p>
+
+    <p>When viewed, radio buttons appear as a circle (unchecked) or a filled circle (checked). Checkboxes appear as a square (unchecked) or a filled square (checked). Depending on the browser and operation system, the square sometimes has rounded corners.</p>
+
+    <h4>Attributes</h4>
+    <p>checkboxes and radio buttons have a number of attributes to control their behavior:</p>
+
+    <h5> Value </h5>
+    <p>Like any other input element, the value attribute specifies the string value to associate with the button in the event of form submission. However, checkboxes and radio buttons are special in that when the value is omitted, it defaults to on when submitted, rather than sending a black value. The value attribute is not reflected in the button's appearance.</p>
+
+    <h5>Checked</h5>
+    <p>The checked attribute specifies the initial state of a checkbox or radio button. This is a boolean attribute and may be omitted.</p>
+
+    <p>Each of these are valid, equavalent ways to defince a checked radio button:</p>
+
+    <p><b>Input this code</b></p>
+
+    <p>
+        <b>
+            (input checked)  <br>
+            (input checked="")  <br>
+            (input checked="checked")   <br>
+            (input checked="ChEcKed")   <br>
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is -->
+    <p>
+        <input checked>
+        <input checked="">
+        <input checked="checked">
+        <input checked="ChEcKed">
+    </p>
+
+    <p>The absence of the checked attribute is the only valid syntax for an unchecked button:</p>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>
+            (input type="radio")
+            (input type="checkbox")
+        </b>
+    </p>
+    
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <input type="radio">
+        <input type="checkbox">
+    </p>
+    
+    <p>When resetting a <b>(form)</b>, checkboxes and radio buttons revert to the state of their checked attribute.</p>
+
+    <h4>Accessibility</h4>
+    <h4>Labels</h4>
+
+    <p>To give context to the buttons and show users what each button is form each of them should have a label. This can be done using a <b>(label)</b> element to wrap the button. Alsom this makes the label clickable, so you select the corresponding button</p>
+
+    <p><b>Example</b></p>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>(label)
+        &emsp;(input type="radio" name="color" value="#F00")</b>
+                Red
+        <b>(/label)</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <label >
+            <input type="radio" name="color" value="#F00">
+            Red
+        </label>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <p>or with a <b>(label)</b> element with a for attribute set to the id attribute of the button</p>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>(input type="radio" name="color" value="#F00")</b>
+        <b>(label for="red")Red(/label)</b>
+    </p>
+
+    <p><b>Then Ouput code is:</b></p>
+    <p>
+        <!-- Output code is: -->
+        <input type="radio" name="color" value="#F00">
+        <label for="red">Red</label>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <h4>Button Groups</h4>
+    <p>Since each radio button affects the others in the group, it is common to provide a label or context for the entire group of radio buttons.</p>
+
+    <p> To provide a label for the entire group, the radio button should be included in a <b>(fieldset)</b> element with a <b>(legend)</b>element within it</p>
+
+    <p><b>Example:</b></p>
+
+    <!-- Emmet HTML Code is fieldset>legend{Theme color:}+(p>input[type="radio" name="color" id="red" value="#F00"]+label[for="red"]{Red})+(p>input[type="radio" name="color" id="green" value="#F00"]+label[for="green"]{Green})+(p>input[type="radio" name="color" id="blue" value="#F00"]+label[for="blue"]{Blue})-->
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>
+            (fieldset)</b>   <br>
+            &ensp;<b>(Legend)</b>Theme color: <b>(/legend)</b>    <br>
+            &ensp;<b>(p)</b>  <br>
+            &emsp;&ensp;<b>(input type="radio" name="color" id="red" value="#F00")</b>  <br>
+            &emsp;&ensp;<b>(label for="red")</b> Red <b>(/label)</b>    <br>
+            &ensp;<b>(/p)</b> <br>
+            &ensp;<b>(p)</b>  <br>
+            &emsp;&ensp;<b>(input type="radio" name="color" id="green" value="#F00")</b>    <br>
+            &emsp;&ensp;<b>(label for="green")</b>Green <b>(/label)</b>
+            &ensp;<b>(/p)</b> <br>
+            &ensp;<b>(p)</b>  <br>
+            &emsp;&ensp;<b>(input type="radio" name="color" id="blue" value="#F00")</b> <br>
+            &emsp;&ensp;<b>(label for="blue")</b> Blue <b>(/label)</b>  <br>
+            &ensp;<b>(/p)</b> <br>
+        <b>(/fieldset)</b>
+    </p>
+
+    <p><b>Then Output code is: </b></p>
+    <!-- Then Output code is:-->
+    <p>
+        <fieldset>
+            <legend>Theme color:</legend>
+            <p>
+                <input type="radio" name="color" id="red" value="#F00">
+            
+                <label for="red">Red</label>
+            </p>
+            <p>
+                <input type="radio" name="color" id="green" value="#F00"><label for="green">Green</label>
+            </p>
+            <p>
+                <input type="radio" name="color" id="blue" value="#F00"><label for="blue">Blue</label>
+            </p>
+        </fieldset>
+    </p>
+
+    <p> Checkboxes can also be grouped in simmilar fashion, with a fieldset and legend identifying the group of related checkboxes. However, keep in mind that checkboxes should <i>not</i> share the same name because they are not mutually exclusive. Doing this will result in the form submitting multiple values for the same key and not all serve side languages handle this in the same way (undefined behavior). Each checkbox should either have a uniqus name, or use a set of square brackets ([]) to indicate that the form should submit an array of values for that key. Which method you choose should depend on how you plan to handle the form data client-side or server-side. You should also keep the legend short, since some combinations of browsers and screen readers read the legend before each input field in the fieldset.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 15.3 - Input Validation -->
+    <h3> 15.3 - Input Validation </h3>
+    <p> HTML input validation is done automatically by the browser based on special attributes on the input element. This kind of validation can be circumvented by the user via specially 
+    crafted HTTP requests, so it does not replace server-side input validation. The validation only occurs when attempting to submit the form, so all restricted input must be inside a form in order for validation to occur (unles you're using JavaScript). Keep in mind that inputs which are disabled or read-only will not trigger validation.</p>
+    <p>Some newer input type (like email, url, tel, date and many more) are automatically validated and do not require your own validation contraints.</p>
+
+    <h5>Version ≥ 5</h5>
+    <h4>Required</h4>
+
+    <p>Use the required attribute to indicate that a field must be completed in order to pass validation.</p>
+
+    <input require>
+
+    <h4>Minimum/Maximum Length</h4>
+
+    <p>Use the minlength and maxlength attribute to indicate length requirements. Most browsers will prevent the user from typing more that <i>max</i> characters into the box, preventing them from making their entry invalid even before they attempt submission.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (input minlength="3")   <br>
+            (input maxlength="15")  <br>
+            (input minlength="3" maxlength="15")    <br>
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is:-->
+    <p>
+        <input type="text" minilength="3">
+        <input type="text" maxlengtg="15">
+        <input type="text" minlength="3" maxlength="15">
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <h4>Specifying a range</h4>
+
+    <p>
+        Use min and max attributes to restrict the range of numbers a user can input into an input of type number or range
+    </p>
+
+    <p><b>Input this code is:</b></p>   
+
+    <p>
+        Marks: <b>(input type="number" size="6" name="marks" min="0" max="100")</b> <br>
+        Subject feedback : <b>(input type="range" size="2" name="feedback" min="1" max="5")</b>
+    </p>
+
+    <p><b>Then Output this code is:</b></p>
+    <!-- Ouput code is -->
+    <p>
+        Marks: <input type="number" size="6" name="marks" min="0" max="100"> <br>
+        Subject feedback : <input type="range" size="2" name="feedback" min="1" max="5">
+    </p>
+
+    <h5>Version ≥ 5</h5>
+    <h4>Match a pattern</h4>
+
+    <p>For move control, use the pattern attribute to specify any regular expresion that must be matched in order to pass validation. you can also specify a title, which is included in the validation message if the field doesn't pass.</p>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>
+            (input type="text" pattern="d*" title="Numbers only, please.")
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <input pattern="d*" title="Numbers only, please.">
+    </p>
+
+    <p>Here's the message shown in Google Chrome version 51 when attempting to submit the form with an invalid value inside this field:</p>
+
+    <input pattern="d*" title="Numbers only, please.">
+
+    <p>Not all browser display a meesage for invalid patterns, although there is full support among most used modern browsers.</p>
+
+    <p> Check the latest support on <a href="https://caniuse.com/input-pattern"><u>Can|Use</u></a> and implement accordingly.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <h5>version ≥ 5</h5>
+    <h4>Accept file type</h4>
+
+    <p>For input fields of type file, it is possible to accept only certain types of files, such as videos, images, audios, specific file extensions, or certain <a href="https://www.iana.org/assignments/media-types/media-types.xhtml"><u>media types.</u></a>. For example:</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (input type="file" accept="image/*" title="Only image are allowed")
+        </b>
+    </p>
+
+    <p><b>Then Output Code is</b></p>
+    <!-- Output code is :-->
+    <p>
+        <input type="file" accept="image/*" title="Only image are allowed">
+    </p>
+    
+    <br> <!--Spacing line like enter -->
+
+    <p>Multiple values can be specified with a comma, e.g.:</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>(input type="file" accept="image/*, .rar, application/zip")</b>
+    </p>
+
+    <p><b>Then Output code is</b></p>
+    <!-- Output code is-->
+    <p>
+       <input type="file" accept="image/*, .rar, application/zip">
+    </p>
+    
+    <br> <!-- Spacing line like enter -->
+
+    <p><b>Note:</b> Adding novalidate attribute to the form element or formnavalidate attribbut to the submit button, prevents validation on form elements. For example:</p>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>
+            (form)   <br>
+            &emsp;&emsp;(input type="text" name="name" required)    <br>
+            &emsp;&emsp;(input type="email" name="email" required)  <br>
+            &emsp;&emsp;(input type="text" pattern="d*" name="number" required) <br>
+            
+            &emsp;&emsp;(input type="submit" value="publish") <!-- Form will validated-->   <br>
+            &emsp;&emsp;(input type="submit" value="save" formnovalidate) <!-- Form will NOT be validated-->    <br>
+         (/form)</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <form action="">
+            <input type="text" name="name" required>
+            <input type="email" name="email" required>
+            <input type="text" pattern="d*" name="number" required>
+            
+            <input type="submit" value="publish"> <!-- Form will validated-->
+            <input type="submit" value="save" formnovalidate> <!-- Form will NOT be validated-->
+        </form>
+    </p>
+
+    <p>The form has fields that are required for "publishing" the draft but aren't required for "saving" the draft.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 15.4 - Color -->
+    <h3>15.4 - Color</h3>
+    <h5>Version ≥ 5</h5>
+
+    <p>In supporting browsers, the input element with a type attribute whose value is color creates a button-like control, with a color equal to the value of color attribute (defaults to black if value is not specified or is an invalid hexadecimal formal)</p>
+
+    <p>Clicking this button opens the operating system's color widget, which allows user to select a color.</p>
+
+    <p>Fallback for browsers which do not support this input type is regular input type=text.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>(input type="color" name="favcolor" value="#f0000")</b>
+    </p>
+
+    <p>Then Output code is:</p>
+    <!-- Output code is: -->
+    <p>
+        <input type="color" name="favcolor" value="#ff0000">
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 15.5 - Password -->
+    <h3> 15.5 - Password </h3>
+
+    <p>The input element with type attribute whose value is password creates a single-line text field similar to the input type=text, except that text is not displayed as the user enters it.</p>
+
+    <input type="password" name="password" placeholder="Password">
+
+    <p>Placeholder text is shown in plain text and is overwritten automatically when a user start typing.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (input type="password" name="password" placeholder="Password")
+        </b>
+    </p>
+
+    <p><b>Then Output this code is:</b></p>
+    <!-- Output code is: --> 
+    <p>
+        <input type="password" name="password" placeholder="Password">
+    </p>
+
+    <p><b>Note:</b> Some browsers and systems modify the default behavior of the password field to also display the most recently typed character for a short duration, like so:</p>
+
+    <img style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://i.sstatic.net/KaLZQ.jpg" width="204" height="54">
+
+    <!--Chapter 15.6 - File -->
+    <h3> 15.6 - File </h3>
+
+    <input type="file" name="filesubmission">
+
+    <p>File inputs allow user to select file from their local filesystem for use with the current page. If used in conjuntion with a form elementm they can be used to allow users to upload files to a server (for more info see uploading files)</p>
+
+    <p>The following example allows users to use the file input to select a file from their filesystem and upload that file to a script on the server named upload_file.php</p>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+       <b>(form action="upload_file.php" method="post" enctype="multipart/form-data")</b>    <br>
+        &emsp;&emsp;Select file to upload:  <br>
+        &emsp;&emsp;<b>(input type="file" name="filesubmission" id="filesubmission") </b>  <br>
+        &emsp;&emsp;<b>(input type="submit" value="upload your file" name="submit")</b>    <br>
+        <b>(form)</b>
+     </p>
+
+    <p><b>Then Output Code is:</b></p>
+
+    <p>
+       <!-- Output Code is-->
+        <form action="upload_file.php" method="post" enctype="multipart/form-data">
+            Select file to upload:
+            <input type="file" name="filesubmission" id="filesubmission">
+            <input type="submit" value="upload your file" name="submit">
+        <form>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <h4>Multiple file</h4>
+
+    <p>
+        Adding the multiple attribute the user will be able to select
+        <b>more than one</b> file:
+    </p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+       <b>(input type="file" name="fileSubmission" id="fileSubmission" multiple="multiple")</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+
+    <!-- Ouput Code is -->
+     <p>
+        <input type="file" name="fileSubmission" id="fileSubmission" multiple="multiple">
+    </p>
+    
+    <br> <!--Spacing line like enter-->
+
+    <h4>Accept Files</h4>
+
+    <p>Accept attribute specifies the types of files that user can select, E.g. .png, .gif, .jpeg.</p>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>(input type="file" name="filesubmission" accept="image/x-ping, image/gif, image/jpeg")</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+
+    <p>
+        <input type="file" name="filesubmission" accept="image/x-ping, image/gif, image/jpeg">
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+    
+
+    <!-- Chapter 15.7 - Button -->
+    <h3> Chapter 15.7 - Button </h3>
+
+    <input type="button" value="Button Text">
+
+    <p>Button can be used for triggering actions to occur on the page, without submitting the form. You can also use the <b>(Button)</b> element  if you require a button that can be more easily styled or contain  other elements:</p>
+
+    <p><b>Input This code:</b></p>
+
+    <p>
+        <b>(button type="button")</b> Button Text <b>(/button)</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+
+    <p>
+        <button type="button">Button Text</button>
+    </p>
+
+    <br><!--Spacing line like enter-->
+
+    <p>Buttons are typically used with an "onclick" event:</p>
+
+    <p><b>Input This code:</b></p>
+
+    <p>
+        <b>(input type="button" onclick="alert('hello world!')" value="Click Me")</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+
+    <!--Output code is-->
+    <p>
+        <input type="button" onclick="alert('hello world!')" value="Click Me">
+    </p>
+
+    <p><b>Or</b></p>
+
+    <p><b>Input This code:</b></p>
+
+    <p>
+        <b>(button type="button" onclick="alert('alert world!')")</b>
+            Click Me
+        <b>(/button)</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+
+    <!--Output code is:-->
+    <button type="button" onclick="alert('alert world!')">Click Me</button>
+
+    <h4>Attributes</h4>
+    <h5>[name]</h5>
+
+    <p>The name of the button, which is submitted with the form data.</p>
+    
+    [type]
+
+    <p>The type of the button</p>
+
+    <h4><i>Possible values are:</i></h4>
+
+    <p>Submit: The button submits the form data to the server. This is the dafault if the attributes is not specified, or if the attribute is dynamically changed to an empty or invalid value.
+        
+        <br> <!-- Spacing line like enter -->
+    
+    reset:  The button resets all the controls to their initial values.
+        
+        <br> <!-- Spacing line like enter -->
+    
+    button: The button has no default behavior. It can be have client-side scripts associated with the element's events, which are triggered when the events occur.
+
+        <br> <!-- Spacing line like enter -->
+    
+    menu: The button opens a popup menu defined via its designated element.
+    </p>
+
+    [type] 
+
+    <p>The initial value of the button</p>
+
+    <h5>Version ≥ 5</h5>
+
+    <h4>Extra Attributes for submit Buttons</h4>
+
+    <!-- Emmet HTML Code is table>(thead>tr>th*2)+(tbody>tr*6>td*2) -->
+    <table>
+        <thead>
+            <tr>
+                <th><b>Attribute</b></th>
+                <th><b>Description</b></th>
+            <tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>form</td>
+                <td>Specifies the ID of the form the button belongs to. If none is specified , it will belong to its ancestor form element (if one exist)</td>
+            </tr>
+            <tr>
+                <td>formaction</td>
+                <td>Specifies where to send the form-datawhen the form is submitted using this button.</td>
+            </tr>
+            <tr>
+                <td>formenctype</td>
+                <td>When submitting it to the server using this button. Can only be used with formmethod="post".</td>
+            </tr>
+            <tr>
+                <td>formmethod</td>
+                <td>Specifies the HTTP method to use (POST and GET) When sending form-data using this button.</td>
+            </tr>
+            <tr>
+                <td>formnovalidate</td>
+                <td>Specifies that the form-data should not be validated on submission.</td>
+            </tr>
+            <tr>
+                <td>formtarget</td>
+                <td>Specifies where to display the response that is received after submitting the form using this button.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 15.8 - Submit -->
+    <h3>15.8 - Submit</h3>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>(input type="submit" value="Submit")</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+
+    <input type="submit" value="Submit">
+
+    <p>A submit input creates a button which submits the form it is inside when clicked
+
+    <br> <!--Spacing line like enter -->
+    
+    <p>You can also use the <b>(button)</b> element if you require a submit button that can be more easily style or contain other elements:</p>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>(button type="submit")
+        (img src="submit-icon.jpg" /)</b> Submit
+        <b>(/button)</b>
+    </p>
+
+    <p><b>Then Output code is</b></p>
+    <!-- Output code is -->
+    <p>
+        <button type="submit">
+            <img src="submit-icon.jpg" /> Submit
+        </button>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 15.9 - Reset -->
+    <h3> 15.9 - Reset </h3>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>(input type="reset" value="Reset")</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code-->
+     <p>
+        <input type="reset" value="Reset">
+    </p>
+
+    <p> An input of type reset creates a button which, when clicked, resets all inputs in the form it is contained in to their default state.</p>
+
+    <ul>
+        <li>Text in an input field will be reset to blank or its default value (specified using the value attribute).</li>
+        <li>Any option(s) in selection menu will be deselected unless they have the selected attribute.</li>
+        <li>All checkboxes and radio boxes will be deselected unless they have the checked attribute.</li>
+    </ul>
+
+    <p><b>Note:</b> A reset button must be inside or attached to (via the form attribute) a <b>(form)</b> element in order to have any effect. The button will only reset the elements within this form.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 15.10 - Hidden -->
+    <h3>15.10 - Hidden</h3>
+
+    <p><b>Input This code is:</b></p>
+
+    <p> 
+        <b>(input type="hidden" name="inputName" value="inputValue")</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is:-->
+     <p>
+        <input type="hidden" name="inputName" value="inputValue">
+    </p>
+
+    <p>A hidden input won't be visible to the user, but its value will be sent to the server when the form is submitted nonetheless.</p>
+    
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 15.11 - Tel -->
+    <h3> 15.11 - Tel </h3>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>(input type="tel" value="+8400000000")</b>
+    </p>
+
+    <p><b>Then Ouput code is: </b></p>
+    <!-- Ouput Code is: -->
+    <p>
+        <input type="tel" value="+8400000000">
+    </p>
+
+    <p>The input element with a type attribute, whose value is tel represents a one-line plain-text edit control for entering a telephone number</p>
+
+    <br> <!--Spacing line like enter -->
+    
+    <!--Chapter 15.12 - Email -->
+    <h3> 15.12 - Email </h3>
+
+    <p> The <input type="email"> is used for input fields that should contain an e-mail address.</p>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>
+            (form)  <br>
+            &emsp;(label) E-mail: (/label)  <br>
+            &emsp;(input type="email" name="email") <br>
+            (/form)
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is -->
+    <p>
+        <form >
+            <label >E-mail: </label>
+            <input type="email" name="email">
+        </form>
+    </p>
+
+    <p>E-mail address can be automatically validated when submitted depending on browser support.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 15.13 - Number -->
+    <h3> 15.13 - Number </h3>
+    <h5>Version ≥ 5 </h5>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>(input type="number" value="0" name="quantity")</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p> 
+        <input type="number" value="0" name="quantity">
+    </p>
+
+     <p> The input element with a type attribute whose value is number represents a precise control for setting the element's value to a string representing a number.</p>
+
+     <p>Please note that this field does not guarantee to have a correct number. It just allows all the symbols which could be used in any real number, for example user will be able to enter value like ele-, 0.</p>
+
+    <br> <!--Spacing line like enter -->
+
+    <!-- Chapter 15.14 - Range -->
+    <h3> 15.14 - Range </h3>
+    <h5>Version ≥ 5</h5>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>(input type="range" min="" max="" step="" /)</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <input type="range" min="" max="" step="" />
+    </p>
+
+    <p>A control for entering a number whose exact value is not important</p>
+
+     <!-- Emmet HTML Code is table>(thead>tr>th*3)+(tbody>tr*3>td*3)-->
+    <table>
+        <thead>
+            <tr>
+                <th><b>Attribute</b></th>
+                <th><b>Description</b></th>
+                <th><b> Default value</b></th>
+            <tr>
+        </thead>
+        </tbody>
+            <tr>
+                <td>min</td>
+                <td>Minimum value for range</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>max</td>
+                <td>Maximum value for range</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>step</td>
+                <td>Amount to increase by on each increment</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 15.15 - Search -->
+    <h3> 15.15 - Search </h3>
+    <h5>Version  ≥ 5</h5>
+
+    <p>Input type search is used for textual search. It will add magnifer symbol next to space for text on most browsers.</p>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>(input type="search" name="google search")</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+     <!-- Output code is: -->
+    <p>
+        <input type="search" name="google search">
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+    
+    <!-- Chapter 15.16 - Image -->
+    <h3> 15.16 - Image </h3>
+
+     <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>
+            (input type="image" src="img.png" alt="image_name" height="50px" width="50px" /)
+        </b>
+    </p>
+
+    <p><b>Then Ouput code is:</b></p>
+    <!-- Output code is -->
+    <p>
+        <input type="image" src="img.png" alt="image_name" height="50px" width="50px" />
+    </p>
+
+    <p>An image. You must use the src attribute to define the source of the image and the alt attribute to define alternative text. You can use the height and width attributes to define the size of the image in pixels.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    
+    <!-- Chapter 15.17 - Week -->
+    <h3> 15.17 - Week </h3>
+    <h5>Version  ≥ 5</h5>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>(input type="week")</b>
+    </p>
+
+    <p><b>Then Output This code :</b></p>
+    <!-- Output Code is : -->
+    <p>
+        <input type="week" />
+    </p>
+
+    <p>dependent on browser support, a control will show for entering a week-year number and a week number with no time zone.</p>
+
+    <br> <!-- Spacing line like enter -->
+    
+
+    <!-- Chapter 15.18 - URL -->
+    <h3> 15.18 - URL </h3>
+    <h5>Version  ≥ 5</h5>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (input type="url" name="Homepage")
+        </b>
+    </p>
+     
+    <p><b>Then Output code is:</b></p>
+     <!-- Output code is: -->
+    <p>
+        <input type="url" name="Homepage">
+    </p>
+
+    <p> 
+        This is used for input fields that should contain a URL addres.
+
+        <br><!-- Spacing line like enter -->
+    
+        Depending on browser support, the url field can be automatically validated when submitted.
+    
+        <br> <!-- Spacing line like enter -->
+    
+        Some Smartphones recognize the urltype, and adds ".com" to the keyboard to match url input.
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 15.19 - DateTIme-Local -->
+    <h3> 15.19 - DateTIme-Local </h3>
+    <h5>Version  ≥ 5</h5>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>(input type="datetime-local" /)</b>
+    </p>
+
+    <p><b>Then Output code is :</b></p>
+    <!-- Ouput code is: -->
+    <p>
+        <input type="datetime-local" />
+    </p>
+
+    <p>Dependent on browser support, a date and time picker will pop up on screen for you to choose a date and time.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+
+    <!-- Chapter 15.20 - Month -->
+    <h3> 15.20 - Month </h3>
+    <h5>Version  ≥ 5</h5>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>(input type="month" /)</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <input type="month" />
+    </p>
+
+    <p>Dependent on browser support, a control will show to pick the month</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 15.21 - Time -->
+    <h3> 15.21 - Time</h3>
+    <h5>Version  ≥ 5</h5>
+
+    <p><b>Input This code is:</b>/p>
+
+    <p>
+        <b>(input type="time")</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Spacing line like enter -->
+    <p>
+        <input type="time">
+    </p>
+
+    <p>The time input marks this element as accepting a string representing a time. The format is defined in <a href="https://datatracker.ietf.org/doc/html/rfc3339"> RFC 3339</a> and should be partial-time such as</p>
+
+    <p> 19:04:39
+        <br>
+        08:20:39.04
+    </p>
+
+    <p> Currently, all versions of edge, chrome, opera, and chrome for Android support type="time". The newer versions of Android Browser, specifically 4.4 and up support it. Safari for iOS offers partial support, not supporting min, max, and steo attributes.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 15.22 - DateTime (Global) -->
+    <h3> 15.22 - DateTime (Global) </h3>
+
+    <p>The input element with a type attribute whose value is "<b>datetime</b>" represents a control for setting the element's value to a string representing a <b></b>global date and time (with timezone information)</b></p>
+
+    <p><b>Input this code is :</b></p>
+
+    <p>
+        <b>(fieldset)   <br>
+        &emsp;(p) <br>
+        &emsp;&emsp;(label)</b> <br>
+        &emsp;&emsp;&emsp;&emsp;Meeting time : <b>(input type="datetime" name="meeting start")</b>  <br>
+        &emsp;&emsp;<b>(/label)</b> <br>
+        &emsp;<b>(/p)    <br>
+        (/fieldset)</b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is -->
+    <p>
+        <fieldset>
+            <p><label>Meeting time :<input type="datetime" name="meeting start"></label></p>
+        </fieldset>
+    </p>
+
+    <br><!-- Spacing line like enter -->
+
+    <p><i>Permitted attributes:</i></p>
+
+    <ul>
+        <li>global attributes</li>
+        <li>name</li>
+        <li>disabled</li>
+        <li>form</li>
+        <li>type</li>
+        <li>autocomplate</li>
+        <li>autofocus</li>
+        <li>list</li>
+        <li>min & max</li>
+        <li>step (float)</li>
+        <li>readonly</li>
+        <li>required value</li>
+    </ul>
+
+    <br> <!-- Spacing line like enter -->
+
+
+    <!-- Chapter 15.23 - Date -->
+    <h3> 15.23 - Date </h3>
+     <h5>Version  ≥ 5</h5>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>
+            (input type="date" /)
+        </b>
+    </p>
+
+    <p><b>Then Output Code is:</b></p>
+    <!-- Output code is -->
+    <p>
+        <input type="date" />
+    </p>
+    
+    <p>A date picker will pop up on screen for you to choose a date. This is not supported in Firefox or Internet Explorer.</p>
+
+</body>
+</html>

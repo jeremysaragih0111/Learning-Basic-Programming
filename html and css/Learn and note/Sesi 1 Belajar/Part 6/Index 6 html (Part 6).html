@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Material Part 6 - Learn HTML 5 Modern</title>
+</head>
+<body>
+    <!-- Continue The Material Part 5 - Learn HTML 5 Modern -->
+
+
+                    <!-- Chapter 26 - Embed -->
+    <h2>chapter 26 - Embed</h2>
+
+    <!-- Emmed HTML code is table>(thead>tr>th*2)+(tbody>tr*4>td*2)-->
+    <table>
+        <thead>
+            <tr>
+                <th><b>Parameters</b></th>
+                <th><b>Details</b></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>src</td>
+                <td>Address the resource</td>
+            </tr>
+            <tr>
+                <td>type</td>
+                <td>Type of embeded resource</td>
+            </tr>
+            <tr>
+                <td>width</td>
+                <td>Horizontal dimension</td>
+            </tr>
+            <tr>
+                <td>height</td>
+                <td>Vertical dimension</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 26.1 -Basic usage -->
+    <h3> 26.1 - Basic usage </h3>
+
+    <p>The embed tag is new in HTML5. This element provides an integration point of an external (typically non-HTML) application or interactive content</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (embed src="myflash.swf")
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is : -->
+    <p> 
+        <embed src="myflash.swf"> 
+    </p>
+
+    <br> <!-- Output code is:-->
+
+    <!-- Chapter 26.2 - Defining the MIME type -->
+    <h3>26.2 - Defining the MIME type</h3>
+
+    <p>The <a href="https://datatracker.ietf.org/doc/html/rfc2046"><u>MIME</u></a> type must be defined using the type attribute.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (embed src="video.mp4" type="video/mp4" width="640" height="480")
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <embed src="video.mp4" type="video/mp4" width="640" height="480">
+    </p>
+
+    <br> <!-- Spacing line like enter  -->
+
+
+                    <!-- Chapter 27 - Iframes -->
+    <h2> Chapter 27 - Iframes </h2>
+
+    <!-- Emmet HTML Code is table>(thead>tr>th*2)+(tbody>tr*6>td*2) -->
+    <table>
+        <thead>
+            <tr>
+                <th><b>Attribute</b></th>
+                <th><b>Details</b></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>name</td>
+                <td>Sets element's name, to be used with an a tag to change the iframe's src.</td>
+            </tr>
+            <tr>
+                <td>width</td>
+                <td>Sets the element's width in pixels.</td>
+            </tr>
+            <tr>
+                <td>height</td>
+                <td>Sets the element's height in pixels.</td>
+            </tr>
+            <tr>
+                <td>src</td>
+                <td>Specifies the page that will be displayed in the frame.</td>
+            </tr>
+            <tr>
+                <td>srcdoc</td>
+                <td>Specifies the content that will be displayed in the frame, assuming the browser supports it. The content must be valid HTML.</td>
+            </tr>
+            <tr>
+                <td>sandbox</td>
+                <td> When set, the contents of the iframe is treated as being from a uniqu origin and features including scripts, plugins, form and popups will be disabled . Restrictions can be selectively relaxed by adding a space separated list of values. See the table in Remarks for possible values.</td>
+            </tr>
+            <tr>
+                <td>allowfullscreen</td>
+                <td>Whether to allow the iframe's contents to use <small>requestFullscreen</small>()</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br> <!-- Spacing line like enter -->
+    
+    <!-- Chapter 27.1 - Basic of an Inline Frame -->
+    <h3> 27.1 - Basic of an Inline frame </h3>
+
+    <p>The term "Iframe" means Inline Frame. It can be used to include another page in your page. This will yield a small frame which shows the exact contents of the base.html.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (iframe src="base.html")(/iframe)
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <iframe title="#" src="base.html"></iframe>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 27.2 - Sandboxing -->
+    <h3>27.2 - Sandboxing</h3>
+
+    <p>The following embeds an untrusted web page all restrictions enabled</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p><b> (iframe sandbox src="http://example.com/")(/iframe) </b></p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <iframe title="#" sandbox src="http://example.com/"></iframe>
+    </p>
+
+    <p>To allow the page to run scripts and submit forms, add allow-script and allow-forms to the sandbox attribute.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (iframe src="http://example.com/" sandbox="allow-scripts allow-forms")(/iframe)
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is:-->
+    <p>
+        <iframe title="#" sandbox="allow-scripts allow-forms" src="http://example.com/"></iframe>
+    </p>
+
+    <p>If there is untrusted content (such as user comments) on the same doamin as the parent web page, an inframe can be used to disable scripts while still allowing the parent document to interact with it's content using JavaScript.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (iframe src="http://example.com/untrusted/comments/page2" sandbox="allow-same-origin allow-top-navigation")
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is-->
+    <p>
+        <iframe title="#" src="http://example.com/untrusted/comments/page2" sandbox="allow-same-origin allow-top-navigation"></iframe>
+    </p>
+
+    <p>The parent document can add event listeners and resize the IFrame to fit its contents. This, along with allow allow-top-navigation, can make the sandboxed iframe appear to be part of parent document.</p>
+
+    <p>This sandbox is not a replacement for sanitizing input but can be used as part of a <u>defense in depth</u> strategy.</p>
+
+    <p>Also be aware that this sandbox can be subverted by an attacker convicing a user to visit the iframe's source directly. The <a href="https://w3c.github.io/webappsec-csp/#directive-sandbox"><u>Content Security Policy</u></a> HTTP header can be used to mitigate this attack.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 27.3 - Setting the Frame Size -->
+    <h3>27.3 Setting the Frame Size</h3>
+
+    <p>The IFrame can be resized using the width and height attributes, where the values are represented in pixels (HTML 4.01 allowed percentage values, but HTML 5 only allows values in CSS pixels).</p>
+
+    <p><b>Input this code is:</b></p>
+    
+    <p>
+        <b>
+            (iframe src="base.html" width="800" height="600")(/iframe)
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <iframe title="base.html" src="base.html" width="800" height="600"> Frame 800</iframe>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 27.4 Uisng the "srcdoc" attribute -->
+    <h3> Using the "srcdoc" attribute </h3>
+
+    <p>The srcdoc attribute can be used (instead of the src attribute) to specify the exact contents of the iframe as a whole HTML document. This will yield an iframe with the text "IFrames are cool"</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (iframe title="#" srcdoc="(p)IFrame are cool (/p)")(/iframe)
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <iframe title="#" srcdoc="<p>IFrame are cool</p>"></iframe>
+    </p>
+
+    <p>If the srcdoc attribute isn't supported by the browser, the IFrame will instead fall back to using the src attribute, but if both the src and srcdoc attributes are present and supported by the browser, srcdoc takes precedence.</p>
+
+    <p><b>Input this code:</b></p>
+
+    <p>
+        <b>
+            (iframe src="base.html" title="#" srcdoc="(p)IFrame are coll (/p)")(/iframe)
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <iframe src="base.html.html" title="#" srcdoc="<p>IFrame are cool</p>"></iframe>
+    </p>
+
+    <p>In the above example, if the browser does not support the srcdoc attribute, it will instead display the contents of the base.html page</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter  27.5 - Using Anchors with IFrames -->
+    <h3> 27.5 - Using Ancors with IFrames </h3>
+    
+    <p> Normally a chane of webpage within an iframe is initiated from with the iframe, for example, clicking a link inside the iframe. However, it is possible to change an IFrame's content from outside the IFrame. You can use an anchor tag whose href attribute is set to the desired URL and whose target attribute is set to the iframe's name attribute</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (iframe title="#" src="webpage.html" name="myIFrame")(/iframe)  <br>
+            (a href="different_webpage.html" target="myIFrame")</b> Change the Iframe content to different_webpage.html <b>(/a) <br>
+        </b>
+    </p>
+
+    <p><b>The Output code is:</b></p>
+    <p>
+        <iframe src="webpage.html" frameborder="0" title="#" name="myIFrame"></iframe>
+        <a href="different_webpage.html" target="myIFrame">Change the IFrame content to different_webpage.html</a>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    
+                    <!-- Chapter 28 - Content Languages -->
+    <h2> Chapter 28 - Content Languages </h2>
+
+    <!-- Chapter 28.1 -  Base Document Language -->
+    <h3> 28.1 - Base Document Language </h3>
+
+    <p>It's a good practice to declare the primary language of the document in the HTML element:</p>
+
+    <p><html lang="en"></html></p>
+
+    <p>If no other lang attribute is specified in the document, it means that <i>everything</i> (i.e., element content and attribute text values) is in that language.</p>
+
+    <p>If the document containts parts in others languages, these parts should get their own lang attributes to "overwrite" the language declaration.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 28.2 - Element Language -->
+    <h3> 28.2 - Element language </h3>
+
+    <p>The lang attribute is used to specify the language of element content and attribute text values:</p>
+
+    <p><b>Input this code:</b></p>
+
+    <p>
+        <b>
+            (p lang="en")</b> The content of this element is in English <b>(/p)</b> <br>
+            <b>(p lang="en" title="The value of this attribute is also in English")</b> The content of this element is English <b>(/p)  <br>
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is-->
+    <p>
+        <p lang="en">The content of this element is in English</p>
+        <p lang="en" title="The value of this attribute is also in English">The content of this element is English</p>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <p> The language declaration gets inherited:</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (div lang="en") <br>
+            &emsp;(p) This element containts English content. (/p)    <br>
+            &emsp;(p title="This attribute, too.") Same with this element(/p) <br>
+            (/div)
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <div lang="en">
+            <p>This element contains English content.</p>
+            <p title="This attribute, too.">Same with this element</p>
+        </div>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 28.3 - Elemennts with Multiple Languages -->
+    <h3> 28.3 - Elements with Multiple Languages </h3>
+
+    <p>You can "overwrite" a language declaration: </p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (p lang="en")</b> This English sentence contains the the German word <b>(span lang="de")</b> Hallo <b></span>
+            </p>
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <p lang="en">This English sentence contains the German word
+        <span lang="de">Hallo</span> 
+        </p>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 28.4 - Regional URLs -->
+    <h3>28.4 - Regional URLs</h3>
+
+    <p>It is possible to add the attribute <a href="https://www.w3.org/TR/2014/REC-html5-20141028/links.html#attr-hyperlink-hreflang"><u>hreflang</u></a> to the elements <b>(a)</b> and <b>(area)</b> that create hyperlinks. Such it specifies the language of the linked resource. The language defined must be a valid <a href="https://en.wikipedia.org/wiki/BCP_47"><u>BCP 47</u></a> (1) language tag.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            <p><a href="example.org" hreflang="en">example.org</a>is one of IANA's example domains.</p>
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <p><a href="example.org" hreflang="en">example.org</a>is one of IANA's example domains.</p>
+    </p>
+
+    <p>1. ↑ IETF Networking Group: RFC 5646 <a href="http://www.ietf.org/rfc/bcp/bcp47.txt"><i><u>Tags for identifying languages</u></i></a> IETF, September 2009</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 28.5 - Handling Attributes with Different Languages -->
+    <h3> 28.5 - Handling Attributes with Different Languages </h3>
+
+    <p>You can "overwrite" parent element's language declaration by introducing any element apart from applet, base, basefont, br, frame, frameset, hr, iframe, meta, param, script (of HTML 4.0) with an own lang attribute:</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (p lang="en" title="An English paragraph")   <br>
+            &emsp;(span lang="de" title="A German sentece")</b> Hello Welt! <b>(/span)    <br>
+            (/p)
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <p lang="en" title="An English paragraph"><span lang="de" title="A German sentence">Hello Welt!</span></p>
+    </p>
+
+    <br> <!-- Spacing line like enter -->
+
+
+                    <!-- Chapter 29 - SVG -->
+    <h2> Chapter 29 - SVG </h2>
+    
+    <p> SVG Stands for Scalable Vector Graphics. SVG is used to  define graphics for the Web</p>
+    <p>The HTML <b>(svg)</b> element is a container for SVG graphics.</p>
+    <p> SVG has several methods for drawing paths, boxes, circles, text, and graphic images.</p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 29.1 - Inline SVG -->
+    <h3> 29.1 - Inline SVG </h3>
+
+    <p>SVG can be written directly into a HTML document. Inline SVG can be styled and manipulated using CSS and JavaScript.</p>
+
+    <p><b>Input This code is:</b></p>
+
+    <p>
+        <b>
+            (body)  <br>
+            &emsp;&emsp;(svg class="attention" xlmns="htt://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 1000 1000")    <br>
+            &emsp;&emsp;&emsp;(path id="attention" d="m571,767l0,-106q0,-8,-5,-13t-12,-5l-108,0q-7,0,-12,5t-5,13l0,106q0,8,5,13t12,6l108,0q7,0,12,-6t5,-13Zm-1,-208l10,-257q0,-6,-5,-10q-7,-6,-14,-6l-122,0q-7,0,-14,6q-5,4,-5,12l9,255q0,5,6,9t13,3l103,0q8,0,13,-3t6,-9Zm-7,-522l428,786q20,35,-1,70q-10,17,-26,26t-35,10l-858,0q-18,0,-35,-10t-26,-26q-21,-35,-1,-70l429,-786q9,-17,26,-27t36,-10t36,10t27,27Z" /)   <br>
+            &emsp;(/svg)  <br>
+            (/body) <br>
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p><b>The Result looks like this:</b></p>
+    <p>
+        <body>
+            <svg class="attention" xlmns="htt://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 1000 1000">
+                    <path id="attention" d="m571,767l0,-106q0,-8,-5,-13t-12,-5l-108,0q-7,0,-12,5t-5,13l0,106q0,8,5,13t12,6l108,0q7,0,12,-6t5,-13Zm-1,-208l10,-257q0,-6,-5,-10q-7,-6,-14,-6l-122,0q-7,0,-14,6q-5,4,-5,12l9,255q0,5,6,9t13,3l103,0q8,0,13,-3t6,-9Zm-7,-522l428,786q20,35,-1,70q-10,17,-26,26t-35,10l-858,0q-18,0,-35,-10t-26,-26q-21,-35,-1,-70l429,-786q9,-17,26,-27t36,-10t36,10t27,27Z" />
+            </svg>
+        </body>
+    </p>
+
+    <p>The above inline SVG can then be styled using the corresponding CSS class:</p>
+
+    <p>
+        .attention{
+            fill: red;
+            width: 50px;
+            height: 50px;
+        }
+    </p>
+
+    <br>    <!-- Spacing line like enter -->
+
+    <!-- Chapter 29.3 - Embedding SVG using CSS -->
+    <h3> 29.3 - Embedding SVG using CSS </h3>
+
+    <p>You can add external SVG files using the background-image property, just as you would do with any other imgae.</p>
+
+    <p><b>HTML:</b></p>
+
+    <p>
+        <div class="attention"></div>
+    </p>
+
+    <p><b>CSS</b></p>
+
+    <p>
+        .attention {
+            background-image: url(attention.svg);
+            background-size: 100% 100%;
+            width: 50px;
+            height: 50px;
+        }
+    </p>
+
+    <p>You can also embed the image directly into a css file using a data url</p>
+
+    backround-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3org%2F1999%2Fxlink%22%20viewBox%3D%220%200%201000%201000%22%20%3E%0D%0A%3Cpath%20id%3D%22attention%22%20d%3D%22m571%2C767l0%2C-106q0%2C-8%2C-5%2C-13t-12%2C-5l-108%2C0q-7%2C0%2C-12%2C5t-5%2C13l0%2C106q0%2C8%2C5%2C13t12%2C6l108%2C0q7%2C0%2C12%2C-6t5%2C-13Zm-1%2C-208l10%2C-257q0%2C-6%2C-5%2C-10q-7%2C-6%2C-14%2C-6l-122%2C0q-7%2C0%2C-14%2C6q-5%2C4%2C-5%2C12l9%2C255q0%2C5%2C6%2C9t13%2C3l103%2C0q8%2C0%2C13%2C-3t6%2C-9Zm-7%2C-522l428%2C786q20%2C35%2C-1%2C70q-10%2C17%2C-26%2C26t-35%2C10l-858%2C0q-18%2C0%2C-35%2C-10t-26%2C-26q-21%2C-35%2C-1%2C-70l429%2C-786q9%2C-17%2C26%2C-27t36%2C-10t36%2C10t27%2C27Z%22%20%2F%3E%0D%0A%3C%2Fsvg%3E);
+
+    <br>  <!-- Spacing line like enter -->
+
+    <!-- Chapter 30 - Canvas -->
+    <h2>Chapter 30 - Canvas</h2>
+
+    <!-- Emmet HTML code is: table>(thead>tr>th*2)+(tbody>tr*2>th*2 -->
+    <table>
+        <thead>
+            <tr>
+                <th><b>Attribute</b></th>
+                <th><b>Description</b></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>height</th>
+                <th>Specifies the canvas height</th>
+            </tr>
+            <tr>
+                <th>width</th>
+                <th>Specifies the canvas width</th>
+            </tr>
+        </tbody>
+    </table>
+
+    <br><!-- Spacing line like enter -->
+
+    <!-- Chapter 30.1 - Basic Example -->
+    <h3> 30.1 - Basic Example </h3>
+
+    <p>The canvas element was introducued in HTML5 for drawing graphics.</p>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            <canvas id="myCanvas">cannot display graphic. Canvas is not supported by your browser (IE < 9)
+            </canvas>
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <canvas id="myCanvas">Cannot display graphics. Canvas is not supported by your browser (IE < 9)</canvas>
+    </p>
+
+    <p> The above will create a tranparant HTML <b>(canvas)</b> element  of 300x150px in size.</p>
+
+    <p>You can use the <b>canvas</b> element to draw amazing stuff like shapes, graphs, manipulate image, create engaging games etc with <b>JavaScript</b></p>
+
+    <p>The canvas's 2D <i>drawable layer</i> surface Object is reffered to as CanvaRenderingCortext2D; or from a HTMLCanvasElement Using the .getContext("2D) methods:</p>
+
+    <p>
+        <!-- now we can refer to the canvas's 2D layer context using 'ctx' -->  <br>
+        var ctx = document.getElementById("myCanvas").getContext("2d"); <br>
+        
+        ctx.fillstyle = "#f00"; <br>
+        ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height); <!-- x,y, width, height -->    <br>
+
+        ctx.fillStyle = "#000"; .
+        ctx.fillText("My red canvas with some black text", 24, 32);
+        <!-- text, x, y -->
+    </p>
+
+    <p> <a href="https://jsfiddle.net/omvrvhyu/">jsFiddle example</a></p>
+
+    <br> <!-- Spacing line like enter -->
+
+    <!-- Chapter 30.2 - Drawing two rectangles on a <canvas> -->
+    <h3> 30.2 - Drawing two rectangles on a <b>(canvas) </b></h3>
+
+    <p><b>Input this code is:</b></p>
+
+    <p>
+        <b>
+            (!DOCTYPE html) <br>
+            (html lang="en")    <br>
+            (head)  <br>
+            &emsp;&emsp;(meta charset="utf-8" /)   <br>
+            &emsp;&emsp;(title)</b> Draw two rectangles on the canvas <b>(/title)  <br>
+            &emsp;&emsp;(style) <br>
+            &emsp;&emsp;&emsp;&emsp;canvas {    <br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;border: 1px solid gray;  <br>
+            &emsp;&emsp;&emsp;&emsp;}   <br>
+            &emsp;&emsp;(/style)    <br>
+            &emsp;&emsp;(script async)  <br>
+            &emsp;&emsp;&emsp;window.onload = init; // call init() once the window is completely loaded   <br>
+            &emsp;&emsp;&emsp;function init(){    <br>
+            &emsp;&emsp;&emsp;&emsp;//#1 - get reference to <b>(canvas)</b> <br>
+            &emsp;&emsp;&emsp;&emsp;var canvas = document.querySelector('canvas');  <br>
+                <br>
+            &emsp;&emsp;&emsp;&emsp;//#2 - get reference to the drawing context and drawing API     <br>
+            &emsp;&emsp;&emsp;&emsp;var ctx = canvas.getContext('2d');  <br>
+                <br>
+            &emsp;&emsp;&emsp;&emsp;//#3 - all fill operations are now in red   <br>
+            &emsp;&emsp;&emsp;&emsp;ctx.fillStyle = 'red';  <br>
+                <br>
+            &emsp;&emsp;&emsp;&emsp;//#4 - fill a 100x100 rectangle at x=0, y=0 <br>
+            &emsp;&emsp;&emsp;&emsp;ctx.fillRect(0,0,100,100);  <br>
+                <br>
+            &emsp;&emsp;&emsp;&emsp;//#5 - all fill operations are now in green <br>
+            &emsp;&emsp;&emsp;&emsp;ctx.fillStyle = 'green';    <br>
+                <br>
+            &emsp;&emsp;&emsp;&emsp;//#6 - fill a 50x40 rectangle at x=25, y=25 <br>
+            &emsp;&emsp;&emsp;&emsp;ctx.fillRect(25,25,50,50);  <br>
+            &emsp;&emsp;}   <br>
+                <br>
+            &emsp;&emsp;(/script)   <br>
+            (/head) <br>
+            (body)  <br>
+            &emsp;(canvas width=300 height=200) Your browser does not support canvas (/canvas)    <br>
+            <br>
+            &emsp;(a href="chapter 30.2 - Drawing two rectangles on canvas.html") </b>   <br>
+            &emsp;Buka Chapter 30.2 - Drawing Two Rectangles
+                <b>(/a) <br>
+            (/body) <br>
+            (/html) <br>
+
+        </b>
+    </p>
+
+    <p><b>Then Output code is:</b></p>
+    <!-- Output code is: -->
+    <p>
+        <a href="chapter 30.2 - Drawing two rectangles on canvas.html">
+            Buka Chapter 30.2 - Drawing Two Rectangles
+        </a>
+    </p>
+
+</body>
+</html>
